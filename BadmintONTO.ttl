@@ -55,51 +55,66 @@
 
 
 #################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.opengis.net/ont/geosparql#wktLiteral
+<http://www.opengis.net/ont/geosparql#wktLiteral> rdf:type rdfs:Datatype ;
+                                                  rdfs:comment "A Well-known Text serialization of a Geometry object." .
+
+
+#################################################################
 #    Object Properties
 #################################################################
 
-###  http://huanyu-li.github.io/ontology/BadmintONTO/hasHittingArea
-:hasHittingArea rdf:type owl:ObjectProperty .
+###  http://huanyu-li.github.io/ontology/BadmintONTO/getPointByPair
+:getPointByPair rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :winBy ;
+                rdfs:range :Pair .
 
 
-###  http://huanyu-li.github.io/ontology/BadmintONTO/hasHittingPlayer
-:hasHittingPlayer rdf:type owl:ObjectProperty .
+###  http://huanyu-li.github.io/ontology/BadmintONTO/getPointByPlayer
+:getPointByPlayer rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :winBy ;
+                  rdfs:range :Person .
 
 
-###  http://huanyu-li.github.io/ontology/BadmintONTO/hasHittingRoute
-:hasHittingRoute rdf:type owl:ObjectProperty .
+###  http://huanyu-li.github.io/ontology/BadmintONTO/getPointByTeam
+:getPointByTeam rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :winBy ;
+                rdfs:range :Team .
 
 
-###  http://huanyu-li.github.io/ontology/BadmintONTO/hasHittingStyle
-:hasHittingStyle rdf:type owl:ObjectProperty .
+###  http://huanyu-li.github.io/ontology/BadmintONTO/getSetByPair
+:getSetByPair rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :winBy .
+
+
+###  http://huanyu-li.github.io/ontology/BadmintONTO/getSetByPlayer
+:getSetByPlayer rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :winBy .
+
+
+###  http://huanyu-li.github.io/ontology/BadmintONTO/hasAgentRole
+:hasAgentRole rdf:type owl:ObjectProperty ;
+              rdfs:domain :Event ;
+              rdfs:range :AgentRole .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/hasInformationObject
 :hasInformationObject rdf:type owl:ObjectProperty ;
-                      rdfs:range :Information .
+                      rdfs:range :InformationObject .
 
 
-###  http://huanyu-li.github.io/ontology/BadmintONTO/hasMatch
-:hasMatch rdf:type owl:ObjectProperty ;
-          rdfs:domain :GameType ;
-          rdfs:range :MatchEvent ;
-          rdfs:comment "A game event has a collection of match events."@en .
+###  http://huanyu-li.github.io/ontology/BadmintONTO/hasPlayer
+:hasPlayer rdf:type owl:ObjectProperty ;
+           rdfs:range :Person .
 
 
-###  http://huanyu-li.github.io/ontology/BadmintONTO/hasParticipation
-:hasParticipation rdf:type owl:ObjectProperty ;
-                  rdfs:domain :Event ;
-                  rdfs:range :Participation .
-
-
-###  http://huanyu-li.github.io/ontology/BadmintONTO/hasParticipationRole
-:hasParticipationRole rdf:type owl:ObjectProperty ;
-                      rdfs:domain :Participation ;
-                      rdfs:range :Role .
-
-
-###  http://huanyu-li.github.io/ontology/BadmintONTO/hasReceivingPlayer
-:hasReceivingPlayer rdf:type owl:ObjectProperty .
+###  http://huanyu-li.github.io/ontology/BadmintONTO/hasShotType
+:hasShotType rdf:type owl:ObjectProperty ;
+             rdfs:domain :ShotInformation ;
+             rdfs:range :ShotType .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/hasSubEvent
@@ -108,57 +123,71 @@
              rdfs:range :Event .
 
 
-###  http://huanyu-li.github.io/ontology/BadmintONTO/hasTeam
-:hasTeam rdf:type owl:ObjectProperty ;
-         rdfs:domain :BWFTeamGame ;
-         rdfs:range :Team .
+###  http://huanyu-li.github.io/ontology/BadmintONTO/hittingPlayer
+:hittingPlayer rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :hasPlayer .
 
 
-###  http://huanyu-li.github.io/ontology/BadmintONTO/hasTeamPlayer
-:hasTeamPlayer rdf:type owl:ObjectProperty ;
-               rdfs:domain :Team ;
-               rdfs:range :Player .
+###  http://huanyu-li.github.io/ontology/BadmintONTO/isDescribedBy
+:isDescribedBy rdf:type owl:ObjectProperty ;
+               rdfs:domain :Event ;
+               rdfs:range :InformationObject .
 
 
-###  http://huanyu-li.github.io/ontology/BadmintONTO/pairAPlaying
-:pairAPlaying rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf :hasParticipation .
+###  http://huanyu-li.github.io/ontology/BadmintONTO/isPerformedBy
+:isPerformedBy rdf:type owl:ObjectProperty ;
+               rdfs:domain :AgentRole ;
+               rdfs:range <http://xmlns.com/foaf/0.1/Agent> .
 
 
-###  http://huanyu-li.github.io/ontology/BadmintONTO/pairBPlaying
-:pairBPlaying rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf :hasParticipation .
+###  http://huanyu-li.github.io/ontology/BadmintONTO/occursAtLocation
+:occursAtLocation rdf:type owl:ObjectProperty ;
+                  rdfs:range :Location .
 
 
-###  http://huanyu-li.github.io/ontology/BadmintONTO/participationBy
-:participationBy rdf:type owl:ObjectProperty ;
-                 rdfs:domain :Participation ;
-                 rdfs:range <http://xmlns.com/foaf/0.1/Agent> .
+###  http://huanyu-li.github.io/ontology/BadmintONTO/occursAtTime
+:occursAtTime rdf:type owl:ObjectProperty ;
+              rdfs:domain :Event ;
+              rdfs:range <http://www.w3.org/2006/time#TemporalEntity> .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/playedBy
 :playedBy rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf :participationBy .
+          rdfs:subPropertyOf :isPerformedBy .
 
 
-###  http://huanyu-li.github.io/ontology/BadmintONTO/playerAPlaying
-:playerAPlaying rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf :hasParticipation .
+###  http://huanyu-li.github.io/ontology/BadmintONTO/playerLocation
+:playerLocation rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :occursAtLocation .
 
 
-###  http://huanyu-li.github.io/ontology/BadmintONTO/playerBPlaying
-:playerBPlaying rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf :hasParticipation .
+###  http://huanyu-li.github.io/ontology/BadmintONTO/receivingPlayer
+:receivingPlayer rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :hasPlayer .
 
 
-###  http://huanyu-li.github.io/ontology/BadmintONTO/playerCPlaying
-:playerCPlaying rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf :hasParticipation .
+###  http://huanyu-li.github.io/ontology/BadmintONTO/shuttleHittingLocation
+:shuttleHittingLocation rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :occursAtLocation .
 
 
-###  http://huanyu-li.github.io/ontology/BadmintONTO/playerDPlaying
-:playerDPlaying rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf :hasParticipation .
+###  http://huanyu-li.github.io/ontology/BadmintONTO/shuttleLandingLocation
+:shuttleLandingLocation rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :occursAtLocation .
+
+
+###  http://huanyu-li.github.io/ontology/BadmintONTO/winBy
+:winBy rdf:type owl:ObjectProperty .
+
+
+###  http://huanyu-li.github.io/ontology/BadmintONTO/winMatchByPair
+:winMatchByPair rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :winBy .
+
+
+###  http://huanyu-li.github.io/ontology/BadmintONTO/winMatchByPlayer
+:winMatchByPlayer rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :winBy .
 
 
 #################################################################
@@ -209,12 +238,12 @@
 :PersonName rdf:type owl:DatatypeProperty .
 
 
-###  http://huanyu-li.github.io/ontology/BadmintONTO/gameScoreA
-:gameScoreA rdf:type owl:DatatypeProperty .
+###  http://huanyu-li.github.io/ontology/BadmintONTO/matchScoreA
+:matchScoreA rdf:type owl:DatatypeProperty .
 
 
-###  http://huanyu-li.github.io/ontology/BadmintONTO/gameScoreB
-:gameScoreB rdf:type owl:DatatypeProperty .
+###  http://huanyu-li.github.io/ontology/BadmintONTO/matchScoreB
+:matchScoreB rdf:type owl:DatatypeProperty .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/playerLocationArea
@@ -254,9 +283,31 @@
 :yCoordinate rdf:type owl:DatatypeProperty .
 
 
+###  http://www.opengis.net/ont/geosparql#asWKT
+<http://www.opengis.net/ont/geosparql#asWKT> rdf:type owl:DatatypeProperty ;
+                                             rdfs:domain <http://www.opengis.net/ont/geosparql#Geometry> ;
+                                             rdfs:comment "The WKT serialization of a Geometry" ;
+                                             rdfs:isDefinedBy <http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/geometry-as-wkt-literal> .
+
+
 #################################################################
 #    Classes
 #################################################################
+
+###  http://huanyu-li.github.io/ontology/BadmintONTO/AgentRole
+:AgentRole rdf:type owl:Class ;
+           rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :isPerformedBy ;
+                                                    owl:someValuesFrom <http://xmlns.com/foaf/0.1/Agent>
+                                                  ]
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :isPerformedBy ;
+                                                    owl:allValuesFrom <http://xmlns.com/foaf/0.1/Agent>
+                                                  ]
+                                                ) ;
+                             rdf:type owl:Class
+                           ] .
+
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/AttackingClearStroke
 :AttackingClearStroke rdf:type owl:Class ;
@@ -265,18 +316,7 @@
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/BWFTeamGame
 :BWFTeamGame rdf:type owl:Class ;
-             rdfs:subClassOf :GameType ,
-                             [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :hasTeam ;
-                                                      owl:someValuesFrom :Team
-                                                    ]
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :hasTeam ;
-                                                      owl:allValuesFrom :Team
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] .
+             rdfs:subClassOf :GameType .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/BWFTournamentGame
@@ -328,9 +368,9 @@
                       rdfs:subClassOf :DriveStroke .
 
 
-###  http://huanyu-li.github.io/ontology/BadmintONTO/Doctor
-:Doctor rdf:type owl:Class ;
-        rdfs:subClassOf :Role .
+###  http://huanyu-li.github.io/ontology/BadmintONTO/DoublePlayerRole
+:DoublePlayerRole rdf:type owl:Class ;
+                  rdfs:subClassOf :PlayerRole .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/DriveStroke
@@ -354,22 +394,50 @@
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/Event
-:Event rdf:type owl:Class .
+:Event rdf:type owl:Class ;
+       rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                owl:onProperty :isDescribedBy ;
+                                                owl:someValuesFrom :InformationObject
+                                              ]
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :isDescribedBy ;
+                                                owl:allValuesFrom :InformationObject
+                                              ]
+                                            ) ;
+                         rdf:type owl:Class
+                       ] ,
+                       [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                owl:onProperty :occursAtLocation ;
+                                                owl:someValuesFrom :Location
+                                              ]
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :occursAtLocation ;
+                                                owl:allValuesFrom :Location
+                                              ]
+                                            ) ;
+                         rdf:type owl:Class
+                       ] ,
+                       [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                owl:onProperty :occursAtTime ;
+                                                owl:someValuesFrom <http://www.w3.org/2006/time#TemporalEntity>
+                                              ]
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :occursAtTime ;
+                                                owl:allValuesFrom <http://www.w3.org/2006/time#TemporalEntity>
+                                              ]
+                                            ) ;
+                         rdf:type owl:Class
+                       ] .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/EventInformation
 :EventInformation rdf:type owl:Class ;
-                  rdfs:subClassOf :Information ,
+                  rdfs:subClassOf :InformationObject ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty <http://www.w3.org/2006/time#hasTime> ;
                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                     owl:onClass <http://www.w3.org/2006/time#TemporalEntity>
                                   ] .
-
-
-###  http://huanyu-li.github.io/ontology/BadmintONTO/FirstSet
-:FirstSet rdf:type owl:Class ;
-          rdfs:subClassOf :Period .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/FlickStroke
@@ -388,18 +456,7 @@
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/GameType
-:GameType rdf:type owl:Class ;
-          rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                   owl:onProperty :hasMatch ;
-                                                   owl:someValuesFrom :MatchEvent
-                                                 ]
-                                                 [ rdf:type owl:Restriction ;
-                                                   owl:onProperty :hasMatch ;
-                                                   owl:allValuesFrom :MatchEvent
-                                                 ]
-                                               ) ;
-                            rdf:type owl:Class
-                          ] .
+:GameType rdf:type owl:Class .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/GetPointEvent
@@ -419,19 +476,14 @@
 :HittingStyle rdf:type owl:Class .
 
 
-###  http://huanyu-li.github.io/ontology/BadmintONTO/Information
-:Information rdf:type owl:Class .
+###  http://huanyu-li.github.io/ontology/BadmintONTO/InformationObject
+:InformationObject rdf:type owl:Class .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/LiftStroke
 :LiftStroke rdf:type owl:Class ;
             owl:equivalentClass :LobStroke ;
             rdfs:subClassOf :Stroke .
-
-
-###  http://huanyu-li.github.io/ontology/BadmintONTO/LineJudge
-:LineJudge rdf:type owl:Class ;
-           rdfs:subClassOf :Role .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/LobStroke
@@ -448,18 +500,45 @@
            rdfs:subClassOf :Serve .
 
 
-###  http://huanyu-li.github.io/ontology/BadmintONTO/ManSingleMatchType
-:ManSingleMatchType rdf:type owl:Class ;
-                    rdfs:subClassOf :MatchType .
-
-
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/MatchEvent
 :MatchEvent rdf:type owl:Class ;
             rdfs:subClassOf :Event ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :hasSubEvent ;
                               owl:someValuesFrom :SetEvent
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :isDescribedBy ;
+                              owl:someValuesFrom :MatchInformation
                             ] .
+
+
+###  http://huanyu-li.github.io/ontology/BadmintONTO/MatchInformation
+:MatchInformation rdf:type owl:Class ;
+                  rdfs:subClassOf :InformationObject ,
+                                  [ rdf:type owl:Class ;
+                                    owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :winMatchByPair ;
+                                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                    owl:onClass :Pair
+                                                  ]
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :winMatchByPlayer ;
+                                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                    owl:onClass :Person
+                                                  ]
+                                                )
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :matchScoreA ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:nonNegativeInteger
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :matchScoreB ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:nonNegativeInteger
+                                  ] .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/MatchType
@@ -469,21 +548,6 @@
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/MedicalPauseEvent
 :MedicalPauseEvent rdf:type owl:Class ;
                    rdfs:subClassOf :Event .
-
-
-###  http://huanyu-li.github.io/ontology/BadmintONTO/MenDoubleMatchType
-:MenDoubleMatchType rdf:type owl:Class ;
-                    rdfs:subClassOf :MatchType .
-
-
-###  http://huanyu-li.github.io/ontology/BadmintONTO/MixDoubleMatchType
-:MixDoubleMatchType rdf:type owl:Class ;
-                    rdfs:subClassOf :MatchType .
-
-
-###  http://huanyu-li.github.io/ontology/BadmintONTO/NationalTeam
-:NationalTeam rdf:type owl:Class ;
-              rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/NetPlayStroke
@@ -496,13 +560,14 @@
               rdfs:subClassOf :HittingArea .
 
 
-###  http://huanyu-li.github.io/ontology/BadmintONTO/Participation
-:Participation rdf:type owl:Class .
+###  http://huanyu-li.github.io/ontology/BadmintONTO/Pair
+:Pair rdf:type owl:Class ;
+      rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> .
 
 
-###  http://huanyu-li.github.io/ontology/BadmintONTO/ParticipationInformation
-:ParticipationInformation rdf:type owl:Class ;
-                          rdfs:subClassOf :Information .
+###  http://huanyu-li.github.io/ontology/BadmintONTO/PairPlayersRole
+:PairPlayersRole rdf:type owl:Class ;
+                 rdfs:subClassOf :PlayerRole .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/PassiveDrop
@@ -515,18 +580,24 @@
               rdfs:subClassOf :Event .
 
 
-###  http://huanyu-li.github.io/ontology/BadmintONTO/Period
-:Period rdf:type owl:Class .
-
-
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/Person
 :Person rdf:type owl:Class ;
         rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> .
 
 
-###  http://huanyu-li.github.io/ontology/BadmintONTO/Player
-:Player rdf:type owl:Class ;
-        rdfs:subClassOf :Role .
+###  http://huanyu-li.github.io/ontology/BadmintONTO/PlayerInformation
+:PlayerInformation rdf:type owl:Class ;
+                   rdfs:subClassOf :InformationObject ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasPlayer ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass :Person
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :playerLocation ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass :PlayerLocation
+                                   ] .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/PlayerLocation
@@ -534,9 +605,13 @@
                 rdfs:subClassOf :Location .
 
 
+###  http://huanyu-li.github.io/ontology/BadmintONTO/PlayerRole
+:PlayerRole rdf:type owl:Class ;
+            rdfs:subClassOf :AgentRole .
+
+
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/PlayingParticipation
-:PlayingParticipation rdf:type owl:Class ;
-                      rdfs:subClassOf :Participation .
+:PlayingParticipation rdf:type owl:Class .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/PushStroke
@@ -547,6 +622,10 @@
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/RallyEvent
 :RallyEvent rdf:type owl:Class ;
             rdfs:subClassOf :Event ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :isDescribedBy ;
+                              owl:someValuesFrom :RallyInformation
+                            ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :hasSubEvent ;
                               owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -559,6 +638,34 @@
                             ] .
 
 
+###  http://huanyu-li.github.io/ontology/BadmintONTO/RallyInformation
+:RallyInformation rdf:type owl:Class ;
+                  rdfs:subClassOf :InformationObject ,
+                                  [ rdf:type owl:Class ;
+                                    owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :getPointByPair ;
+                                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                    owl:onClass :Pair
+                                                  ]
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :getPointByPlayer ;
+                                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                    owl:onClass :Person
+                                                  ]
+                                                )
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :rallyLoseReason ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:string
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :rallyWinReason ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:string
+                                  ] .
+
+
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/RestEvent
 :RestEvent rdf:type owl:Class ;
            rdfs:subClassOf :Event .
@@ -569,13 +676,24 @@
                rdfs:subClassOf :NetPlayStroke .
 
 
-###  http://huanyu-li.github.io/ontology/BadmintONTO/Role
-:Role rdf:type owl:Class .
-
-
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/RoundHeadArea
 :RoundHeadArea rdf:type owl:Class ;
                rdfs:subClassOf :HittingArea .
+
+
+###  http://huanyu-li.github.io/ontology/BadmintONTO/RoundScores
+:RoundScores rdf:type owl:Class ;
+             rdfs:subClassOf :InformationObject ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :roundScoreA ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :roundScoreB ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:nonNegativeInteger
+                             ] .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/RushStroke
@@ -583,23 +701,9 @@
             rdfs:subClassOf :Stroke .
 
 
-###  http://huanyu-li.github.io/ontology/BadmintONTO/SecondSet
-:SecondSet rdf:type owl:Class ;
-           rdfs:subClassOf :Period .
-
-
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/Serve
 :Serve rdf:type owl:Class ;
-       rdfs:subClassOf [ rdf:type owl:Restriction ;
-                         owl:onProperty :hasHittingStyle ;
-                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                         owl:onClass :HittingStyle
-                       ] .
-
-
-###  http://huanyu-li.github.io/ontology/BadmintONTO/ServiceJudge
-:ServiceJudge rdf:type owl:Class ;
-              rdfs:subClassOf :Role .
+       rdfs:subClassOf :ShotType .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/SetEvent
@@ -610,10 +714,42 @@
                             owl:someValuesFrom :RallyEvent
                           ] ,
                           [ rdf:type owl:Restriction ;
+                            owl:onProperty :isDescribedBy ;
+                            owl:someValuesFrom :SetInformation
+                          ] ,
+                          [ rdf:type owl:Restriction ;
                             owl:onProperty :hasSubEvent ;
                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                             owl:onClass :RestEvent
                           ] .
+
+
+###  http://huanyu-li.github.io/ontology/BadmintONTO/SetInformation
+:SetInformation rdf:type owl:Class ;
+                rdfs:subClassOf :InformationObject ,
+                                [ rdf:type owl:Class ;
+                                  owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :getSetByPair ;
+                                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                  owl:onClass :Pair
+                                                ]
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :getSetByPlayer ;
+                                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                  owl:onClass :Person
+                                                ]
+                                              )
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :setScoreA ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:nonNegativeInteger
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :setScoreB ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:nonNegativeInteger
+                                ] .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/ShortServe
@@ -621,19 +757,62 @@
             rdfs:subClassOf :Serve .
 
 
-###  http://huanyu-li.github.io/ontology/BadmintONTO/ShuttleHittedLocation
-:ShuttleHittedLocation rdf:type owl:Class ;
-                       rdfs:subClassOf :Location .
+###  http://huanyu-li.github.io/ontology/BadmintONTO/ShotInformation
+:ShotInformation rdf:type owl:Class ;
+                 rdfs:subClassOf :InformationObject ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasShotType ;
+                                   owl:someValuesFrom :ShotType
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hittingPlayer ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass :Person
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :receivingPlayer ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass :Person
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :shuttleHittingLocation ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass :ShuttleLocation
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :shuttleLandingLocation ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass :ShuttleLocation
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :roundScoreA ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:nonNegativeInteger
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :roundScoreB ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:nonNegativeInteger
+                                 ] .
 
 
-###  http://huanyu-li.github.io/ontology/BadmintONTO/ShuttleLandingLocation
-:ShuttleLandingLocation rdf:type owl:Class ;
-                        rdfs:subClassOf :Location .
+###  http://huanyu-li.github.io/ontology/BadmintONTO/ShotType
+:ShotType rdf:type owl:Class .
+
+
+###  http://huanyu-li.github.io/ontology/BadmintONTO/ShuttleLocation
+:ShuttleLocation rdf:type owl:Class ;
+                 rdfs:subClassOf :Location .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/SideHandArea
 :SideHandArea rdf:type owl:Class ;
               rdfs:subClassOf :HittingArea .
+
+
+###  http://huanyu-li.github.io/ontology/BadmintONTO/SinglePlayerRole
+:SinglePlayerRole rdf:type owl:Class ;
+                  rdfs:subClassOf :PlayerRole .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/SmashStroke
@@ -643,26 +822,16 @@
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/Stroke
 :Stroke rdf:type owl:Class ;
-        rdfs:subClassOf [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasHittingArea ;
-                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                          owl:onClass :HittingArea
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasHittingRoute ;
-                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                          owl:onClass :HittingRoute
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasHittingStyle ;
-                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                          owl:onClass :HittingStyle
-                        ] .
+        rdfs:subClassOf :ShotType .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/StrokeEvent
 :StrokeEvent rdf:type owl:Class ;
-             rdfs:subClassOf :Event .
+             rdfs:subClassOf :Event ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :isDescribedBy ;
+                               owl:someValuesFrom :ShotInformation
+                             ] .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/SudirmanCupGame
@@ -677,22 +846,7 @@
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/Team
 :Team rdf:type owl:Class ;
-      rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                               owl:onProperty :hasTeamPlayer ;
-                                               owl:someValuesFrom :Player
-                                             ]
-                                             [ rdf:type owl:Restriction ;
-                                               owl:onProperty :hasTeamPlayer ;
-                                               owl:allValuesFrom :Player
-                                             ]
-                                           ) ;
-                        rdf:type owl:Class
-                      ] .
-
-
-###  http://huanyu-li.github.io/ontology/BadmintONTO/ThirdSet
-:ThirdSet rdf:type owl:Class ;
-          rdfs:subClassOf :Period .
+      rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/ThomasCupGame
@@ -710,11 +864,6 @@
              rdfs:subClassOf :BWFTeamGame .
 
 
-###  http://huanyu-li.github.io/ontology/BadmintONTO/Umpire
-:Umpire rdf:type owl:Class ;
-        rdfs:subClassOf :Role .
-
-
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/UnderHandArea
 :UnderHandArea rdf:type owl:Class ;
                rdfs:subClassOf :HittingArea .
@@ -725,23 +874,106 @@
                  rdfs:subClassOf :Event .
 
 
-###  http://huanyu-li.github.io/ontology/BadmintONTO/WomanSingleMatchType
-:WomanSingleMatchType rdf:type owl:Class ;
-                      rdfs:subClassOf :MatchType .
-
-
-###  http://huanyu-li.github.io/ontology/BadmintONTO/WomenDoubleMatchType
-:WomenDoubleMatchType rdf:type owl:Class ;
-                      rdfs:subClassOf :MatchType .
-
-
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/WristSmash
 :WristSmash rdf:type owl:Class ;
             rdfs:subClassOf :SmashStroke .
 
 
+###  http://www.opengis.net/ont/geosparql#Geometry
+<http://www.opengis.net/ont/geosparql#Geometry> rdf:type owl:Class .
+
+
 ###  http://xmlns.com/foaf/0.1/Agent
 <http://xmlns.com/foaf/0.1/Agent> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://huanyu-li.github.io/ontology/BadmintONTO/Doctor
+:Doctor rdf:type owl:NamedIndividual ,
+                 :AgentRole .
+
+
+###  http://huanyu-li.github.io/ontology/BadmintONTO/LineJudge
+:LineJudge rdf:type owl:NamedIndividual ,
+                    :AgentRole .
+
+
+###  http://huanyu-li.github.io/ontology/BadmintONTO/ManSingle
+:ManSingle rdf:type owl:NamedIndividual ,
+                    :MatchType .
+
+
+###  http://huanyu-li.github.io/ontology/BadmintONTO/MenDouble
+:MenDouble rdf:type owl:NamedIndividual ,
+                    :MatchType .
+
+
+###  http://huanyu-li.github.io/ontology/BadmintONTO/MixDouble
+:MixDouble rdf:type owl:NamedIndividual ,
+                    :MatchType .
+
+
+###  http://huanyu-li.github.io/ontology/BadmintONTO/ServiceJudge
+:ServiceJudge rdf:type owl:NamedIndividual ,
+                       :AgentRole .
+
+
+###  http://huanyu-li.github.io/ontology/BadmintONTO/Umpire
+:Umpire rdf:type owl:NamedIndividual ,
+                 :AgentRole .
+
+
+###  http://huanyu-li.github.io/ontology/BadmintONTO/WomanSingle
+:WomanSingle rdf:type owl:NamedIndividual ,
+                      :MatchType .
+
+
+###  http://huanyu-li.github.io/ontology/BadmintONTO/WomenDouble
+:WomenDouble rdf:type owl:NamedIndividual ,
+                      :MatchType .
+
+
+###  http://huanyu-li.github.io/ontology/BadmintONTO/double_player_a
+:double_player_a rdf:type owl:NamedIndividual ,
+                          :DoublePlayerRole .
+
+
+###  http://huanyu-li.github.io/ontology/BadmintONTO/double_player_b
+:double_player_b rdf:type owl:NamedIndividual ,
+                          :DoublePlayerRole .
+
+
+###  http://huanyu-li.github.io/ontology/BadmintONTO/double_player_c
+:double_player_c rdf:type owl:NamedIndividual ,
+                          :DoublePlayerRole .
+
+
+###  http://huanyu-li.github.io/ontology/BadmintONTO/double_player_d
+:double_player_d rdf:type owl:NamedIndividual ,
+                          :DoublePlayerRole .
+
+
+###  http://huanyu-li.github.io/ontology/BadmintONTO/single_player_a
+:single_player_a rdf:type owl:NamedIndividual ,
+                          :SinglePlayerRole .
+
+
+###  http://huanyu-li.github.io/ontology/BadmintONTO/single_player_b
+:single_player_b rdf:type owl:NamedIndividual ,
+                          :SinglePlayerRole .
+
+
+###  http://huanyu-li.github.io/ontology/BadmintONTO/team_a
+:team_a rdf:type owl:NamedIndividual ,
+                 :PairPlayersRole .
+
+
+###  http://huanyu-li.github.io/ontology/BadmintONTO/team_b
+:team_b rdf:type owl:NamedIndividual ,
+                 :PairPlayersRole .
 
 
 ###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi

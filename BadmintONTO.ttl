@@ -527,7 +527,8 @@
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/InformationObject
-:InformationObject rdf:type owl:Class .
+:InformationObject rdf:type owl:Class ;
+                   rdfs:seeAlso "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/LiftStroke

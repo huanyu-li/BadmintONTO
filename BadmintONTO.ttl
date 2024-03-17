@@ -143,6 +143,11 @@
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/hasLocation
 :hasLocation rdf:type owl:ObjectProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :PlayerInformation
+                                         :ShotInformation
+                                       )
+                         ] ;
              rdfs:range :Location ;
              rdfs:comment "has Location" ,
                           "hasLocation represents that some entities can associate with locations." .
@@ -158,6 +163,7 @@
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/hasPlayer
 :hasPlayer rdf:type owl:ObjectProperty ;
+           rdfs:domain :ShotInformation ;
            rdfs:range :Player ;
            rdfs:comment "hasPlayer represents that some entities can associate with players." ;
            rdfs:label "has player" .
@@ -276,7 +282,7 @@
 :shuttleLandingLocation rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf :hasLocation ;
                         rdfs:domain :ShotInformation ;
-                        rdfs:range :Location ;
+                        rdfs:range :ShuttleLocation ;
                         rdfs:comment "shuttleLandingLocation represents that a shuttle's landing location is captured by a shot-information object." ;
                         rdfs:label "shuttle landing location" .
 
@@ -310,7 +316,9 @@
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/belongToCountry
 :belongToCountry rdf:type owl:DatatypeProperty ;
                  rdfs:domain :Location ;
-                 rdfs:comment "ISO (3166) country code" .
+                 rdfs:range xsd:string ;
+                 rdfs:comment "ISO (3166) country code" ;
+                 rdfs:label "belong to country" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/currentWorldRanking
@@ -451,9 +459,9 @@
 
 ###  http://www.opengis.net/ont/geosparql#asWKT
 <http://www.opengis.net/ont/geosparql#asWKT> rdf:type owl:DatatypeProperty ;
-                                             rdfs:domain <http://www.opengis.net/ont/geosparql#Geometry> ;
+                                             rdfs:domain :Geometry ;
                                              rdfs:range <http://www.opengis.net/ont/geosparql#wktLiteral> ;
-                                             rdfs:comment "The WKT serialization of a Geometry" ;
+                                             rdfs:comment "The WKT serialization of a Geometry." ;
                                              rdfs:isDefinedBy <http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/geometry-as-wkt-literal> .
 
 
@@ -539,11 +547,13 @@
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/Draw
 :Draw rdf:type owl:Class ;
       owl:equivalentClass :MatchType ;
+      rdfs:comment "The different match types in badminton (i.e., man single, men double, woman single, women double and mix double)." ;
       rdfs:label "Draw" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/Equipment
 :Equipment rdf:type owl:Class ;
+           rdfs:comment "Equipments in badmintion domain." ;
            rdfs:label "Equipment" .
 
 
@@ -582,6 +592,7 @@
                                             ) ;
                          rdf:type owl:Class
                        ] ;
+       rdfs:comment "Activities that take place within a given context or timeframe." ;
        rdfs:label "Event" .
 
 
@@ -603,6 +614,13 @@
            rdfs:subClassOf :Event ;
            rdfs:comment "A set (game) in a match." ;
            rdfs:label "Game Event" .
+
+
+###  http://huanyu-li.github.io/ontology/BadmintONTO/Geometry
+:Geometry rdf:type owl:Class ;
+          rdfs:comment "http://www.opengis.net/ont/geosparql#Geometry" ;
+          rdfs:label "Geometry" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "A coherent set of direct positions in space. The positions are held within a Spatial Reference System (SRS)." .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/GetPointEvent
@@ -632,7 +650,7 @@
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/Location
 :Location rdf:type owl:Class ;
-          rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Geometry> ,
+          rdfs:subClassOf :Geometry ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty <http://www.opengis.net/ont/geosparql#asWKT> ;
                             owl:someValuesFrom xsd:string
@@ -728,12 +746,14 @@
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/Person
 :Person rdf:type owl:Class ;
         rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ;
+        rdfs:comment "A person agent can have some roles." ;
         rdfs:label "Person" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/Player
 :Player rdf:type owl:Class ;
         rdfs:subClassOf :Person ;
+        rdfs:comment "A player in badmintion related events." ;
         rdfs:label "Player" .
 
 
@@ -793,7 +813,8 @@
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/Racket
 :Racket rdf:type owl:Class ;
         rdfs:subClassOf :Equipment ;
-        rdfs:label "Racket" .
+        rdfs:label "Racket" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "Rackets in badminton domain." .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/RallyEvent
@@ -1085,6 +1106,7 @@
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/Team
 :Team rdf:type owl:Class ;
       rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ;
+      rdfs:comment "A team in a team-baed competition." ;
       rdfs:label "Team" .
 
 
@@ -1111,12 +1133,10 @@
                  rdfs:label "Withdrawal Event" .
 
 
-###  http://www.opengis.net/ont/geosparql#Geometry
-<http://www.opengis.net/ont/geosparql#Geometry> rdf:type owl:Class .
-
-
 ###  http://xmlns.com/foaf/0.1/Agent
-<http://xmlns.com/foaf/0.1/Agent> rdf:type owl:Class .
+<http://xmlns.com/foaf/0.1/Agent> rdf:type owl:Class ;
+                                  rdfs:comment "An agent (eg. person, group, software or physical artifact)." ;
+                                  rdfs:label "Agent" .
 
 
 #################################################################

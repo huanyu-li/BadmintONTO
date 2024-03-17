@@ -113,6 +113,12 @@
               rdfs:range :AgentRole .
 
 
+###  http://huanyu-li.github.io/ontology/BadmintONTO/hasDraw
+:hasDraw rdf:type owl:ObjectProperty ;
+         rdfs:domain :CompetitionType ;
+         rdfs:range :Draw .
+
+
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/hasHittingArea
 :hasHittingArea rdf:type owl:ObjectProperty ;
                 rdfs:range :HittingArea .
@@ -202,7 +208,7 @@
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/relatesToCompetition
 :relatesToCompetition rdf:type owl:ObjectProperty ;
                       rdfs:domain :CompetitionEvent ;
-                      rdfs:range :Competition .
+                      rdfs:range :CompetitionType .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/shuttleHittingLocation
@@ -340,6 +346,12 @@
            rdfs:range xsd:nonNegativeInteger .
 
 
+###  http://huanyu-li.github.io/ontology/BadmintONTO/shotNumber
+:shotNumber rdf:type owl:DatatypeProperty ;
+            rdfs:domain :RallyInformation ;
+            rdfs:range xsd:nonNegativeInteger .
+
+
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/xCoordinate
 :xCoordinate rdf:type owl:DatatypeProperty .
 
@@ -374,36 +386,35 @@
                              rdf:type owl:Class
                            ] ;
            rdfs:comment "A role that an agent can take in a specific context." ;
-           rdfs:label "AgentRole" .
+           rdfs:label "Agent Role" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/BWFTeamCompetition
 :BWFTeamCompetition rdf:type owl:Class ;
-                    rdfs:subClassOf :Competition ;
-                    rdfs:label "BWFTeamCompetition" .
+                    rdfs:subClassOf :CompetitionType ;
+                    rdfs:comment "Team competitions organized by the Badminton World Federation (BWF)." ;
+                    rdfs:label "BWF Team Competition" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/BWFTournamentCompetition
 :BWFTournamentCompetition rdf:type owl:Class ;
-                          rdfs:subClassOf :Competition ;
-                          rdfs:label "BWFTournamentCompetition" .
+                          rdfs:subClassOf :CompetitionType ;
+                          rdfs:comment "Tournamen competitions organized by BWF." ;
+                          rdfs:label "BWF Tournament Competition" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/ChallengeEvent
 :ChallengeEvent rdf:type owl:Class ;
                 rdfs:subClassOf :Event ;
-                rdfs:label "ChallengeEvent" .
+                rdfs:comment "A challenge event called by a player to challenge a judgement." ;
+                rdfs:label "Challenge Event" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/ChangeCourtEvent
 :ChangeCourtEvent rdf:type owl:Class ;
                   rdfs:subClassOf :Event ;
-                  rdfs:label "ChangeCourtEvent" .
-
-
-###  http://huanyu-li.github.io/ontology/BadmintONTO/Competition
-:Competition rdf:type owl:Class ;
-             rdfs:label "Competition" .
+                  rdfs:comment "A change-court event can happen between sets, or after one player or one pair firstly wins 11 points." ;
+                  rdfs:label "Change-Court Event" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/CompetitionEvent
@@ -413,18 +424,32 @@
                                     owl:onProperty :hasSubEvent ;
                                     owl:someValuesFrom :MatchEvent
                                   ] ;
-                  rdfs:label "CompetitionEvent" .
+                  rdfs:comment "A competition event takes place in period of time, composing different draws and matches." ;
+                  rdfs:label "Competition Event" .
+
+
+###  http://huanyu-li.github.io/ontology/BadmintONTO/CompetitionType
+:CompetitionType rdf:type owl:Class ;
+                 rdfs:comment "Different Competition Types in badminton." ;
+                 rdfs:label "Competition Type" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/CourtArea
 :CourtArea rdf:type owl:Class ;
-           rdfs:label "CourtArea" .
+           rdfs:label "Court Area" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/DoublePlayerRole
 :DoublePlayerRole rdf:type owl:Class ;
                   rdfs:subClassOf :PlayerRole ;
-                  rdfs:label "DoublePlayerRole" .
+                  rdfs:comment "A role that a player takes in a double match." ;
+                  rdfs:label "Double Player Role" .
+
+
+###  http://huanyu-li.github.io/ontology/BadmintONTO/Draw
+:Draw rdf:type owl:Class ;
+      owl:equivalentClass :MatchType ;
+      rdfs:label "Draw" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/Equipment
@@ -477,34 +502,41 @@
                                     owl:onProperty <http://www.w3.org/2006/time#hasTime> ;
                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                     owl:onClass <http://www.w3.org/2006/time#TemporalEntity>
-                                  ] .
+                                  ] ;
+                  rdfs:comment "An information object captures relevant information of an event." ;
+                  rdfs:label "Event Information" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/GameEvent
 :GameEvent rdf:type owl:Class ;
            owl:equivalentClass :SetEvent ;
-           rdfs:subClassOf :Event .
+           rdfs:subClassOf :Event ;
+           rdfs:comment "A set (game) in a match." ;
+           rdfs:label "Game Event" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/GetPointEvent
 :GetPointEvent rdf:type owl:Class ;
                rdfs:subClassOf :Event ;
-               rdfs:label "GetPointEvent" .
+               rdfs:comment "A get-point event is as the last sub-event in a rally event." ;
+               rdfs:label "Get-Point Event" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/HittingArea
 :HittingArea rdf:type owl:Class ;
-             rdfs:label "HittingArea" .
+             rdfs:comment "The hitting area in terms of a player when the player hits a shuttle." ;
+             rdfs:label "Hitting Area" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/HittingStyle
 :HittingStyle rdf:type owl:Class ;
-              rdfs:label "HitttingRoute" .
+              rdfs:comment "A hitting style indicates if a shot is hitted backhand or forehand." ;
+              rdfs:label "Hittting Style" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/InformationObject
 :InformationObject rdf:type owl:Class ;
-                   rdfs:label "InformationObject" ;
+                   rdfs:label "Information Object" ;
                    rdfs:seeAlso "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject" .
 
 
@@ -515,6 +547,7 @@
                             owl:onProperty <http://www.opengis.net/ont/geosparql#asWKT> ;
                             owl:someValuesFrom xsd:string
                           ] ;
+          rdfs:comment "The geometric location." ;
           rdfs:label "Location" .
 
 
@@ -529,7 +562,8 @@
                               owl:onProperty :isDescribedBy ;
                               owl:someValuesFrom :MatchInformation
                             ] ;
-            rdfs:label "MatchEvent" .
+            rdfs:comment "A match event is participated by two single players or two pairs, and contains 3 sets at most." ;
+            rdfs:label "Match Event" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/MatchInformation
@@ -549,6 +583,11 @@
                                                 )
                                   ] ,
                                   [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasMatchType ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass :MatchType
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty :matchScoreA ;
                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                     owl:onDataRange xsd:nonNegativeInteger
@@ -557,41 +596,43 @@
                                     owl:onProperty :matchScoreB ;
                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                     owl:onDataRange xsd:nonNegativeInteger
-                                  ] .
+                                  ] ;
+                  rdfs:comment "An information object captures relevant information of a match." ;
+                  rdfs:label "Match Information" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/MatchType
 :MatchType rdf:type owl:Class ;
-           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                             owl:onProperty :hasMatchType ;
-                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                             owl:onClass :MatchType
-                           ] ;
-           rdfs:label "MatchType" .
+           rdfs:comment "The different match types in badminton (i.e., man single, men double, woman single, women double and mix double)." ;
+           rdfs:label "Match Type" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/MedicalPauseEvent
 :MedicalPauseEvent rdf:type owl:Class ;
                    rdfs:subClassOf :Event ;
-                   rdfs:label "MedicalPauseEvent" .
+                   rdfs:comment "A medical pause event can be asked by a player." ;
+                   rdfs:label "Medical Pause Event" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/Pair
 :Pair rdf:type owl:Class ;
       rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ;
+      rdfs:comment "Pairs in double plays (i.e., men double, women double and mix double)." ;
       rdfs:label "Pair" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/PairPlayersRole
 :PairPlayersRole rdf:type owl:Class ;
                  rdfs:subClassOf :PlayerRole ;
-                 rdfs:label "PairPlayerRole" .
+                 rdfs:comment "A role that a pair of two players takes in a match." ;
+                 rdfs:label "Pair-Player Role" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/PenaltyEvent
 :PenaltyEvent rdf:type owl:Class ;
               rdfs:subClassOf :Event ;
-              rdfs:label "PenaltyEvent" .
+              rdfs:comment "A penalty event can be called by an umpire." ;
+              rdfs:label "Penalty Event" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/Person
@@ -618,7 +659,9 @@
                                      owl:onProperty :playerLocation ;
                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                      owl:onClass :PlayerLocation
-                                   ] .
+                                   ] ;
+                   rdfs:comment "An information object captures relevant information of a player." ;
+                   rdfs:label "Player Information" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/PlayerLocation
@@ -635,14 +678,15 @@
                                                      ) ;
                                   rdf:type owl:Class
                                 ] ;
-                rdfs:label "PlayerLocation" .
+                rdfs:comment "The location of a player." ;
+                rdfs:label "Player Location" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/PlayerRole
 :PlayerRole rdf:type owl:Class ;
             rdfs:subClassOf :AgentRole ;
             rdfs:comment "A role that a player takes in a match." ;
-            rdfs:label "PlayerRole" .
+            rdfs:label "Player Role" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/Racket
@@ -668,7 +712,8 @@
                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                               owl:onClass :GetPointEvent
                             ] ;
-            rdfs:label "RallyEvent" .
+            rdfs:comment "A rally event starts with a serve and ends until one of the two players/pairs wins the point." ;
+            rdfs:label "Rally Event" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/RallyInformation
@@ -706,33 +751,27 @@
                                     owl:onProperty :roundScoreB ;
                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                     owl:onDataRange xsd:nonNegativeInteger
-                                  ] .
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :shotNumber ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:nonNegativeInteger
+                                  ] ;
+                  rdfs:comment "An information object captures relevant information of a rally." ;
+                  rdfs:label "Rally Information" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/RestEvent
 :RestEvent rdf:type owl:Class ;
            rdfs:subClassOf :Event ;
-           rdfs:label "RestEvent" .
-
-
-###  http://huanyu-li.github.io/ontology/BadmintONTO/RoundScores
-:RoundScores rdf:type owl:Class ;
-             rdfs:subClassOf :InformationObject ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty :roundScoreA ;
-                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                               owl:onDataRange xsd:nonNegativeInteger
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty :roundScoreB ;
-                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                               owl:onDataRange xsd:nonNegativeInteger
-                             ] .
+           rdfs:comment "A rest event can happen in between sets and after one of the two players/pairs firstly wins 11 points in a set." ;
+           rdfs:label "Rest Event" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/Serve
 :Serve rdf:type owl:Class ;
        rdfs:subClassOf :ShotType ;
+       rdfs:comment "A serve is always played by a player as a start of a rally." ;
        rdfs:label "Serve" .
 
 
@@ -752,7 +791,8 @@
                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                             owl:onClass :RestEvent
                           ] ;
-          rdfs:label "SetEvent" .
+          rdfs:comment "A set event is with in a match and ends after the one player/pair wins 21 points and wins by 2 points at least." ;
+          rdfs:label "Set Event" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/SetInformation
@@ -780,7 +820,9 @@
                                   owl:onProperty :setScoreB ;
                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                   owl:onDataRange xsd:nonNegativeInteger
-                                ] .
+                                ] ;
+                rdfs:comment "An information object captures relevant information of a set." ;
+                rdfs:label "Set Information" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/ShotInformation
@@ -859,12 +901,15 @@
                                    owl:onProperty :roundScoreB ;
                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                    owl:onDataRange xsd:nonNegativeInteger
-                                 ] .
+                                 ] ;
+                 rdfs:comment "An information object captures relevant information of a shot." ;
+                 rdfs:label "Shot Information" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/ShotType
 :ShotType rdf:type owl:Class ;
-          rdfs:label "ShotType" .
+          rdfs:comment "A shot can be classfied as a server or a specific stroke." ;
+          rdfs:label "Shot Type" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/ShuttleLocation
@@ -881,23 +926,27 @@
                                                       ) ;
                                    rdf:type owl:Class
                                  ] ;
-                 rdfs:label "ShuttleLocation" .
+                 rdfs:comment "The location of a shuttle." ;
+                 rdfs:label "Shuttle Location" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/ShuttleRoute
 :ShuttleRoute rdf:type owl:Class ;
-              rdfs:label "ShuttleRoute" .
+              rdfs:comment "The route of the shuttle after a play hitting a shuttle." ;
+              rdfs:label "Shuttle Route" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/SinglePlayerRole
 :SinglePlayerRole rdf:type owl:Class ;
                   rdfs:subClassOf :PlayerRole ;
-                  rdfs:label "SinglePlayerRole" .
+                  rdfs:comment "A role that a player takes in a single match." ;
+                  rdfs:label "Single Player Role" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/Stroke
 :Stroke rdf:type owl:Class ;
         rdfs:subClassOf :ShotType ;
+        rdfs:comment "A stroke is played a player after serving in a rally." ;
         rdfs:label "Stroke" .
 
 
@@ -913,20 +962,23 @@
                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                owl:onClass :ShotInformation
                              ] ;
-             rdfs:label "StrokeEvent" .
+             rdfs:comment "A stroke event is about a player hitting a shuttle." ;
+             rdfs:label "Stroke Event" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/SudirmanCupCompetition
 :SudirmanCupCompetition rdf:type owl:Class ;
                         rdfs:subClassOf :BWFTeamCompetition ;
-                        rdfs:comment "https://en.wikipedia.org/wiki/Sudirman_Cup" ;
-                        rdfs:label "SudirmanCupCompetition" .
+                        rdfs:comment "Mixed team competition organized by BWF." ,
+                                     "https://en.wikipedia.org/wiki/Sudirman_Cup" ;
+                        rdfs:label "Sudirman Cup Competition" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/SummerOlymipicsCompetition
 :SummerOlymipicsCompetition rdf:type owl:Class ;
-                            rdfs:subClassOf :Competition ;
-                            rdfs:label "SummerOlympicsCompetition" .
+                            rdfs:subClassOf :CompetitionType ;
+                            rdfs:comment "A badminton competition in a summer olympics." ;
+                            rdfs:label "Summer Olympics Competition" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/Team
@@ -938,21 +990,24 @@
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/ThomasCupCompetition
 :ThomasCupCompetition rdf:type owl:Class ;
                       rdfs:subClassOf :BWFTeamCompetition ;
-                      rdfs:comment "https://en.wikipedia.org/wiki/Thomas_Cup" ;
-                      rdfs:label "ThomasCupCompetition" .
+                      rdfs:comment "Men team competition organized by BWF." ,
+                                   "https://en.wikipedia.org/wiki/Thomas_Cup" ;
+                      rdfs:label "Thomas Cup Competition" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/UberCupCompetition
 :UberCupCompetition rdf:type owl:Class ;
                     rdfs:subClassOf :BWFTeamCompetition ;
-                    rdfs:comment "https://en.wikipedia.org/wiki/Uber_Cup" ;
-                    rdfs:label "UberCupCompetition" .
+                    rdfs:comment "Women team competition organized by BWF." ,
+                                 "https://en.wikipedia.org/wiki/Uber_Cup" ;
+                    rdfs:label "Uber Cup Competition" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/WithdrawalEvent
 :WithdrawalEvent rdf:type owl:Class ;
                  rdfs:subClassOf :Event ;
-                 rdfs:label "WithdrawalEvent" .
+                 rdfs:comment "A withdrawal event can be called by a player/pair during/before a match." ;
+                 rdfs:label "Withdrawal Event" .
 
 
 ###  http://www.opengis.net/ont/geosparql#Geometry

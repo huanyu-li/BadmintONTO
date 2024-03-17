@@ -1,0 +1,3212 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.2.0), http://vowl.visualdataweb.org",
+  "namespace" : [ ],
+  "header" : {
+    "languages" : [ "IRI-based", "en", "es", "undefined" ],
+    "title" : {
+      "undefined" : "BadmintON onTOlogy (BadmintONTO)"
+    },
+    "uri" : "http://w3id.org/BadmintONTO/",
+    "version" : "0.1",
+    "author" : [ "Huanyu Li" ],
+    "seeAlso" : [ "https://github.com/huanyu-li/BadmintONTO" ],
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://github.com/huanyu-li/BadmintONTO/blob/main/LICENSE",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2023-03-21",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "badmintonto",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "http://huanyu-li.github.io/ontology/BadmintONTO/0.1/",
+        "type" : "label"
+      } ]
+    }
+  },
+  "metrics" : {
+    "classCount" : 54,
+    "datatypeCount" : 18,
+    "objectPropertyCount" : 31,
+    "datatypePropertyCount" : 18,
+    "propertyCount" : 49,
+    "nodeCount" : 72,
+    "axiomCount" : 683,
+    "individualCount" : 78
+  },
+  "class" : [ {
+    "id" : "class50",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "class34",
+    "type" : "externalclass"
+  }, {
+    "id" : "class49",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "class1",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "class51",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "class15",
+    "type" : "externalclass"
+  }, {
+    "id" : "class19",
+    "type" : "externalclass"
+  }, {
+    "id" : "class42",
+    "type" : "externalclass"
+  }, {
+    "id" : "class46",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "class47",
+    "type" : "externalclass"
+  }, {
+    "id" : "class2",
+    "type" : "externalclass"
+  }, {
+    "id" : "class9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class7",
+    "type" : "externalclass"
+  }, {
+    "id" : "class40",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "class11",
+    "type" : "externalclass"
+  }, {
+    "id" : "class27",
+    "type" : "externalclass"
+  }, {
+    "id" : "class14",
+    "type" : "externalclass"
+  }, {
+    "id" : "class16",
+    "type" : "externalclass"
+  }, {
+    "id" : "class45",
+    "type" : "externalclass"
+  }, {
+    "id" : "class17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class25",
+    "type" : "externalclass"
+  }, {
+    "id" : "class21",
+    "type" : "externalclass"
+  }, {
+    "id" : "class24",
+    "type" : "externalclass"
+  }, {
+    "id" : "class37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class3",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "class30",
+    "type" : "externalclass"
+  }, {
+    "id" : "class54",
+    "type" : "externalclass"
+  }, {
+    "id" : "class29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class35",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "class38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class36",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "class20",
+    "type" : "externalclass"
+  }, {
+    "id" : "class31",
+    "type" : "externalclass"
+  }, {
+    "id" : "class5",
+    "type" : "externalclass"
+  }, {
+    "id" : "class41",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "class44",
+    "type" : "externalclass"
+  }, {
+    "id" : "class6",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "class4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class8",
+    "type" : "externalclass"
+  }, {
+    "id" : "class43",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "class12",
+    "type" : "externalclass"
+  }, {
+    "id" : "class22",
+    "type" : "externalclass"
+  }, {
+    "id" : "class52",
+    "type" : "externalclass"
+  }, {
+    "id" : "class53",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "class23",
+    "type" : "externalclass"
+  }, {
+    "id" : "class33",
+    "type" : "externalclass"
+  }, {
+    "id" : "class10",
+    "type" : "externalclass"
+  }, {
+    "id" : "class48",
+    "type" : "owl:Class"
+  }, {
+    "id" : "thing3",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "thing2",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "thing5",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "thing4",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "thing1",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "class60",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "class63",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "class64",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "class58",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "class59",
+    "type" : "owl:unionOf"
+  } ],
+  "classAttribute" : [ {
+    "id" : "class50",
+    "label" : {
+      "IRI-based" : "SetInformation",
+      "undefined" : "Set Information"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/SetInformation",
+    "comment" : {
+      "undefined" : "An information object captures relevant information of a set."
+    },
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class28" ],
+    "instances" : 0,
+    "union" : [ "class29", "class17" ]
+  }, {
+    "id" : "class34",
+    "label" : {
+      "IRI-based" : "WithdrawalEvent",
+      "undefined" : "Withdrawal Event"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/WithdrawalEvent",
+    "comment" : {
+      "undefined" : "A withdrawal event can be called by a player/pair during/before a match."
+    },
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class40" ],
+    "instances" : 0
+  }, {
+    "id" : "class49",
+    "label" : {
+      "IRI-based" : "MatchInformation",
+      "undefined" : "Match Information"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/MatchInformation",
+    "comment" : {
+      "undefined" : "An information object captures relevant information of a match."
+    },
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class28" ],
+    "instances" : 0,
+    "union" : [ "class29", "class17" ]
+  }, {
+    "id" : "class1",
+    "label" : {
+      "IRI-based" : "PlayerLocation",
+      "undefined" : "Player Location"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/PlayerLocation",
+    "comment" : {
+      "undefined" : "The location of a player."
+    },
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class9" ],
+    "instances" : 0,
+    "intersection" : [ "class48" ]
+  }, {
+    "id" : "class51",
+    "label" : {
+      "IRI-based" : "ShuttleLocation",
+      "undefined" : "Shuttle Location"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/ShuttleLocation",
+    "comment" : {
+      "undefined" : "The location of a shuttle."
+    },
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class9" ],
+    "instances" : 0,
+    "intersection" : [ "class48" ]
+  }, {
+    "id" : "class15",
+    "label" : {
+      "IRI-based" : "PenaltyEvent",
+      "undefined" : "Penalty Event"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/PenaltyEvent",
+    "comment" : {
+      "undefined" : "A penalty event can be called by an umpire."
+    },
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class40" ],
+    "instances" : 0
+  }, {
+    "id" : "class19",
+    "label" : {
+      "IRI-based" : "Stroke",
+      "undefined" : "Stroke"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/Stroke",
+    "comment" : {
+      "undefined" : "A stroke is played a player after serving in a rally."
+    },
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class32" ],
+    "instances" : 19,
+    "individuals" : [ {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/AttackingClearStroke",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/AttackingClearStroke"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Attacking Clear",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/ReturnNetStroke",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/ReturnNetStroke"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Return Net",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/FlickStroke",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/FlickStroke"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Flick",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/DropStroke",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/DropStroke"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Drop",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/NetPlayStroke",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/NetPlayStroke"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Net Play",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/PushStroke",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/PushStroke"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Push",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/DriveStroke",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/DriveStroke"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Drive",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/RushStroke",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/RushStroke"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Rush",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/DefensiveReturnDriveStroke",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/DefensiveReturnDriveStroke"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Defensive Return-Drive",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/DefensiveClearStroke",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/DefensiveClearStroke"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Defensive Clear",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/LiftStroke",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/LiftStroke"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Lift",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/SmashStroke",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/SmashStroke"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Smash",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/CrossCourtNetStroke",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/CrossCourtNetStroke"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Cross-Court Net",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/BackCourtDriveStroke",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/BackCourtDriveStroke"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Back-Court Drive",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/LobStroke",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/LobStroke"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Lob",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/DrivenFlightStroke",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/DrivenFlightStroke"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Driven Flight",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/PassiveDropStroke",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/PassiveDropStroke"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Passive Drop",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/WristSmashStroke",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/WristSmashStroke"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Wrist Smash",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/ClearStroke",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/ClearStroke"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Clear",
+          "type" : "label"
+        } ]
+      }
+    } ]
+  }, {
+    "id" : "class42",
+    "label" : {
+      "IRI-based" : "ChangeCourtEvent",
+      "undefined" : "Change-Court Event"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/ChangeCourtEvent",
+    "comment" : {
+      "undefined" : "A change-court event can happen between sets, or after one player or one pair firstly wins 11 points."
+    },
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class40" ],
+    "instances" : 0
+  }, {
+    "id" : "class46",
+    "label" : {
+      "IRI-based" : "RallyInformation",
+      "undefined" : "Rally Information"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/RallyInformation",
+    "comment" : {
+      "undefined" : "An information object captures relevant information of a rally."
+    },
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class28" ],
+    "instances" : 0,
+    "union" : [ "class29", "class17" ]
+  }, {
+    "id" : "class47",
+    "label" : {
+      "IRI-based" : "ChallengeEvent",
+      "undefined" : "Challenge Event"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/ChallengeEvent",
+    "comment" : {
+      "undefined" : "A challenge event called by a player to challenge a judgement."
+    },
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class40" ],
+    "instances" : 0
+  }, {
+    "id" : "class2",
+    "label" : {
+      "IRI-based" : "MedicalPauseEvent",
+      "undefined" : "Medical Pause Event"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/MedicalPauseEvent",
+    "comment" : {
+      "undefined" : "A medical pause event can be asked by a player."
+    },
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class40" ],
+    "instances" : 0
+  }, {
+    "id" : "class9",
+    "label" : {
+      "IRI-based" : "Location",
+      "undefined" : "Location"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/Location",
+    "comment" : {
+      "undefined" : "The geometric location."
+    },
+    "attributes" : [ "external" ],
+    "subClasses" : [ "class1", "class51" ],
+    "superClasses" : [ "class11" ],
+    "instances" : 0
+  }, {
+    "id" : "class7",
+    "label" : {
+      "IRI-based" : "Person",
+      "undefined" : "Person"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/Person",
+    "comment" : {
+      "undefined" : "A person agent can have some roles."
+    },
+    "attributes" : [ "external" ],
+    "subClasses" : [ "class17" ],
+    "superClasses" : [ "class38" ],
+    "instances" : 0
+  }, {
+    "id" : "class40",
+    "label" : {
+      "IRI-based" : "Event",
+      "undefined" : "Event"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/Event",
+    "comment" : {
+      "undefined" : "Activities that take place within a given context or timeframe."
+    },
+    "attributes" : [ "external" ],
+    "subClasses" : [ "class47", "class42", "class25", "class53", "class22", "class21", "class2", "class15", "class16", "class24", "class6", "class33", "class34" ],
+    "instances" : 0,
+    "intersection" : [ "class28", "class9", "class4" ]
+  }, {
+    "id" : "class11",
+    "label" : {
+      "IRI-based" : "Geometry",
+      "undefined" : "Geometry"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/Geometry",
+    "comment" : {
+      "undefined" : "http://www.opengis.net/ont/geosparql#Geometry"
+    },
+    "attributes" : [ "external" ],
+    "subClasses" : [ "class9" ],
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "A coherent set of direct positions in space. The positions are held within a Spatial Reference System (SRS).",
+        "type" : "label"
+      } ]
+    },
+    "instances" : 0
+  }, {
+    "id" : "class27",
+    "label" : {
+      "IRI-based" : "BWFTournamentCompetition",
+      "undefined" : "BWF Tournament Competition"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/BWFTournamentCompetition",
+    "comment" : {
+      "undefined" : "Tournamen competitions organized by BWF."
+    },
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class14" ],
+    "instances" : 0
+  }, {
+    "id" : "class14",
+    "label" : {
+      "IRI-based" : "CompetitionType",
+      "undefined" : "Competition Type"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/CompetitionType",
+    "comment" : {
+      "undefined" : "Different Competition Types in badminton."
+    },
+    "attributes" : [ "external" ],
+    "subClasses" : [ "class12", "class27", "class31" ],
+    "instances" : 0
+  }, {
+    "id" : "class16",
+    "label" : {
+      "IRI-based" : "RallyEvent",
+      "undefined" : "Rally Event"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/RallyEvent",
+    "comment" : {
+      "undefined" : "A rally event starts with a serve and ends until one of the two players/pairs wins the point."
+    },
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class40" ],
+    "instances" : 0
+  }, {
+    "id" : "class45",
+    "label" : {
+      "IRI-based" : "ThomasCupCompetition",
+      "undefined" : "Thomas Cup Competition"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/ThomasCupCompetition",
+    "comment" : {
+      "undefined" : "https://en.wikipedia.org/wiki/Thomas_Cup"
+    },
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class12" ],
+    "instances" : 0
+  }, {
+    "id" : "class17",
+    "label" : {
+      "IRI-based" : "Player",
+      "undefined" : "Player"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/Player",
+    "comment" : {
+      "undefined" : "A player in badmintion related events."
+    },
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class7" ],
+    "instances" : 0
+  }, {
+    "id" : "class28",
+    "label" : {
+      "IRI-based" : "InformationObject",
+      "undefined" : "Information Object"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/InformationObject",
+    "attributes" : [ "external" ],
+    "subClasses" : [ "class44", "class49", "class26", "class46", "class50", "class41" ],
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject",
+        "type" : "label"
+      } ]
+    },
+    "instances" : 0
+  }, {
+    "id" : "class26",
+    "label" : {
+      "IRI-based" : "PlayerInformation",
+      "undefined" : "Player Information"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/PlayerInformation",
+    "comment" : {
+      "undefined" : "An information object captures relevant information of a player."
+    },
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class28" ],
+    "instances" : 0
+  }, {
+    "id" : "class32",
+    "label" : {
+      "IRI-based" : "ShotType",
+      "undefined" : "Shot Type"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/ShotType",
+    "comment" : {
+      "undefined" : "A shot can be classfied as a server or a specific stroke."
+    },
+    "attributes" : [ "external" ],
+    "subClasses" : [ "class10", "class19" ],
+    "instances" : 0
+  }, {
+    "id" : "class18",
+    "label" : {
+      "IRI-based" : "Team",
+      "undefined" : "Team"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/Team",
+    "comment" : {
+      "undefined" : "A team in a team-baed competition."
+    },
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class38" ],
+    "instances" : 0
+  }, {
+    "id" : "class13",
+    "label" : {
+      "IRI-based" : "HittingArea",
+      "undefined" : "Hitting Area"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/HittingArea",
+    "comment" : {
+      "undefined" : "The hitting area in terms of a player when the player hits a shuttle."
+    },
+    "attributes" : [ "external" ],
+    "instances" : 4,
+    "individuals" : [ {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/SideHandArea",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/SideHandArea"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/RoundHeadArea",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/RoundHeadArea"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/UnderHandArea",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/UnderHandArea"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/OverHandArea",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/OverHandArea"
+      },
+      "annotations" : { }
+    } ]
+  }, {
+    "id" : "class25",
+    "label" : {
+      "IRI-based" : "CompetitionEvent",
+      "undefined" : "Competition Event"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/CompetitionEvent",
+    "comment" : {
+      "undefined" : "A competition event takes place in period of time, composing different draws and matches."
+    },
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class40" ],
+    "instances" : 0
+  }, {
+    "id" : "class21",
+    "label" : {
+      "IRI-based" : "MatchEvent",
+      "undefined" : "Match Event"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/MatchEvent",
+    "comment" : {
+      "undefined" : "A match event is participated by two single players or two pairs, and contains 3 sets at most."
+    },
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class40" ],
+    "instances" : 0
+  }, {
+    "id" : "class24",
+    "label" : {
+      "IRI-based" : "RestEvent",
+      "undefined" : "Rest Event"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/RestEvent",
+    "comment" : {
+      "undefined" : "A rest event can happen in between sets and after one of the two players/pairs firstly wins 11 points in a set."
+    },
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class40" ],
+    "instances" : 0
+  }, {
+    "id" : "class37",
+    "label" : {
+      "IRI-based" : "HittingStyle",
+      "undefined" : "Hittting Style"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/HittingStyle",
+    "comment" : {
+      "undefined" : "A hitting style indicates if a shot is hit backhand or forehand."
+    },
+    "attributes" : [ "external" ],
+    "instances" : 2,
+    "individuals" : [ {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/ForehandHitting",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/ForehandHitting"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Forehand Hitting",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/BackhandHitting",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/BackhandHitting"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Bankhand Hitting",
+          "type" : "label"
+        } ]
+      }
+    } ]
+  }, {
+    "id" : "class3",
+    "label" : {
+      "IRI-based" : "Draw",
+      "undefined" : "Draw"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/Draw",
+    "comment" : {
+      "undefined" : "The different match types in badminton (i.e., man single, men double, woman single, women double and mix double)."
+    },
+    "attributes" : [ "external", "equivalent" ],
+    "instances" : 0,
+    "equivalent" : [ "class36" ]
+  }, {
+    "id" : "class30",
+    "label" : {
+      "IRI-based" : "DoublePlayerRole",
+      "undefined" : "Double Player Role"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/DoublePlayerRole",
+    "comment" : {
+      "undefined" : "A role that a player takes in a double match."
+    },
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class43" ],
+    "instances" : 4,
+    "individuals" : [ {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/double_player_b",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/double_player_b"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Double Player B",
+          "type" : "label"
+        } ],
+        "comment" : [ {
+          "identifier" : "comment",
+          "language" : "undefined",
+          "value" : "Double-player role in Pair A",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/double_player_d",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/double_player_d"
+      },
+      "annotations" : {
+        "comment" : [ {
+          "identifier" : "comment",
+          "language" : "undefined",
+          "value" : "Double-player role in Pair B",
+          "type" : "label"
+        } ],
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Double Player D",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/double_player_c",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/double_player_c"
+      },
+      "annotations" : {
+        "comment" : [ {
+          "identifier" : "comment",
+          "language" : "undefined",
+          "value" : "Double-player role in Pair B",
+          "type" : "label"
+        } ],
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Double Player C",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/double_player_a",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/double_player_a"
+      },
+      "annotations" : {
+        "comment" : [ {
+          "identifier" : "comment",
+          "language" : "undefined",
+          "value" : "Double-player role in Pair A",
+          "type" : "label"
+        } ],
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Double Player A",
+          "type" : "label"
+        } ]
+      }
+    } ]
+  }, {
+    "id" : "class54",
+    "label" : {
+      "IRI-based" : "UberCupCompetition",
+      "undefined" : "Uber Cup Competition"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/UberCupCompetition",
+    "comment" : {
+      "undefined" : "https://en.wikipedia.org/wiki/Uber_Cup"
+    },
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class12" ],
+    "instances" : 0
+  }, {
+    "id" : "class29",
+    "label" : {
+      "IRI-based" : "Pair",
+      "undefined" : "Pair"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/Pair",
+    "comment" : {
+      "undefined" : "Pairs in double plays (i.e., men double, women double and mix double)."
+    },
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class38" ],
+    "instances" : 0
+  }, {
+    "id" : "class39",
+    "label" : {
+      "IRI-based" : "ShuttleRoute",
+      "undefined" : "Shuttle Route"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/ShuttleRoute",
+    "comment" : {
+      "undefined" : "The route of the shuttle after a play hitting a shuttle."
+    },
+    "attributes" : [ "external" ],
+    "instances" : 2,
+    "individuals" : [ {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/StraightRoute",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/StraightRoute"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Stright Route",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/SlashRoute",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/SlashRoute"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Slash Route",
+          "type" : "label"
+        } ]
+      }
+    } ]
+  }, {
+    "id" : "class35",
+    "label" : {
+      "IRI-based" : "AgentRole",
+      "undefined" : "Agent Role"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/AgentRole",
+    "comment" : {
+      "undefined" : "A role that an agent can take in a specific context."
+    },
+    "attributes" : [ "external" ],
+    "subClasses" : [ "class43" ],
+    "instances" : 4,
+    "individuals" : [ {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/ServiceJudge",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/ServiceJudge"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Service Judge",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/Doctor",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/Doctor"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Doctor",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/Umpire",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/Umpire"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Umpire",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/LineJudge",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/LineJudge"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Line Judge",
+          "type" : "label"
+        } ]
+      }
+    } ],
+    "intersection" : [ "class38" ]
+  }, {
+    "id" : "class38",
+    "label" : {
+      "IRI-based" : "Agent",
+      "undefined" : "Agent"
+    },
+    "iri" : "http://xmlns.com/foaf/0.1/Agent",
+    "comment" : {
+      "undefined" : "An agent (eg. person, group, software or physical artifact)."
+    },
+    "attributes" : [ "external" ],
+    "subClasses" : [ "class29", "class7", "class18" ],
+    "instances" : 0
+  }, {
+    "id" : "class36",
+    "label" : {
+      "IRI-based" : "MatchType",
+      "undefined" : "Match Type"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/MatchType",
+    "comment" : {
+      "undefined" : "The different match types in badminton (i.e., man single, men double, woman single, women double and mix double)."
+    },
+    "attributes" : [ "external", "equivalent" ],
+    "instances" : 5,
+    "individuals" : [ {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/ManSingle",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/ManSingle"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/MenDouble",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/MenDouble"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/MixDouble",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/MixDouble"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/WomenDouble",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/WomenDouble"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/WomanSingle",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/WomanSingle"
+      },
+      "annotations" : { }
+    } ],
+    "equivalent" : [ "class3" ]
+  }, {
+    "id" : "class20",
+    "label" : {
+      "IRI-based" : "Equipment",
+      "undefined" : "Equipment"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/Equipment",
+    "comment" : {
+      "undefined" : "Equipments in badmintion domain."
+    },
+    "attributes" : [ "external" ],
+    "subClasses" : [ "class52" ],
+    "instances" : 0
+  }, {
+    "id" : "class31",
+    "label" : {
+      "IRI-based" : "SummerOlymipicsCompetition",
+      "undefined" : "Summer Olympics Competition"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/SummerOlymipicsCompetition",
+    "comment" : {
+      "undefined" : "A badminton competition in a summer olympics."
+    },
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class14" ],
+    "instances" : 0
+  }, {
+    "id" : "class5",
+    "label" : {
+      "IRI-based" : "SudirmanCupCompetition",
+      "undefined" : "Sudirman Cup Competition"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/SudirmanCupCompetition",
+    "comment" : {
+      "undefined" : "Mixed team competition organized by BWF."
+    },
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class12" ],
+    "instances" : 0
+  }, {
+    "id" : "class41",
+    "label" : {
+      "IRI-based" : "ShotInformation",
+      "undefined" : "Shot Information"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/ShotInformation",
+    "comment" : {
+      "undefined" : "An information object captures relevant information of a shot."
+    },
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class28" ],
+    "instances" : 0,
+    "intersection" : [ "class13", "class37", "class32", "class39" ]
+  }, {
+    "id" : "class44",
+    "label" : {
+      "IRI-based" : "EventInformation",
+      "undefined" : "Event Information"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/EventInformation",
+    "comment" : {
+      "undefined" : "An information object captures relevant information of an event."
+    },
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class28" ],
+    "instances" : 0
+  }, {
+    "id" : "class6",
+    "label" : {
+      "IRI-based" : "SetEvent",
+      "undefined" : "Set Event"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/SetEvent",
+    "comment" : {
+      "undefined" : "A set event is with in a match and ends after the one player/pair wins 21 points and wins by 2 points at least."
+    },
+    "attributes" : [ "external", "equivalent" ],
+    "superClasses" : [ "class40" ],
+    "instances" : 0,
+    "equivalent" : [ "class53" ]
+  }, {
+    "id" : "class4",
+    "label" : {
+      "IRI-based" : "TemporalEntity",
+      "en" : "Temporal entity",
+      "es" : "entidad temporal"
+    },
+    "iri" : "http://www.w3.org/2006/time#TemporalEntity",
+    "comment" : {
+      "en" : "A temporal interval or instant.",
+      "es" : "Un intervalo temporal o un instante."
+    },
+    "attributes" : [ "external" ],
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A temporal interval or instant.",
+        "type" : "label"
+      }, {
+        "identifier" : "definition",
+        "language" : "es",
+        "value" : "Un intervalo temporal o un instante.",
+        "type" : "label"
+      } ]
+    },
+    "instances" : 0
+  }, {
+    "id" : "class8",
+    "label" : {
+      "IRI-based" : "SinglePlayerRole",
+      "undefined" : "Single Player Role"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/SinglePlayerRole",
+    "comment" : {
+      "undefined" : "A role that a player takes in a single match."
+    },
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class43" ],
+    "instances" : 2,
+    "individuals" : [ {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/single_player_b",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/single_player_b"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Single Player B",
+          "type" : "label"
+        } ],
+        "comment" : [ {
+          "identifier" : "comment",
+          "language" : "undefined",
+          "value" : "Player role B in single plays",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/single_player_a",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/single_player_a"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Single Player A",
+          "type" : "label"
+        } ],
+        "comment" : [ {
+          "identifier" : "comment",
+          "language" : "undefined",
+          "value" : "Player role A in single plays",
+          "type" : "label"
+        } ]
+      }
+    } ]
+  }, {
+    "id" : "class43",
+    "label" : {
+      "IRI-based" : "PlayerRole",
+      "undefined" : "Player Role"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/PlayerRole",
+    "comment" : {
+      "undefined" : "A role that a player takes in a match."
+    },
+    "attributes" : [ "external" ],
+    "subClasses" : [ "class30", "class23", "class8" ],
+    "superClasses" : [ "class35" ],
+    "instances" : 0,
+    "intersection" : [ "class17" ]
+  }, {
+    "id" : "class12",
+    "label" : {
+      "IRI-based" : "BWFTeamCompetition",
+      "undefined" : "BWF Team Competition"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/BWFTeamCompetition",
+    "comment" : {
+      "undefined" : "Team competitions organized by the Badminton World Federation (BWF)."
+    },
+    "attributes" : [ "external" ],
+    "subClasses" : [ "class5", "class45", "class54" ],
+    "superClasses" : [ "class14" ],
+    "instances" : 0
+  }, {
+    "id" : "class22",
+    "label" : {
+      "IRI-based" : "GetPointEvent",
+      "undefined" : "Get-Point Event"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/GetPointEvent",
+    "comment" : {
+      "undefined" : "A get-point event is as the last sub-event in a rally event."
+    },
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class40" ],
+    "instances" : 0
+  }, {
+    "id" : "class52",
+    "label" : {
+      "IRI-based" : "Racket",
+      "undefined" : "Racket"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/Racket",
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class20" ],
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "Rackets in badminton domain.",
+        "type" : "label"
+      } ]
+    },
+    "instances" : 0
+  }, {
+    "id" : "class53",
+    "label" : {
+      "IRI-based" : "GameEvent",
+      "undefined" : "Game Event"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/GameEvent",
+    "comment" : {
+      "undefined" : "A set (game) in a match."
+    },
+    "attributes" : [ "external", "equivalent" ],
+    "superClasses" : [ "class40" ],
+    "instances" : 0,
+    "equivalent" : [ "class6" ]
+  }, {
+    "id" : "class23",
+    "label" : {
+      "IRI-based" : "PairPlayersRole",
+      "undefined" : "Pair-Player Role"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/PairPlayersRole",
+    "comment" : {
+      "undefined" : "A role that a pair of two players takes in a match."
+    },
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class43" ],
+    "instances" : 2,
+    "individuals" : [ {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/pair_a",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/pair_a"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Pair A",
+          "type" : "label"
+        } ],
+        "comment" : [ {
+          "identifier" : "comment",
+          "language" : "undefined",
+          "value" : "Pair-players role as pair A",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/pair_b",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/pair_b"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Pair B",
+          "type" : "label"
+        } ],
+        "comment" : [ {
+          "identifier" : "comment",
+          "language" : "undefined",
+          "value" : "Pair-players role as pair B",
+          "type" : "label"
+        } ]
+      }
+    } ]
+  }, {
+    "id" : "class33",
+    "label" : {
+      "IRI-based" : "StrokeEvent",
+      "undefined" : "Stroke Event"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/StrokeEvent",
+    "comment" : {
+      "undefined" : "A stroke event is about a player hitting a shuttle."
+    },
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class40" ],
+    "instances" : 0
+  }, {
+    "id" : "class10",
+    "label" : {
+      "IRI-based" : "Serve",
+      "undefined" : "Serve"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/Serve",
+    "comment" : {
+      "undefined" : "A serve is always played by a player as a start of a rally."
+    },
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class32" ],
+    "instances" : 2,
+    "individuals" : [ {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/LongServe",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/LongServe"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Long Serve",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/ShortServe",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/ShortServe"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "Short Serve",
+          "type" : "label"
+        } ]
+      }
+    } ]
+  }, {
+    "id" : "class48",
+    "label" : {
+      "IRI-based" : "CourtArea",
+      "undefined" : "Court Area"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/CourtArea",
+    "comment" : {
+      "undefined" : "A court area indicates a particular area in a court."
+    },
+    "attributes" : [ "external" ],
+    "instances" : 32,
+    "individuals" : [ {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/A_12",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/A_12"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/B_8",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/B_8"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/A_14",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/A_14"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/B_11",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/B_11"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/B_6",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/B_6"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/B_1",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/B_1"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/A_8",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/A_8"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/A_9",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/A_9"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/A_10",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/A_10"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/B_7",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/B_7"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/B_10",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/B_10"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/A_15",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/A_15"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/B_16",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/B_16"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/B_4",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/B_4"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/A_13",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/A_13"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/A_4",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/A_4"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/B_2",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/B_2"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/A_6",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/A_6"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/B_14",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/B_14"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/A_1",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/A_1"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/A_2",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/A_2"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/B_13",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/B_13"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/B_15",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/B_15"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/A_11",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/A_11"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/B_9",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/B_9"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/B_12",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/B_12"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/B_5",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/B_5"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/B_3",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/B_3"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/A_16",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/A_16"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/A_7",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/A_7"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/A_3",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/A_3"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/A_5",
+      "labels" : {
+        "IRI-based" : "http://huanyu-li.github.io/ontology/BadmintONTO/A_5"
+      },
+      "annotations" : { }
+    } ]
+  }, {
+    "id" : "thing3",
+    "label" : {
+      "undefined" : "Thing"
+    },
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "instances" : 0
+  }, {
+    "id" : "thing2",
+    "label" : {
+      "undefined" : "Thing"
+    },
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "instances" : 0
+  }, {
+    "id" : "thing5",
+    "label" : {
+      "undefined" : "Thing"
+    },
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "instances" : 0
+  }, {
+    "id" : "thing4",
+    "label" : {
+      "undefined" : "Thing"
+    },
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "instances" : 0
+  }, {
+    "id" : "thing1",
+    "label" : {
+      "undefined" : "Thing"
+    },
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "instances" : 0
+  }, {
+    "id" : "class60",
+    "label" : {
+      "IRI-based" : "anonymous"
+    },
+    "instances" : 0,
+    "union" : [ "class17", "class18", "class29" ]
+  }, {
+    "id" : "class63",
+    "label" : {
+      "IRI-based" : "anonymous"
+    },
+    "instances" : 0,
+    "union" : [ "class17", "class29" ]
+  }, {
+    "id" : "class64",
+    "label" : {
+      "IRI-based" : "anonymous"
+    },
+    "instances" : 0,
+    "union" : [ "class46", "class41" ]
+  }, {
+    "id" : "class58",
+    "label" : {
+      "IRI-based" : "anonymous"
+    },
+    "instances" : 0,
+    "union" : [ "class1", "class51" ]
+  }, {
+    "id" : "class59",
+    "label" : {
+      "IRI-based" : "anonymous"
+    },
+    "instances" : 0,
+    "union" : [ "class26", "class41" ]
+  } ],
+  "datatype" : [ {
+    "id" : "literal5",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "literal7",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "datatype1",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "datatype3",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "datatype2",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "datatype4",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "datatype10",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "datatype6",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "datatype9",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "datatype13",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "datatype8",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "datatype14",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "datatype11",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "datatype12",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "datatype17",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "datatype18",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "datatype15",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "datatype16",
+    "type" : "rdfs:Datatype"
+  } ],
+  "datatypeAttribute" : [ {
+    "id" : "literal5",
+    "label" : {
+      "IRI-based" : "Literal"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  }, {
+    "id" : "literal7",
+    "label" : {
+      "IRI-based" : "Literal"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  }, {
+    "id" : "datatype1",
+    "label" : {
+      "IRI-based" : "nonNegativeInteger"
+    },
+    "iri" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  }, {
+    "id" : "datatype3",
+    "label" : {
+      "IRI-based" : "nonNegativeInteger"
+    },
+    "iri" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  }, {
+    "id" : "datatype2",
+    "label" : {
+      "IRI-based" : "nonNegativeInteger"
+    },
+    "iri" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  }, {
+    "id" : "datatype4",
+    "label" : {
+      "IRI-based" : "nonNegativeInteger"
+    },
+    "iri" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  }, {
+    "id" : "datatype10",
+    "label" : {
+      "IRI-based" : "string"
+    },
+    "iri" : "http://www.w3.org/2001/XMLSchema#string"
+  }, {
+    "id" : "datatype6",
+    "label" : {
+      "IRI-based" : "nonNegativeInteger"
+    },
+    "iri" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  }, {
+    "id" : "datatype9",
+    "label" : {
+      "IRI-based" : "string"
+    },
+    "iri" : "http://www.w3.org/2001/XMLSchema#string"
+  }, {
+    "id" : "datatype13",
+    "label" : {
+      "IRI-based" : "nonNegativeInteger"
+    },
+    "iri" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  }, {
+    "id" : "datatype8",
+    "label" : {
+      "IRI-based" : "nonNegativeInteger"
+    },
+    "iri" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  }, {
+    "id" : "datatype14",
+    "label" : {
+      "IRI-based" : "string"
+    },
+    "iri" : "http://www.w3.org/2001/XMLSchema#string"
+  }, {
+    "id" : "datatype11",
+    "label" : {
+      "IRI-based" : "string"
+    },
+    "iri" : "http://www.w3.org/2001/XMLSchema#string"
+  }, {
+    "id" : "datatype12",
+    "label" : {
+      "IRI-based" : "nonNegativeInteger"
+    },
+    "iri" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  }, {
+    "id" : "datatype17",
+    "label" : {
+      "IRI-based" : "nonNegativeInteger"
+    },
+    "iri" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  }, {
+    "id" : "datatype18",
+    "label" : {
+      "IRI-based" : "nonNegativeInteger"
+    },
+    "iri" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  }, {
+    "id" : "datatype15",
+    "label" : {
+      "IRI-based" : "wktLiteral"
+    },
+    "iri" : "http://www.opengis.net/ont/geosparql#wktLiteral"
+  }, {
+    "id" : "datatype16",
+    "label" : {
+      "IRI-based" : "double"
+    },
+    "iri" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "property" : [ {
+    "id" : "property54",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property84",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property60",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property58",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property79",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property80",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property2",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property1",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property29",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property4",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property3",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property26",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property69",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property25",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property28",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property27",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property22",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property21",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property24",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property23",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property20",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property81",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property73",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property74",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property85",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property77",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property46",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property88",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property87",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property70",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property65",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property68",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property72",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property40",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property44",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property49",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property37",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property36",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property39",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property38",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property61",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property33",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property32",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property35",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property34",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property31",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property30",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property75",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property55",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property59",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property48",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property42",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property64",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property41",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property67",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property78",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property45",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property53",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property71",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property43",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property66",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property62",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property52",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property63",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property82",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property47",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property56",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property86",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property9",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property6",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property5",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property8",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property51",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property7",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property19",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property18",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property50",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property76",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property83",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property15",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property14",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property57",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property17",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property16",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property11",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property10",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property13",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property12",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "id" : "property54",
+    "label" : {
+      "IRI-based" : "hasLocation"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/hasLocation",
+    "comment" : {
+      "undefined" : "has Location"
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class59",
+    "range" : "class9",
+    "subproperty" : [ "property49", "property42", "property60" ]
+  }, {
+    "id" : "property84",
+    "label" : {
+      "IRI-based" : "personFullName",
+      "undefined" : "person full name"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/personFullName",
+    "comment" : {
+      "undefined" : "The full name of a person."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class7",
+    "range" : "datatype14"
+  }, {
+    "id" : "property60",
+    "label" : {
+      "IRI-based" : "shuttleLandingLocation",
+      "undefined" : "shuttle landing location"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/shuttleLandingLocation",
+    "comment" : {
+      "undefined" : "shuttleLandingLocation represents that a shuttle's landing location is captured by a shot-information object."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class41",
+    "range" : "class51",
+    "superproperty" : [ "property54" ],
+    "cardinality" : 1
+  }, {
+    "id" : "property58",
+    "label" : {
+      "IRI-based" : "hasHittingStyle",
+      "undefined" : "has hitting style"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/hasHittingStyle",
+    "comment" : {
+      "undefined" : "hasHittingStyle represents that if a shuttle is hit backhand or forehand by a player."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class41",
+    "range" : "class37"
+  }, {
+    "id" : "property79",
+    "label" : {
+      "IRI-based" : "rallyLoseReason",
+      "undefined" : "rally lose reason"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/rallyLoseReason",
+    "comment" : {
+      "undefined" : "The lose reason of a rally."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class46",
+    "range" : "datatype9",
+    "cardinality" : 1
+  }, {
+    "id" : "property80",
+    "label" : {
+      "IRI-based" : "rallyWinReason",
+      "undefined" : "rally win reason"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/rallyWinReason",
+    "comment" : {
+      "undefined" : "The win reason of a rally."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class46",
+    "range" : "datatype10",
+    "cardinality" : 1
+  }, {
+    "id" : "property2",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class51",
+    "range" : "class9"
+  }, {
+    "id" : "property1",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class1",
+    "range" : "class9"
+  }, {
+    "id" : "property29",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class43",
+    "range" : "class35"
+  }, {
+    "id" : "property4",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class47",
+    "range" : "class40"
+  }, {
+    "id" : "property3",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class17",
+    "range" : "class7"
+  }, {
+    "id" : "property26",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class41",
+    "range" : "class28"
+  }, {
+    "id" : "property69",
+    "label" : {
+      "IRI-based" : "hasHittingArea",
+      "undefined" : "has hitting area"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/hasHittingArea",
+    "comment" : {
+      "undefined" : "hasHittingArea represents that a shot is hit at a particular area in terms of the player."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class41",
+    "range" : "class13"
+  }, {
+    "id" : "property25",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class50",
+    "range" : "class28"
+  }, {
+    "id" : "property28",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class19",
+    "range" : "class32"
+  }, {
+    "id" : "property27",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class10",
+    "range" : "class32"
+  }, {
+    "id" : "property22",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class49",
+    "range" : "class28"
+  }, {
+    "id" : "property21",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class44",
+    "range" : "class28"
+  }, {
+    "id" : "property24",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class46",
+    "range" : "class28"
+  }, {
+    "id" : "property23",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class26",
+    "range" : "class28"
+  }, {
+    "id" : "property20",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class31",
+    "range" : "class14"
+  }, {
+    "id" : "property81",
+    "label" : {
+      "IRI-based" : "belongToCountry",
+      "undefined" : "belong to country"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/belongToCountry",
+    "comment" : {
+      "undefined" : "ISO (3166) country code"
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class9",
+    "range" : "datatype11"
+  }, {
+    "id" : "property73",
+    "label" : {
+      "IRI-based" : "roundScoreA",
+      "undefined" : "round score A"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/roundScoreA",
+    "comment" : {
+      "undefined" : "The set score of player/pair A."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class64",
+    "range" : "datatype3",
+    "cardinality" : 1
+  }, {
+    "id" : "property74",
+    "label" : {
+      "IRI-based" : "roundScoreB",
+      "undefined" : "round score B"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/roundScoreB",
+    "comment" : {
+      "undefined" : "The round score of player/pair B."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class64",
+    "range" : "datatype4",
+    "cardinality" : 1
+  }, {
+    "id" : "property85",
+    "label" : {
+      "IRI-based" : "asWKT"
+    },
+    "iri" : "http://www.opengis.net/ont/geosparql#asWKT",
+    "comment" : {
+      "undefined" : "The WKT serialization of a Geometry."
+    },
+    "isDefinedBy" : "http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/geometry-as-wkt-literal",
+    "attributes" : [ "external" ],
+    "domain" : "class11",
+    "range" : "datatype15"
+  }, {
+    "id" : "property77",
+    "label" : {
+      "IRI-based" : "xCoordinate"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/xCoordinate",
+    "attributes" : [ "external" ],
+    "domain" : "thing2",
+    "range" : "literal7"
+  }, {
+    "id" : "property46",
+    "label" : {
+      "IRI-based" : "hasMatchType",
+      "undefined" : "has match type"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/hasMatchType",
+    "comment" : {
+      "undefined" : "hasMatchType represents that the match type is captured by a match-information object."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class49",
+    "range" : "class36",
+    "cardinality" : 1
+  }, {
+    "id" : "property88",
+    "label" : {
+      "IRI-based" : "setScoreB",
+      "undefined" : "set score B"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/setScoreB",
+    "comment" : {
+      "undefined" : "The set score of player/pair B."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class50",
+    "range" : "datatype18",
+    "cardinality" : 1
+  }, {
+    "id" : "property87",
+    "label" : {
+      "IRI-based" : "setScoreA",
+      "undefined" : "set score A"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/setScoreA",
+    "comment" : {
+      "undefined" : "The set score of player/pair A."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class50",
+    "range" : "datatype17",
+    "cardinality" : 1
+  }, {
+    "id" : "property70",
+    "label" : {
+      "IRI-based" : "hasRoute",
+      "undefined" : "has route"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/hasRoute",
+    "comment" : {
+      "undefined" : "hasRoute represents that the route of a shuttle after hitting."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class41",
+    "range" : "class39"
+  }, {
+    "id" : "property65",
+    "label" : {
+      "IRI-based" : "hasDraw",
+      "undefined" : "has draw"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/hasDraw",
+    "comment" : {
+      "undefined" : "hasDraw represents that a particular competition can have different draws (e.g., man single, men doubble, woman single, women double and mix double)."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class14",
+    "range" : "class3"
+  }, {
+    "id" : "property68",
+    "label" : {
+      "IRI-based" : "hasAgentRole",
+      "undefined" : "has agent role"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/hasAgentRole",
+    "comment" : {
+      "undefined" : "hasAgentRole represents that an event can have some agents playing specific roles."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class40",
+    "range" : "class35"
+  }, {
+    "id" : "property72",
+    "label" : {
+      "IRI-based" : "currentWorldRanking",
+      "undefined" : "current working ranking"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/currentWorldRanking",
+    "comment" : {
+      "undefined" : "The current world ranking of a player/pair."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class63",
+    "range" : "datatype2"
+  }, {
+    "id" : "property40",
+    "label" : {
+      "IRI-based" : "getSetByPlayer"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/getSetByPlayer",
+    "attributes" : [ "external" ],
+    "domain" : "thing1",
+    "range" : "class17",
+    "superproperty" : [ "property59" ],
+    "cardinality" : 1
+  }, {
+    "id" : "property44",
+    "label" : {
+      "IRI-based" : "hasTime",
+      "en" : "has time",
+      "es" : "tiene tiempo"
+    },
+    "iri" : "http://www.w3.org/2006/time#hasTime",
+    "comment" : {
+      "en" : "Supports the association of a temporal entity (instant or interval) to any thing",
+      "es" : "Proporciona soporte a la asociación de una entidad temporal (instante o intervalo) a cualquier cosa."
+    },
+    "attributes" : [ "external" ],
+    "annotations" : {
+      "editorialNote" : [ {
+        "identifier" : "editorialNote",
+        "language" : "en",
+        "value" : "Feature at risk - added in 2017 revision, and not yet widely used. ",
+        "type" : "label"
+      }, {
+        "identifier" : "editorialNote",
+        "language" : "es",
+        "value" : "Característica arriesgada -añadida en la revisión del 2017 que no ha sido todavía utilizada de forma amplia.",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "es",
+        "value" : "Proporciona soporte a la asociación de una entidad temporal (instante o intervalo) a cualquier cosa.",
+        "type" : "label"
+      }, {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Supports the association of a temporal entity (instant or interval) to any thing",
+        "type" : "label"
+      } ]
+    },
+    "domain" : "thing2",
+    "range" : "thing2",
+    "cardinality" : 1
+  }, {
+    "id" : "property49",
+    "label" : {
+      "IRI-based" : "playerLocation",
+      "undefined" : "player location"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/playerLocation",
+    "comment" : {
+      "undefined" : "playerLocation represents that a player's location is captured by a player-information object."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class26",
+    "range" : "class1",
+    "superproperty" : [ "property54" ],
+    "cardinality" : 1
+  }, {
+    "id" : "property37",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class5",
+    "range" : "class12"
+  }, {
+    "id" : "property36",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class8",
+    "range" : "class43"
+  }, {
+    "id" : "property39",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class54",
+    "range" : "class12"
+  }, {
+    "id" : "property38",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class45",
+    "range" : "class12"
+  }, {
+    "id" : "property61",
+    "label" : {
+      "IRI-based" : "isPerformedBy",
+      "undefined" : "is performed by"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/isPerformedBy",
+    "comment" : {
+      "undefined" : "isPerformedBy represents that an agent role is performed by an agent."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class35",
+    "range" : "class38",
+    "subproperty" : [ "property52" ]
+  }, {
+    "id" : "property33",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class52",
+    "range" : "class20"
+  }, {
+    "id" : "property32",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class18",
+    "range" : "class38"
+  }, {
+    "id" : "property35",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class23",
+    "range" : "class43"
+  }, {
+    "id" : "property34",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class30",
+    "range" : "class43"
+  }, {
+    "id" : "property31",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class7",
+    "range" : "class38"
+  }, {
+    "id" : "property30",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class29",
+    "range" : "class38"
+  }, {
+    "id" : "property75",
+    "label" : {
+      "IRI-based" : "yCoordinate"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/yCoordinate",
+    "attributes" : [ "external" ],
+    "domain" : "thing2",
+    "range" : "literal5"
+  }, {
+    "id" : "property55",
+    "label" : {
+      "IRI-based" : "hittingPlayer",
+      "undefined" : "hitting player"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/hittingPlayer",
+    "comment" : {
+      "undefined" : "hittingPlayer represents that the player who hits a shot is captured by a shot-information object."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class41",
+    "range" : "class17",
+    "superproperty" : [ "property63" ],
+    "cardinality" : 1
+  }, {
+    "id" : "property59",
+    "label" : {
+      "IRI-based" : "winBy"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/winBy",
+    "attributes" : [ "external" ],
+    "domain" : "thing4",
+    "range" : "class60",
+    "subproperty" : [ "property64", "property62", "property66", "property45", "property40", "property50", "property43" ]
+  }, {
+    "id" : "property48",
+    "label" : {
+      "IRI-based" : "atCourtArea",
+      "undefined" : "at court area"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/atCourtArea",
+    "comment" : {
+      "undefined" : "atCourtArea is to represent the location of a player/shuttle at a specific court area."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class58",
+    "range" : "class48"
+  }, {
+    "id" : "property42",
+    "label" : {
+      "IRI-based" : "shuttleHitLocation",
+      "undefined" : "shuttle hit location"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/shuttleHitLocation",
+    "comment" : {
+      "undefined" : "shuttleHitLocation represents that a shuttle's hit location is captured by a shot-information object."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class41",
+    "range" : "class51",
+    "superproperty" : [ "property54" ],
+    "cardinality" : 1
+  }, {
+    "id" : "property64",
+    "label" : {
+      "IRI-based" : "getPointByPair"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/getPointByPair",
+    "attributes" : [ "external" ],
+    "domain" : "thing3",
+    "range" : "class29",
+    "superproperty" : [ "property59" ],
+    "cardinality" : 1
+  }, {
+    "id" : "property41",
+    "label" : {
+      "IRI-based" : "hasShotType",
+      "undefined" : "has shot type"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/hasShotType",
+    "comment" : {
+      "undefined" : "hasShotType represents that the shot type is captured by a shot-information object."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class41",
+    "range" : "class32"
+  }, {
+    "id" : "property67",
+    "label" : {
+      "IRI-based" : "hasSubEvent",
+      "undefined" : "has sub-event"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/hasSubEvent",
+    "comment" : {
+      "undefined" : "hasSubEvent represents that an event can have another event as a sub-event."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class40",
+    "range" : "class40",
+    "cardinality" : 1,
+    "minCardinality" : 1
+  }, {
+    "id" : "property78",
+    "label" : {
+      "IRI-based" : "highestWorldRanking",
+      "undefined" : "highest world ranking"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/highestWorldRanking",
+    "comment" : {
+      "undefined" : "The highest world ranking of a player/pair."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class63",
+    "range" : "datatype8"
+  }, {
+    "id" : "property45",
+    "label" : {
+      "IRI-based" : "getSetByPair"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/getSetByPair",
+    "attributes" : [ "external" ],
+    "domain" : "thing3",
+    "range" : "class29",
+    "superproperty" : [ "property59" ],
+    "cardinality" : 1
+  }, {
+    "id" : "property53",
+    "label" : {
+      "IRI-based" : "relatesToCompetition",
+      "undefined" : "relates to competition"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/relatesToCompetition",
+    "comment" : {
+      "undefined" : "relatesToCompetition represents the type of competition for a competition event."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class25",
+    "range" : "class14"
+  }, {
+    "id" : "property71",
+    "label" : {
+      "IRI-based" : "shotNumber",
+      "undefined" : "shot number"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/shotNumber",
+    "comment" : {
+      "undefined" : "The number of shots in a rally."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class46",
+    "range" : "datatype1",
+    "cardinality" : 1
+  }, {
+    "id" : "property43",
+    "label" : {
+      "IRI-based" : "winMatchByPlayer"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/winMatchByPlayer",
+    "attributes" : [ "external" ],
+    "domain" : "thing1",
+    "range" : "class17",
+    "superproperty" : [ "property59" ],
+    "cardinality" : 1
+  }, {
+    "id" : "property66",
+    "label" : {
+      "IRI-based" : "getPointByTeam"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/getPointByTeam",
+    "attributes" : [ "external" ],
+    "domain" : "thing5",
+    "range" : "class18",
+    "superproperty" : [ "property59" ]
+  }, {
+    "id" : "property62",
+    "label" : {
+      "IRI-based" : "getPointByPlayer"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/getPointByPlayer",
+    "attributes" : [ "external" ],
+    "domain" : "thing1",
+    "range" : "class17",
+    "superproperty" : [ "property59" ],
+    "cardinality" : 1
+  }, {
+    "id" : "property52",
+    "label" : {
+      "IRI-based" : "playedBy"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/playedBy",
+    "comment" : {
+      "undefined" : "playedBy represents that a player role is performed by a player."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class43",
+    "range" : "class17",
+    "superproperty" : [ "property61" ]
+  }, {
+    "id" : "property63",
+    "label" : {
+      "IRI-based" : "hasPlayer",
+      "undefined" : "has player"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/hasPlayer",
+    "comment" : {
+      "undefined" : "hasPlayer represents that some entities can associate with players."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class41",
+    "range" : "class17",
+    "subproperty" : [ "property55", "property56" ],
+    "cardinality" : 1
+  }, {
+    "id" : "property82",
+    "label" : {
+      "IRI-based" : "playerAge",
+      "undefined" : "player age"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/playerAge",
+    "comment" : {
+      "undefined" : "The age of a player."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class17",
+    "range" : "datatype12"
+  }, {
+    "id" : "property47",
+    "label" : {
+      "IRI-based" : "isDescribedBy",
+      "undefined" : "is described by"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/isDescribedBy",
+    "comment" : {
+      "undefined" : "isDescribedBy represents that an event can be described an information object that captures relevant information."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class40",
+    "range" : "class28",
+    "cardinality" : 1
+  }, {
+    "id" : "property56",
+    "label" : {
+      "IRI-based" : "receivingPlayer",
+      "undefined" : "receiving player"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/receivingPlayer",
+    "comment" : {
+      "undefined" : "receivingPlayer represents that the player who will receive a shot is captured by a shot-information object."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class41",
+    "range" : "class17",
+    "superproperty" : [ "property63" ],
+    "cardinality" : 1
+  }, {
+    "id" : "property86",
+    "label" : {
+      "IRI-based" : "playerHeight",
+      "undefined" : "player height"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/playerHeight",
+    "comment" : {
+      "undefined" : "The height of a player."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class17",
+    "range" : "datatype16"
+  }, {
+    "id" : "property9",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class21",
+    "range" : "class40"
+  }, {
+    "id" : "property6",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class25",
+    "range" : "class40"
+  }, {
+    "id" : "property5",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class42",
+    "range" : "class40"
+  }, {
+    "id" : "property8",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class22",
+    "range" : "class40"
+  }, {
+    "id" : "property51",
+    "label" : {
+      "IRI-based" : "occursAtLocation",
+      "undefined" : "occurs at location"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/occursAtLocation",
+    "comment" : {
+      "undefined" : "occursAtLocation represents that an event takes place at a location."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class40",
+    "range" : "class9"
+  }, {
+    "id" : "property7",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class53",
+    "range" : "class40"
+  }, {
+    "id" : "property19",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class27",
+    "range" : "class14"
+  }, {
+    "id" : "property18",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class12",
+    "range" : "class14"
+  }, {
+    "id" : "property50",
+    "label" : {
+      "IRI-based" : "winMatchByPair"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/winMatchByPair",
+    "attributes" : [ "external" ],
+    "domain" : "thing3",
+    "range" : "class29",
+    "superproperty" : [ "property59" ],
+    "cardinality" : 1
+  }, {
+    "id" : "property76",
+    "label" : {
+      "IRI-based" : "matchScoreB",
+      "undefined" : "match score B"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/matchScoreB",
+    "comment" : {
+      "undefined" : "The match score of player/pair B."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class49",
+    "range" : "datatype6",
+    "cardinality" : 1
+  }, {
+    "id" : "property83",
+    "label" : {
+      "IRI-based" : "matchScoreA",
+      "undefined" : "match score A"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/matchScoreA",
+    "comment" : {
+      "undefined" : "The match score of player/pair A."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class49",
+    "range" : "datatype13",
+    "cardinality" : 1
+  }, {
+    "id" : "property15",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class33",
+    "range" : "class40"
+  }, {
+    "id" : "property14",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class6",
+    "range" : "class40"
+  }, {
+    "id" : "property57",
+    "label" : {
+      "IRI-based" : "occursAtTime",
+      "undefined" : "occurs at time"
+    },
+    "iri" : "http://huanyu-li.github.io/ontology/BadmintONTO/occursAtTime",
+    "comment" : {
+      "undefined" : "occursAtTime represents that an event takes place at a time."
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class40",
+    "range" : "class4"
+  }, {
+    "id" : "property17",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class9",
+    "range" : "class11"
+  }, {
+    "id" : "property16",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class34",
+    "range" : "class40"
+  }, {
+    "id" : "property11",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class15",
+    "range" : "class40"
+  }, {
+    "id" : "property10",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class2",
+    "range" : "class40"
+  }, {
+    "id" : "property13",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class24",
+    "range" : "class40"
+  }, {
+    "id" : "property12",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class16",
+    "range" : "class40"
+  } ]
+}

@@ -74,7 +74,9 @@
                                          :ShuttleLocation
                                        )
                          ] ;
-             rdfs:range :CourtArea .
+             rdfs:range :CourtArea ;
+             rdfs:comment "atCourtArea is to represent the location of a player/shuttle at a specific court area." ;
+             rdfs:label "at court area" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/getPointByPair
@@ -110,115 +112,173 @@
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/hasAgentRole
 :hasAgentRole rdf:type owl:ObjectProperty ;
               rdfs:domain :Event ;
-              rdfs:range :AgentRole .
+              rdfs:range :AgentRole ;
+              rdfs:comment "hasAgentRole represents that an event can have some agents playing specific roles." ;
+              rdfs:label "has agent role" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/hasDraw
 :hasDraw rdf:type owl:ObjectProperty ;
          rdfs:domain :CompetitionType ;
-         rdfs:range :Draw .
+         rdfs:range :Draw ;
+         rdfs:comment "hasDraw represents that a particular competition can have different draws (e.g., man single, men doubble, woman single, women double and mix double)." ;
+         rdfs:label "has draw" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/hasHittingArea
 :hasHittingArea rdf:type owl:ObjectProperty ;
-                rdfs:range :HittingArea .
-
-
-###  http://huanyu-li.github.io/ontology/BadmintONTO/hasHittingRoute
-:hasHittingRoute rdf:type owl:ObjectProperty ;
-                 rdfs:range :ShuttleRoute .
+                rdfs:domain :ShotInformation ;
+                rdfs:range :HittingArea ;
+                rdfs:comment "hasHittingArea represents that a shot is hit at a particular area in terms of the player." ;
+                rdfs:label "has hitting area" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/hasHittingStyle
 :hasHittingStyle rdf:type owl:ObjectProperty ;
-                 rdfs:range :HittingStyle .
+                 rdfs:domain :ShotInformation ;
+                 rdfs:range :HittingStyle ;
+                 rdfs:comment "hasHittingStyle represents that if a shuttle is hit backhand or forehand by a player." ;
+                 rdfs:label "has hitting style" .
 
 
-###  http://huanyu-li.github.io/ontology/BadmintONTO/hasInformationObject
-:hasInformationObject rdf:type owl:ObjectProperty ;
-                      rdfs:range :InformationObject .
+###  http://huanyu-li.github.io/ontology/BadmintONTO/hasLocation
+:hasLocation rdf:type owl:ObjectProperty ;
+             rdfs:range :Location ;
+             rdfs:comment "has Location" ,
+                          "hasLocation represents that some entities can associate with locations." .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/hasMatchType
 :hasMatchType rdf:type owl:ObjectProperty ;
               rdfs:domain :MatchInformation ;
-              rdfs:range :MatchType .
+              rdfs:range :MatchType ;
+              rdfs:comment "hasMatchType represents that the match type is captured by a match-information object." ;
+              rdfs:label "has match type" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/hasPlayer
 :hasPlayer rdf:type owl:ObjectProperty ;
-           rdfs:range :Player .
+           rdfs:range :Player ;
+           rdfs:comment "hasPlayer represents that some entities can associate with players." ;
+           rdfs:label "has player" .
+
+
+###  http://huanyu-li.github.io/ontology/BadmintONTO/hasRoute
+:hasRoute rdf:type owl:ObjectProperty ;
+          rdfs:domain :ShotInformation ;
+          rdfs:range :ShuttleRoute ;
+          rdfs:comment "hasRoute represents that the route of a shuttle after hitting." ;
+          rdfs:label "has route" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/hasShotType
 :hasShotType rdf:type owl:ObjectProperty ;
              rdfs:domain :ShotInformation ;
-             rdfs:range :ShotType .
+             rdfs:range :ShotType ;
+             rdfs:comment "hasShotType represents that the shot type is captured by a shot-information object." ;
+             rdfs:label "has shot type" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/hasSubEvent
 :hasSubEvent rdf:type owl:ObjectProperty ;
              rdfs:domain :Event ;
-             rdfs:range :Event .
+             rdfs:range :Event ;
+             rdfs:comment "hasSubEvent represents that an event can have another event as a sub-event." ;
+             rdfs:label "has sub-event" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/hittingPlayer
 :hittingPlayer rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf :hasPlayer .
+               rdfs:subPropertyOf :hasPlayer ;
+               rdfs:domain :ShotInformation ;
+               rdfs:range :Player ;
+               rdfs:comment "hittingPlayer represents that the player who hits a shot is captured by a shot-information object." ;
+               rdfs:label "hitting player" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/isDescribedBy
 :isDescribedBy rdf:type owl:ObjectProperty ;
                rdfs:domain :Event ;
-               rdfs:range :InformationObject .
+               rdfs:range :InformationObject ;
+               rdfs:comment "isDescribedBy represents that an event can be described an information object that captures relevant information." ;
+               rdfs:label "is described by" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/isPerformedBy
 :isPerformedBy rdf:type owl:ObjectProperty ;
                rdfs:domain :AgentRole ;
-               rdfs:range <http://xmlns.com/foaf/0.1/Agent> .
+               rdfs:range <http://xmlns.com/foaf/0.1/Agent> ;
+               rdfs:comment "isPerformedBy represents that an agent role is performed by an agent." ;
+               rdfs:label "is performed by" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/occursAtLocation
 :occursAtLocation rdf:type owl:ObjectProperty ;
-                  rdfs:range :Location .
+                  rdfs:domain :Event ;
+                  rdfs:range :Location ;
+                  rdfs:comment "occursAtLocation represents that an event takes place at a location." ;
+                  rdfs:label "occurs at location" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/occursAtTime
 :occursAtTime rdf:type owl:ObjectProperty ;
               rdfs:domain :Event ;
-              rdfs:range <http://www.w3.org/2006/time#TemporalEntity> .
+              rdfs:range <http://www.w3.org/2006/time#TemporalEntity> ;
+              rdfs:comment "occursAtTime represents that an event takes place at a time." ;
+              rdfs:label "occurs at time" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/playedBy
 :playedBy rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf :isPerformedBy .
+          rdfs:subPropertyOf :isPerformedBy ;
+          rdfs:domain :PlayerRole ;
+          rdfs:range :Player ;
+          rdfs:comment "played By" ,
+                       "playedBy represents that a player role is performed by a player." .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/playerLocation
 :playerLocation rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf :occursAtLocation .
+                rdfs:subPropertyOf :hasLocation ;
+                rdfs:domain :PlayerInformation ;
+                rdfs:range :PlayerLocation ;
+                rdfs:comment "playerLocation represents that a player's location is captured by a player-information object." ;
+                rdfs:label "player location" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/receivingPlayer
 :receivingPlayer rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf :hasPlayer .
+                 rdfs:subPropertyOf :hasPlayer ;
+                 rdfs:domain :ShotInformation ;
+                 rdfs:range :Player ;
+                 rdfs:comment "receivingPlayer represents that the player who will receive a shot is captured by a shot-information object." ;
+                 rdfs:label "receiving player" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/relatesToCompetition
 :relatesToCompetition rdf:type owl:ObjectProperty ;
                       rdfs:domain :CompetitionEvent ;
-                      rdfs:range :CompetitionType .
+                      rdfs:range :CompetitionType ;
+                      rdfs:comment "relatesToCompetition represents the type of competition for a competition event." ;
+                      rdfs:label "relates to competition" .
 
 
-###  http://huanyu-li.github.io/ontology/BadmintONTO/shuttleHittingLocation
-:shuttleHittingLocation rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf :occursAtLocation .
+###  http://huanyu-li.github.io/ontology/BadmintONTO/shuttleHitLocation
+:shuttleHitLocation rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :hasLocation ;
+                    rdfs:domain :ShotInformation ;
+                    rdfs:range :ShuttleLocation ;
+                    rdfs:comment "shuttleHitLocation represents that a shuttle's hit location is captured by a shot-information object." ;
+                    rdfs:label "shuttle hit location" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/shuttleLandingLocation
 :shuttleLandingLocation rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf :occursAtLocation .
+                        rdfs:subPropertyOf :hasLocation ;
+                        rdfs:domain :ShotInformation ;
+                        rdfs:range :Location ;
+                        rdfs:comment "shuttleLandingLocation represents that a shuttle's landing location is captured by a shot-information object." ;
+                        rdfs:label "shuttle landing location" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/winBy
@@ -249,6 +309,7 @@
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/belongToCountry
 :belongToCountry rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Location ;
                  rdfs:comment "ISO (3166) country code" .
 
 
@@ -259,7 +320,9 @@
                                                  :Player
                                                )
                                  ] ;
-                     rdfs:range xsd:nonNegativeInteger .
+                     rdfs:range xsd:nonNegativeInteger ;
+                     rdfs:comment "The current world ranking of a player/pair." ;
+                     rdfs:label "current working ranking" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/highestWorldRanking
@@ -269,49 +332,65 @@
                                                  :Player
                                                )
                                  ] ;
-                     rdfs:range xsd:nonNegativeInteger .
+                     rdfs:range xsd:nonNegativeInteger ;
+                     rdfs:comment "The highest world ranking of a player/pair." ;
+                     rdfs:label "highest world ranking" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/matchScoreA
 :matchScoreA rdf:type owl:DatatypeProperty ;
              rdfs:domain :MatchInformation ;
-             rdfs:range xsd:nonNegativeInteger .
+             rdfs:range xsd:nonNegativeInteger ;
+             rdfs:comment "The match score of player/pair A." ;
+             rdfs:label "match score A" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/matchScoreB
 :matchScoreB rdf:type owl:DatatypeProperty ;
              rdfs:domain :MatchInformation ;
-             rdfs:range xsd:nonNegativeInteger .
+             rdfs:range xsd:nonNegativeInteger ;
+             rdfs:comment "The match score of player/pair B." ;
+             rdfs:label "match score B" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/personFullName
 :personFullName rdf:type owl:DatatypeProperty ;
                 rdfs:domain :Person ;
-                rdfs:range xsd:string .
+                rdfs:range xsd:string ;
+                rdfs:comment "The full name of a person." ;
+                rdfs:label "person full name" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/playerAge
 :playerAge rdf:type owl:DatatypeProperty ;
            rdfs:domain :Player ;
-           rdfs:range xsd:nonNegativeInteger .
+           rdfs:range xsd:nonNegativeInteger ;
+           rdfs:comment "The age of a player." ;
+           rdfs:label "player age" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/playerHeight
 :playerHeight rdf:type owl:DatatypeProperty ;
               rdfs:domain :Player ;
-              rdfs:range xsd:double .
+              rdfs:range xsd:double ;
+              rdfs:comment "The height of a player." ;
+              rdfs:label "player height" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/rallyLoseReason
 :rallyLoseReason rdf:type owl:DatatypeProperty ;
                  rdfs:domain :RallyInformation ;
-                 rdfs:range xsd:string .
+                 rdfs:range xsd:string ;
+                 rdfs:comment "The lose reason of a rally." ;
+                 rdfs:label "rally lose reason" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/rallyWinReason
 :rallyWinReason rdf:type owl:DatatypeProperty ;
                 rdfs:domain :RallyInformation ;
-                rdfs:range xsd:string .
+                rdfs:range xsd:string ;
+                rdfs:comment "The win reason of a rally." ;
+                rdfs:label "rally win reason" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/roundScoreA
@@ -321,7 +400,9 @@
                                          :ShotInformation
                                        )
                          ] ;
-             rdfs:range xsd:nonNegativeInteger .
+             rdfs:range xsd:nonNegativeInteger ;
+             rdfs:comment "The set score of player/pair A." ;
+             rdfs:label "round score A" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/roundScoreB
@@ -331,25 +412,33 @@
                                          :ShotInformation
                                        )
                          ] ;
-             rdfs:range xsd:nonNegativeInteger .
+             rdfs:range xsd:nonNegativeInteger ;
+             rdfs:comment "The round score of player/pair B." ;
+             rdfs:label "round score B" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/setScoreA
 :setScoreA rdf:type owl:DatatypeProperty ;
            rdfs:domain :SetInformation ;
-           rdfs:range xsd:nonNegativeInteger .
+           rdfs:range xsd:nonNegativeInteger ;
+           rdfs:comment "The set score of player/pair A." ;
+           rdfs:label "set score A" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/setScoreB
 :setScoreB rdf:type owl:DatatypeProperty ;
            rdfs:domain :SetInformation ;
-           rdfs:range xsd:nonNegativeInteger .
+           rdfs:range xsd:nonNegativeInteger ;
+           rdfs:comment "The set score of player/pair B." ;
+           rdfs:label "set score B" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/shotNumber
 :shotNumber rdf:type owl:DatatypeProperty ;
             rdfs:domain :RallyInformation ;
-            rdfs:range xsd:nonNegativeInteger .
+            rdfs:range xsd:nonNegativeInteger ;
+            rdfs:comment "The number of shots in a rally." ;
+            rdfs:label "shot number" .
 
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/xCoordinate
@@ -436,6 +525,7 @@
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/CourtArea
 :CourtArea rdf:type owl:Class ;
+           rdfs:comment "A court area indicates a particular area in a court." ;
            rdfs:label "Court Area" .
 
 
@@ -530,7 +620,7 @@
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/HittingStyle
 :HittingStyle rdf:type owl:Class ;
-              rdfs:comment "A hitting style indicates if a shot is hitted backhand or forehand." ;
+              rdfs:comment "A hitting style indicates if a shot is hit backhand or forehand." ;
               rdfs:label "Hittting Style" .
 
 
@@ -684,7 +774,18 @@
 
 ###  http://huanyu-li.github.io/ontology/BadmintONTO/PlayerRole
 :PlayerRole rdf:type owl:Class ;
-            rdfs:subClassOf :AgentRole ;
+            rdfs:subClassOf :AgentRole ,
+                            [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :playedBy ;
+                                                     owl:someValuesFrom :Player
+                                                   ]
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :playedBy ;
+                                                     owl:allValuesFrom :Player
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
             rdfs:comment "A role that a player takes in a match." ;
             rdfs:label "Player Role" .
 
@@ -840,23 +941,23 @@
                                    rdf:type owl:Class
                                  ] ,
                                  [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :hasHittingRoute ;
-                                                          owl:someValuesFrom :ShuttleRoute
-                                                        ]
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :hasHittingRoute ;
-                                                          owl:allValuesFrom :ShuttleRoute
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ,
-                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                           owl:onProperty :hasHittingStyle ;
                                                           owl:someValuesFrom :HittingStyle
                                                         ]
                                                         [ rdf:type owl:Restriction ;
                                                           owl:onProperty :hasHittingStyle ;
                                                           owl:allValuesFrom :HittingStyle
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ,
+                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :hasRoute ;
+                                                          owl:someValuesFrom :ShuttleRoute
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :hasRoute ;
+                                                          owl:allValuesFrom :ShuttleRoute
                                                         ]
                                                       ) ;
                                    rdf:type owl:Class
@@ -883,7 +984,7 @@
                                    owl:onClass :Player
                                  ] ,
                                  [ rdf:type owl:Restriction ;
-                                   owl:onProperty :shuttleHittingLocation ;
+                                   owl:onProperty :shuttleHitLocation ;
                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                    owl:onClass :ShuttleLocation
                                  ] ,

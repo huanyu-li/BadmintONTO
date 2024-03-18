@@ -79,6 +79,27 @@
              rdfs:label "at court area" .
 
 
+###  http://w3id.org/BadmintONTO/eliminationPlayer
+:eliminationPlayer rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :hasPlayer ;
+                   rdfs:domain :EliminationInformation ;
+                   rdfs:range [ rdf:type owl:Class ;
+                                owl:unionOf ( :Pair
+                                              :Player
+                                              :Team
+                                            )
+                              ] ;
+                   rdfs:comment "elimination player" ,
+                                "eliminationPlayer represents that a elimination tournament can have some players/pairs/teams." .
+
+
+###  http://w3id.org/BadmintONTO/eliminationStage
+:eliminationStage rdf:type owl:ObjectProperty ;
+                  rdfs:domain :EliminationInformation ;
+                  rdfs:range :EliminationStage ;
+                  rdfs:comment "eliminationStage represents in which stage that an elimination play is." .
+
+
 ###  http://w3id.org/BadmintONTO/getPointByPair
 :getPointByPair rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :winBy ;
@@ -163,9 +184,7 @@
 
 ###  http://w3id.org/BadmintONTO/hasPlayer
 :hasPlayer rdf:type owl:ObjectProperty ;
-           rdfs:domain :ShotInformation ;
-           rdfs:range :Player ;
-           rdfs:comment "hasPlayer represents that some entities can associate with players." ;
+           rdfs:comment "hasPlayer represents that some entities can associate with players/pairs/teams." ;
            rdfs:label "has player" .
 
 
@@ -252,6 +271,24 @@
                 rdfs:label "player location" .
 
 
+###  http://w3id.org/BadmintONTO/qualifiedPlayer
+:qualifiedPlayer rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :hasPlayer ;
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( :EliminationInformation
+                                             :RoundRobinGroupInformation
+                                           )
+                             ] ;
+                 rdfs:range [ rdf:type owl:Class ;
+                              owl:unionOf ( :Pair
+                                            :Player
+                                            :Team
+                                          )
+                            ] ;
+                 rdfs:comment "The players/pairs/teams are qualified in a round-robin group or elimination stage." ;
+                 rdfs:label "qualified player" .
+
+
 ###  http://w3id.org/BadmintONTO/receivingPlayer
 :receivingPlayer rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :hasPlayer ;
@@ -267,6 +304,27 @@
                       rdfs:range :CompetitionType ;
                       rdfs:comment "relatesToCompetition represents the type of competition for a competition event." ;
                       rdfs:label "relates to competition" .
+
+
+###  http://w3id.org/BadmintONTO/roundRobinGroupStage
+:roundRobinGroupStage rdf:type owl:ObjectProperty ;
+                      rdfs:domain :RoundRobinGroupInformation ;
+                      rdfs:range :RoundRobinStage ;
+                      rdfs:comment "roundRobinGroupStage represents in which stage that a round-robin play is." .
+
+
+###  http://w3id.org/BadmintONTO/roundRobinPlayer
+:roundRobinPlayer rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :hasPlayer ;
+                  rdfs:domain :RoundRobinGroupInformation ;
+                  rdfs:range [ rdf:type owl:Class ;
+                               owl:unionOf ( :Pair
+                                             :Player
+                                             :Team
+                                           )
+                             ] ;
+                  rdfs:comment "roundRobinPlayer represents that a group in a round robin tournament can have some players/pairs/teams." ;
+                  rdfs:label "round robin player" .
 
 
 ###  http://w3id.org/BadmintONTO/shuttleHitLocation
@@ -399,6 +457,14 @@
                 rdfs:range xsd:string ;
                 rdfs:comment "The win reason of a rally." ;
                 rdfs:label "rally win reason" .
+
+
+###  http://w3id.org/BadmintONTO/roundRobinGroup
+:roundRobinGroup rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :RoundRobinGroupInformation ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "round-robin group number." ;
+                 rdfs:label "round robin group" .
 
 
 ###  http://w3id.org/BadmintONTO/roundScoreA
@@ -551,6 +617,50 @@
       rdfs:label "Draw" .
 
 
+###  http://w3id.org/BadmintONTO/EliminationEvent
+:EliminationEvent rdf:type owl:Class ;
+                  rdfs:subClassOf :Event ;
+                  rdfs:comment "The event for the elimination stage at a tournament." ;
+                  rdfs:label "Elimination Event" .
+
+
+###  http://w3id.org/BadmintONTO/EliminationInformation
+:EliminationInformation rdf:type owl:Class ;
+                        rdfs:subClassOf :InformationObject ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :eliminationPlayer ;
+                                          owl:someValuesFrom [ rdf:type owl:Class ;
+                                                               owl:unionOf ( :Pair
+                                                                             :Player
+                                                                             :Team
+                                                                           )
+                                                             ]
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :qualifiedPlayer ;
+                                          owl:someValuesFrom [ rdf:type owl:Class ;
+                                                               owl:unionOf ( :Pair
+                                                                             :Player
+                                                                             :Team
+                                                                           )
+                                                             ]
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :eliminationStage ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onClass :EliminationStage
+                                        ] ;
+                        rdfs:comment "An information object captures relevant information of the elimination tournament stage." ;
+                        rdfs:label "Elimination Information" .
+
+
+###  http://w3id.org/BadmintONTO/EliminationStage
+:EliminationStage rdf:type owl:Class ;
+                  rdfs:subClassOf :TournamentStage ;
+                  rdfs:comment "Sudden-death play." ;
+                  rdfs:label "Elimination Stage" .
+
+
 ###  http://w3id.org/BadmintONTO/Equipment
 :Equipment rdf:type owl:Class ;
            rdfs:comment "Equipments in badmintion domain." ;
@@ -659,6 +769,13 @@
           rdfs:label "Location" .
 
 
+###  http://w3id.org/BadmintONTO/MatchDurationDescription
+:MatchDurationDescription rdf:type owl:Class ;
+                          rdfs:subClassOf <http://www.w3.org/2006/time#DurationDescription> ;
+                          rdfs:comment "To describe a match duration." ;
+                          rdfs:label "Match Duration Description" .
+
+
 ###  http://w3id.org/BadmintONTO/MatchEvent
 :MatchEvent rdf:type owl:Class ;
             rdfs:subClassOf :Event ,
@@ -669,6 +786,11 @@
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :isDescribedBy ;
                               owl:someValuesFrom :MatchInformation
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :occursAtTime ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass :MatchTimeEntity
                             ] ;
             rdfs:comment "A match event is participated by two single players or two pairs, and contains 3 sets at most." ;
             rdfs:label "Match Event" .
@@ -707,6 +829,28 @@
                                   ] ;
                   rdfs:comment "An information object captures relevant information of a match." ;
                   rdfs:label "Match Information" .
+
+
+###  http://w3id.org/BadmintONTO/MatchTimeEntity
+:MatchTimeEntity rdf:type owl:Class ;
+                 rdfs:subClassOf <http://www.w3.org/2006/time#TemporalEntity> ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://www.w3.org/2006/time#hasBeginning> ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass <http://www.w3.org/2006/time#Instant>
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://www.w3.org/2006/time#hasDurationDescription> ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass :MatchDurationDescription
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://www.w3.org/2006/time#hasEnd> ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass <http://www.w3.org/2006/time#Instant>
+                                 ] ;
+                 rdfs:comment "Temporal entity for a match." ;
+                 rdfs:label "Match Time Entity" .
 
 
 ###  http://w3id.org/BadmintONTO/MatchType
@@ -890,11 +1034,67 @@
            rdfs:label "Rest Event" .
 
 
+###  http://w3id.org/BadmintONTO/RoundRobinGroupEvent
+:RoundRobinGroupEvent rdf:type owl:Class ;
+                      rdfs:subClassOf :Event ;
+                      rdfs:comment "An event for a round-robin group at a tournament." ;
+                      rdfs:label "Round Robin Group Event" .
+
+
+###  http://w3id.org/BadmintONTO/RoundRobinGroupInformation
+:RoundRobinGroupInformation rdf:type owl:Class ;
+                            rdfs:subClassOf :InformationObject ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :qualifiedPlayer ;
+                                              owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                   owl:unionOf ( :Pair
+                                                                                 :Player
+                                                                                 :Team
+                                                                               )
+                                                                 ]
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :roundRobinPlayer ;
+                                              owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                   owl:unionOf ( :Pair
+                                                                                 :Player
+                                                                                 :Team
+                                                                               )
+                                                                 ]
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :roundRobinGroupStage ;
+                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                              owl:onClass :RoundRobinStage
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :roundRobinGroup ;
+                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                              owl:onDataRange xsd:string
+                                            ] ;
+                            rdfs:comment "An information object captures relevant information of a round-robin group." ;
+                            rdfs:label "Round Robin Information" .
+
+
+###  http://w3id.org/BadmintONTO/RoundRobinStage
+:RoundRobinStage rdf:type owl:Class ;
+                 rdfs:subClassOf :TournamentStage ;
+                 rdfs:label "Round Robin Stage" ,
+                            "round-robin play." .
+
+
 ###  http://w3id.org/BadmintONTO/Serve
 :Serve rdf:type owl:Class ;
        rdfs:subClassOf :ShotType ;
        rdfs:comment "A serve is always played by a player as a start of a rally." ;
        rdfs:label "Serve" .
+
+
+###  http://w3id.org/BadmintONTO/SetDurationDescription
+:SetDurationDescription rdf:type owl:Class ;
+                        rdfs:subClassOf <http://www.w3.org/2006/time#DurationDescription> ;
+                        rdfs:comment "To description a set." ;
+                        rdfs:label "Set Duration Description" .
 
 
 ###  http://w3id.org/BadmintONTO/SetEvent
@@ -912,6 +1112,11 @@
                             owl:onProperty :hasSubEvent ;
                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                             owl:onClass :RestEvent
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :occursAtTime ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :SetTimeEntity
                           ] ;
           rdfs:comment "A set event is with in a match and ends after the one player/pair wins 21 points and wins by 2 points at least." ;
           rdfs:label "Set Event" .
@@ -945,6 +1150,28 @@
                                 ] ;
                 rdfs:comment "An information object captures relevant information of a set." ;
                 rdfs:label "Set Information" .
+
+
+###  http://w3id.org/BadmintONTO/SetTimeEntity
+:SetTimeEntity rdf:type owl:Class ;
+               rdfs:subClassOf <http://www.w3.org/2006/time#TemporalEntity> ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://www.w3.org/2006/time#hasBeginning> ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass <http://www.w3.org/2006/time#Instant>
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://www.w3.org/2006/time#hasDurationDescription> ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :SetDurationDescription
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://www.w3.org/2006/time#hasEnd> ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass <http://www.w3.org/2006/time#Instant>
+                               ] ;
+               rdfs:comment "Temporal entity for a set." ;
+               rdfs:label "Set Time Entity" .
 
 
 ###  http://w3id.org/BadmintONTO/ShotInformation
@@ -1116,6 +1343,12 @@
                       rdfs:comment "Men team competition organized by BWF." ,
                                    "https://en.wikipedia.org/wiki/Thomas_Cup" ;
                       rdfs:label "Thomas Cup Competition" .
+
+
+###  http://w3id.org/BadmintONTO/TournamentStage
+:TournamentStage rdf:type owl:Class ;
+                 rdfs:comment "Round-Robin stage or Elimination stage." ;
+                 rdfs:label "Tournament Stage" .
 
 
 ###  http://w3id.org/BadmintONTO/UberCupCompetition
@@ -1556,6 +1789,19 @@
                  rdfs:label "Double Player D" .
 
 
+###  http://w3id.org/BadmintONTO/eighth-finals
+:eighth-finals rdf:type owl:NamedIndividual ,
+                        :EliminationStage .
+
+
+###  http://w3id.org/BadmintONTO/final
+:final rdf:type owl:NamedIndividual ,
+                :EliminationStage ;
+       owl:sameAs :round-of-2 .
+
+
+###  http://w3id.org/BadmintONTO/round-of-2
+
 ###  http://w3id.org/BadmintONTO/pair_a
 :pair_a rdf:type owl:NamedIndividual ,
                  :PairPlayersRole ;
@@ -1570,6 +1816,81 @@
         rdfs:label "Pair B" .
 
 
+###  http://w3id.org/BadmintONTO/quarterfinals
+:quarterfinals rdf:type owl:NamedIndividual ,
+                        :EliminationStage ;
+               owl:sameAs :round-of-8 .
+
+
+###  http://w3id.org/BadmintONTO/round-of-8
+
+###  http://w3id.org/BadmintONTO/round-of-128
+:round-of-128 rdf:type owl:NamedIndividual ,
+                       :EliminationStage ;
+              owl:sameAs :sixty-fourth-finals .
+
+
+###  http://w3id.org/BadmintONTO/sixty-fourth-finals
+
+###  http://w3id.org/BadmintONTO/round-of-16
+:round-of-16 rdf:type owl:NamedIndividual ,
+                      :EliminationStage ;
+             owl:sameAs :sixteenth-finals .
+
+
+###  http://w3id.org/BadmintONTO/sixteenth-finals
+
+###  http://w3id.org/BadmintONTO/round-of-2
+:round-of-2 rdf:type owl:NamedIndividual ,
+                     :EliminationStage .
+
+
+###  http://w3id.org/BadmintONTO/round-of-4
+:round-of-4 rdf:type owl:NamedIndividual ,
+                     :EliminationStage ;
+            owl:sameAs :semifinals .
+
+
+###  http://w3id.org/BadmintONTO/semifinals
+
+###  http://w3id.org/BadmintONTO/round-of-64
+:round-of-64 rdf:type owl:NamedIndividual ,
+                      :EliminationStage ;
+             owl:sameAs :thirty-second-finals .
+
+
+###  http://w3id.org/BadmintONTO/thirty-second-finals
+
+###  http://w3id.org/BadmintONTO/round-of-8
+:round-of-8 rdf:type owl:NamedIndividual ,
+                     :EliminationStage .
+
+
+###  http://w3id.org/BadmintONTO/rr-round1
+:rr-round1 rdf:type owl:NamedIndividual ,
+                    :RoundRobinStage .
+
+
+###  http://w3id.org/BadmintONTO/rr-round2
+:rr-round2 rdf:type owl:NamedIndividual ,
+                    :RoundRobinStage .
+
+
+###  http://w3id.org/BadmintONTO/rr-round3
+:rr-round3 rdf:type owl:NamedIndividual ,
+                    :RoundRobinStage .
+
+
+###  http://w3id.org/BadmintONTO/rr-round4
+:rr-round4 rdf:type owl:NamedIndividual ,
+                    :RoundRobinStage .
+
+
+###  http://w3id.org/BadmintONTO/semifinals
+:semifinals rdf:type owl:NamedIndividual ,
+                     :EliminationStage .
+
+
 ###  http://w3id.org/BadmintONTO/single_player_a
 :single_player_a rdf:type owl:NamedIndividual ,
                           :SinglePlayerRole ;
@@ -1582,6 +1903,21 @@
                           :SinglePlayerRole ;
                  rdfs:comment "Player role B in single plays" ;
                  rdfs:label "Single Player B" .
+
+
+###  http://w3id.org/BadmintONTO/sixteenth-finals
+:sixteenth-finals rdf:type owl:NamedIndividual ,
+                           :EliminationStage .
+
+
+###  http://w3id.org/BadmintONTO/sixty-fourth-finals
+:sixty-fourth-finals rdf:type owl:NamedIndividual ,
+                              :EliminationStage .
+
+
+###  http://w3id.org/BadmintONTO/thirty-second-finals
+:thirty-second-finals rdf:type owl:NamedIndividual ,
+                               :EliminationStage .
 
 
 ###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi

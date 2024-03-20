@@ -95,6 +95,7 @@
 
 ###  http://w3id.org/BadmintONTO/eliminationStage
 :eliminationStage rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :isInformationAbout ;
                   rdfs:domain :EliminationInformation ;
                   rdfs:range :EliminationStage ;
                   rdfs:comment "eliminationStage represents in which stage that an elimination play is." .
@@ -148,6 +149,7 @@
 
 ###  http://w3id.org/BadmintONTO/hasHittingArea
 :hasHittingArea rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :isInformationAbout ;
                 rdfs:domain :ShotInformation ;
                 rdfs:range :HittingArea ;
                 rdfs:comment "hasHittingArea represents that a shot is hit at a particular area in terms of the player." ;
@@ -156,6 +158,7 @@
 
 ###  http://w3id.org/BadmintONTO/hasHittingStyle
 :hasHittingStyle rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :isInformationAbout ;
                  rdfs:domain :ShotInformation ;
                  rdfs:range :HittingStyle ;
                  rdfs:comment "hasHittingStyle represents that if a shuttle is hit backhand or forehand by a player." ;
@@ -164,6 +167,7 @@
 
 ###  http://w3id.org/BadmintONTO/hasLocation
 :hasLocation rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :isInformationAbout ;
              rdfs:domain [ rdf:type owl:Class ;
                            owl:unionOf ( :PlayerInformation
                                          :ShotInformation
@@ -176,6 +180,7 @@
 
 ###  http://w3id.org/BadmintONTO/hasMatchType
 :hasMatchType rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :isInformationAbout ;
               rdfs:domain :MatchInformation ;
               rdfs:range :MatchType ;
               rdfs:comment "hasMatchType represents that the match type is captured by a match-information object." ;
@@ -184,12 +189,16 @@
 
 ###  http://w3id.org/BadmintONTO/hasPlayer
 :hasPlayer rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :isInformationAbout ;
+           rdfs:domain :PlayerInformation ;
+           rdfs:range :Player ;
            rdfs:comment "hasPlayer represents that some entities can associate with players/pairs/teams." ;
            rdfs:label "has player" .
 
 
 ###  http://w3id.org/BadmintONTO/hasRoute
 :hasRoute rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :isInformationAbout ;
           rdfs:domain :ShotInformation ;
           rdfs:range :ShuttleRoute ;
           rdfs:comment "hasRoute represents that the route of a shuttle after hitting." ;
@@ -198,6 +207,7 @@
 
 ###  http://w3id.org/BadmintONTO/hasShotType
 :hasShotType rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :isInformationAbout ;
              rdfs:domain :ShotInformation ;
              rdfs:range :ShotType ;
              rdfs:comment "hasShotType represents that the shot type is captured by a shot-information object." ;
@@ -227,6 +237,11 @@
                rdfs:range :InformationObject ;
                rdfs:comment "isDescribedBy represents that an event can be described an information object that captures relevant information." ;
                rdfs:label "is described by" .
+
+
+###  http://w3id.org/BadmintONTO/isInformationAbout
+:isInformationAbout rdf:type owl:ObjectProperty ;
+                    rdfs:domain :InformationObject .
 
 
 ###  http://w3id.org/BadmintONTO/isPerformedBy
@@ -308,6 +323,7 @@
 
 ###  http://w3id.org/BadmintONTO/roundRobinGroupStage
 :roundRobinGroupStage rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :isInformationAbout ;
                       rdfs:domain :RoundRobinGroupInformation ;
                       rdfs:range :RoundRobinStage ;
                       rdfs:comment "roundRobinGroupStage represents in which stage that a round-robin play is." .
@@ -347,6 +363,7 @@
 
 ###  http://w3id.org/BadmintONTO/winBy
 :winBy rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf :isInformationAbout ;
        rdfs:range [ rdf:type owl:Class ;
                     owl:unionOf ( :Pair
                                   :Player
@@ -391,6 +408,11 @@
                      rdfs:label "current working ranking" .
 
 
+###  http://w3id.org/BadmintONTO/hasInformationValue
+:hasInformationValue rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :InformationObject .
+
+
 ###  http://w3id.org/BadmintONTO/highestWorldRanking
 :highestWorldRanking rdf:type owl:DatatypeProperty ;
                      rdfs:domain [ rdf:type owl:Class ;
@@ -405,6 +427,7 @@
 
 ###  http://w3id.org/BadmintONTO/matchScoreA
 :matchScoreA rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasInformationValue ;
              rdfs:domain :MatchInformation ;
              rdfs:range xsd:nonNegativeInteger ;
              rdfs:comment "The match score of player/pair A." ;
@@ -413,6 +436,7 @@
 
 ###  http://w3id.org/BadmintONTO/matchScoreB
 :matchScoreB rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasInformationValue ;
              rdfs:domain :MatchInformation ;
              rdfs:range xsd:nonNegativeInteger ;
              rdfs:comment "The match score of player/pair B." ;
@@ -445,6 +469,7 @@
 
 ###  http://w3id.org/BadmintONTO/rallyLoseReason
 :rallyLoseReason rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :hasInformationValue ;
                  rdfs:domain :RallyInformation ;
                  rdfs:range xsd:string ;
                  rdfs:comment "The lose reason of a rally." ;
@@ -453,6 +478,7 @@
 
 ###  http://w3id.org/BadmintONTO/rallyWinReason
 :rallyWinReason rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :hasInformationValue ;
                 rdfs:domain :RallyInformation ;
                 rdfs:range xsd:string ;
                 rdfs:comment "The win reason of a rally." ;
@@ -461,6 +487,7 @@
 
 ###  http://w3id.org/BadmintONTO/roundRobinGroup
 :roundRobinGroup rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :hasInformationValue ;
                  rdfs:domain :RoundRobinGroupInformation ;
                  rdfs:range xsd:string ;
                  rdfs:comment "round-robin group number." ;
@@ -469,6 +496,7 @@
 
 ###  http://w3id.org/BadmintONTO/roundScoreA
 :roundScoreA rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasInformationValue ;
              rdfs:domain [ rdf:type owl:Class ;
                            owl:unionOf ( :RallyInformation
                                          :ShotInformation
@@ -481,6 +509,7 @@
 
 ###  http://w3id.org/BadmintONTO/roundScoreB
 :roundScoreB rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasInformationValue ;
              rdfs:domain [ rdf:type owl:Class ;
                            owl:unionOf ( :RallyInformation
                                          :ShotInformation
@@ -493,6 +522,7 @@
 
 ###  http://w3id.org/BadmintONTO/setScoreA
 :setScoreA rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :hasInformationValue ;
            rdfs:domain :SetInformation ;
            rdfs:range xsd:nonNegativeInteger ;
            rdfs:comment "The set score of player/pair A." ;
@@ -501,6 +531,7 @@
 
 ###  http://w3id.org/BadmintONTO/setScoreB
 :setScoreB rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :hasInformationValue ;
            rdfs:domain :SetInformation ;
            rdfs:range xsd:nonNegativeInteger ;
            rdfs:comment "The set score of player/pair B." ;
@@ -509,18 +540,11 @@
 
 ###  http://w3id.org/BadmintONTO/shotNumber
 :shotNumber rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :hasInformationValue ;
             rdfs:domain :RallyInformation ;
             rdfs:range xsd:nonNegativeInteger ;
             rdfs:comment "The number of shots in a rally." ;
             rdfs:label "shot number" .
-
-
-###  http://w3id.org/BadmintONTO/xCoordinate
-:xCoordinate rdf:type owl:DatatypeProperty .
-
-
-###  http://w3id.org/BadmintONTO/yCoordinate
-:yCoordinate rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.opengis.net/ont/geosparql#asWKT
@@ -670,6 +694,17 @@
 ###  http://w3id.org/BadmintONTO/Event
 :Event rdf:type owl:Class ;
        rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                owl:onProperty :hasAgentRole ;
+                                                owl:someValuesFrom :AgentRole
+                                              ]
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :hasAgentRole ;
+                                                owl:allValuesFrom :AgentRole
+                                              ]
+                                            ) ;
+                         rdf:type owl:Class
+                       ] ,
+                       [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                 owl:onProperty :isDescribedBy ;
                                                 owl:someValuesFrom :InformationObject
                                               ]
@@ -708,12 +743,7 @@
 
 ###  http://w3id.org/BadmintONTO/EventInformation
 :EventInformation rdf:type owl:Class ;
-                  rdfs:subClassOf :InformationObject ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty <http://www.w3.org/2006/time#hasTime> ;
-                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                    owl:onClass <http://www.w3.org/2006/time#TemporalEntity>
-                                  ] ;
+                  rdfs:subClassOf :InformationObject ;
                   rdfs:comment "An information object captures relevant information of an event." ;
                   rdfs:label "Event Information" .
 
@@ -761,9 +791,20 @@
 ###  http://w3id.org/BadmintONTO/Location
 :Location rdf:type owl:Class ;
           rdfs:subClassOf :Geometry ,
+                          [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :atCourtArea ;
+                                                   owl:someValuesFrom :CourtArea
+                                                 ]
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :atCourtArea ;
+                                                   owl:allValuesFrom :CourtArea
+                                                 ]
+                                               ) ;
+                            rdf:type owl:Class
+                          ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty <http://www.opengis.net/ont/geosparql#asWKT> ;
-                            owl:someValuesFrom xsd:string
+                            owl:someValuesFrom <http://www.opengis.net/ont/geosparql#wktLiteral>
                           ] ;
           rdfs:comment "The geometric location." ;
           rdfs:label "Location" .
@@ -920,18 +961,7 @@
 
 ###  http://w3id.org/BadmintONTO/PlayerLocation
 :PlayerLocation rdf:type owl:Class ;
-                rdfs:subClassOf :Location ,
-                                [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                         owl:onProperty :atCourtArea ;
-                                                         owl:someValuesFrom :CourtArea
-                                                       ]
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty :atCourtArea ;
-                                                         owl:allValuesFrom :CourtArea
-                                                       ]
-                                                     ) ;
-                                  rdf:type owl:Class
-                                ] ;
+                rdfs:subClassOf :Location ;
                 rdfs:comment "The location of a player." ;
                 rdfs:label "Player Location" .
 
@@ -1263,18 +1293,7 @@
 
 ###  http://w3id.org/BadmintONTO/ShuttleLocation
 :ShuttleLocation rdf:type owl:Class ;
-                 rdfs:subClassOf :Location ,
-                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :atCourtArea ;
-                                                          owl:someValuesFrom :CourtArea
-                                                        ]
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :atCourtArea ;
-                                                          owl:allValuesFrom :CourtArea
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
+                 rdfs:subClassOf :Location ;
                  rdfs:comment "The location of a shuttle." ;
                  rdfs:label "Shuttle Location" .
 

@@ -16,7 +16,7 @@
                                 <http://purl.org/vocab/vann/preferredNamespacePrefix> "badmintonto" ;
                                 <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/BadmintONTO/0.1/" ;
                                 rdfs:seeAlso "https://github.com/huanyu-li/BadmintONTO" ;
-                                owl:versionInfo "0.1"@en .
+                                owl:versionInfo "0.1" .
 
 #################################################################
 #    Annotation properties

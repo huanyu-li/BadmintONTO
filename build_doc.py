@@ -30,10 +30,10 @@ def add_webvowl_to_html():
                             </strong>
                         </dt>
                         <dd>
-                            <span><a href="BadmintONTO.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL"></a> </span>
-                            <span><a href="BadmintONTO.olw" target="_blank"><img src="https://img.shields.io/badge/Format-OWL-blue.svg" alt="OWL"></a> </span>
-                            <span><a href="BadmintONTO.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML"></a> </span>
-                            <span><a href="BadmintONTO.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD"></a> </span>
+                            <span><a style="text-decoration:none" href="BadmintONTO.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL"></a></span>
+                            <span><a style="text-decoration:none" href="BadmintONTO.owl" target="_blank"><img src="https://img.shields.io/badge/Format-OWL-blue.svg" alt="OWL"></a></span>
+                            <span><a style="text-decoration:none" href="BadmintONTO.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML"></a></span>
+                            <span><a style="text-decoration:none" href="BadmintONTO.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD"></a></span>
 
                         </dd>
                     </div>
@@ -67,6 +67,7 @@ def add_webvowl_to_html():
         tag = soup.find(id='classes')
         tag.insert_before(download_overview)
         html_formatter = formatter.HTMLFormatter(indent=4)
+
         with open(html_path, "w") as f:
             f.write(soup.prettify(formatter=html_formatter))
 

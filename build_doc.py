@@ -2,10 +2,10 @@ from pylode.profiles.vocpub import VocPub
 import os
 from bs4 import BeautifulSoup, formatter
 
-source_ontology_path = './BadmintONTO.ttl'
+source_ontology_path = './ontology/0.1/BadmintONTO.ttl'
 onto_json_path = './BadmintONTO.json'
-html_path = './docs/index.html'
-webvowl_json_path = './docs/webvowl/data/BadmintONTO.json'
+html_path = './docs/0.1/index.html'
+webvowl_json_path = './docs/0.1/webvowl/data/BadmintONTO.json'
 
 def generate_webvowl():
     cmd = "java --add-opens java.base/java.lang=ALL-UNNAMED -jar owl2vowl.jar -file {onto} -output {output}".format(onto=source_ontology_path, output=webvowl_json_path)

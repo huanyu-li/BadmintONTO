@@ -18,6 +18,39 @@ def generate_html():
 def add_webvowl_to_html():
     with open(html_path, encoding="utf-8") as f:
         soup = BeautifulSoup(f, "html.parser")
+
+        download_overview = BeautifulSoup(
+            f"""
+            <div class="section" id="download">
+                <dl>
+                    <div>
+                        <dt>
+                            <strong>
+                                Download Serialization
+                            </strong>
+                        </dt>
+                        <dd>
+                            <span><a href="BadmintONTO.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL"></a> </span>
+                            <span><a href="BadmintONTO.olw" target="_blank"><img src="https://img.shields.io/badge/Format-OWL-blue.svg" alt="OWL"></a> </span>
+                            <span><a href="BadmintONTO.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML"></a> </span>
+                            <span><a href="BadmintONTO.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD"></a> </span>
+
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+            <div class="section" id="overview">
+                    <h2>Overview</h2>
+                    <div class="figure">
+                        <iframe width="100%" height ="800px" src="webvowl/index.html#BadmintONTO"></iframe>
+                        <div class="caption">
+                            <strong>Figure 1:</strong>
+                                Ontology Overview
+                        </div>
+                    </div>
+                    </div>
+            """, "html.parser")
+
         overview = BeautifulSoup(
              f"""
                <div class="section" id="overview">
@@ -32,7 +65,7 @@ def add_webvowl_to_html():
                     </div>
                 """, "html.parser")
         tag = soup.find(id='classes')
-        tag.insert_before(overview)
+        tag.insert_before(download_overview)
         html_formatter = formatter.HTMLFormatter(indent=4)
         with open(html_path, "w") as f:
             f.write(soup.prettify(formatter=html_formatter))

@@ -1,0 +1,7 @@
+Options +FollowSymLinks
+
+# Rewrite engine setup
+RewriteEngine on
+
+# Homepage/repository
+RewriteRule ^/?$ https://badmintonto-372ed9520795.herokuapp.com [R=308,L]

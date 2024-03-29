@@ -47,7 +47,8 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX bo: <http://w3id.org/BadmintONTO/>
 
-SELECT ?shottype (COUNT(?shottype) as ?num) WHERE {
+SELECT ?shottype (COUNT(?shottype) as ?num)
+WHERE {
   ?s a bo:StrokeEvent .
   ?s bo:isDescribedBy ?info .
   ?info bo:hasShotType ?shottype .
@@ -63,7 +64,8 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX bo: <http://w3id.org/BadmintONTO/> 
 
-SELECT ?num_to_point WHERE {
+SELECT ?num_to_point
+WHERE {
   ?s a bo:RallyEvent .
   ?s bo:isDescribedBy ?info .
   ?info bo:getPointByPlayer ?player .   
@@ -75,14 +77,55 @@ Order By (?num_to_point)
 
 CQ5:
 ```
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX bo: <http://w3id.org/BadmintONTO/> 
+
+SELECT ?r ?shottype
+WHERE {
+  ?r a bo:RallyEvent .
+  ?r bo:hasSubEvent ?s .
+  ?r bo:isDescribedBy ?r_info .
+  ?r_info bo:getPointByPlayer <http://example.com/player-25> .   
+  ?s bo:isDescribedBy ?s_info .
+  ?info bo:hasShotType ?shottype .
+  ?info bo:hittingPlayer <http://example.com/player-25> . 
+}
 ```
 
 CQ6:
 ```
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX bo: <http://w3id.org/BadmintONTO/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?player ?name ?num_to_point 
+WHERE {
+  ?s a bo:RallyEvent .
+  ?s bo:isDescribedBy ?info .
+  ?info bo:getPointByPlayer ?player . 
+  ?player bo:personFullName ?name .
+  ?info bo:shotNumber ?num_to_point .
+}
+ORDER BY DESC(xsd:integer(?num_to_point)) LIMIT 1
+
 ```
 
 CQ7:
 ```
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX bo: <http://w3id.org/BadmintONTO/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?player ?num WHERE {
+  ?s a bo:RallyEvent .
+  ?s bo:isDescribedBy ?info .
+  ?info bo:getPointByPlayer ?player .   
+  ?info bo:shotNumber ?num .
+  FILTER (xsd:integer(?num) <= 3)
+}
 ```
 
 

@@ -4,4 +4,4 @@ Options +FollowSymLinks
 RewriteEngine on
 
 # Homepage/repository
-RewriteRule ^/?$ https://badmintonto-372ed9520795.herokuapp.com [R=308,L]
+RewriteRule https://huanyu-li.github.io/BadmintONTO/demo/ https://badmintonto-372ed9520795.herokuapp.com [R=308,L]

@@ -28,6 +28,17 @@ LIMIT 5
 
 CQ2:
 ```
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX bo: <http://w3id.org/BadmintONTO/>
+
+SELECT (COUNT(*) as ?count)
+WHERE {
+  ?m a bo:MatchEvent .
+  ?m bo:isDescribedBy ?info .
+  ?info bo:setNumber ?number .
+  Filter (?number = 3)
+}
 ```
 
 CQ3:

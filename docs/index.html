@@ -9,11 +9,29 @@
 
     <title>BadmintONTO</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS 
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
 
     <!-- Custom styles for this template -->
     <link href="css/cover.css" rel="stylesheet">
+    <style>
+      .table {
+       border-bottom:0px !important;
+      }
+      .table th, .table td {
+          border: 1px !important;
+      }
+      .fixed-table-container {
+          border:0px !important;
+      }
+      thead th{
+       Height: 15px;
+    }
+  </style>
   </head>
 
   <body class="text-center">
@@ -35,26 +53,20 @@
         <p class="lead">An Ontology for the Badminton Domain.</p>
         <p class="lead">
           <!--<a href="#" class="btn btn-lg btn-secondary">Learn more</a>-->
-          <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
-            <table>
+            
+          <div class="cover-container d-flex h-100 p-3 mx-auto flex-row">
+            <table class="table table-borderless">
+              <thead>
                 <tr>
-                    <th>
-                        Version
-                    </th>
-                    <th>
-                        Docs
-                    </th>
-                    <th>
-                        Demo
-                    </th>
-                    <th>
-                      Repository
-                  </th>
-                </tr>
-                <tr>
-                    <td>
-                        0.1
-                    </td>
+                  <th scope="col">Version</th>
+                  <th scope="col">Docs</th>
+                  <th scope="col">Demo</th>
+                  <th scope="col">Repository</th>
+              </tr>
+              </thead>
+                <tbody>
+                  <tr>
+                    <td>0.1</td>
                     <td>
                         <a href="https://huanyu-li.github.io/BadmintONTO/0.1/index.html">HTML</a>
                     </td>
@@ -65,6 +77,8 @@
                       <a href="https://github.com/huanyu-li/BadmintONTO">GitHub</a>
                   </td>
                 </tr>
+                </tbody>
+                
             </table>
 
 

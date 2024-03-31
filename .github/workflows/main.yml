@@ -3,7 +3,7 @@ run-name: Publish ontologies
 on:
   push:
     branches:
-      - main
+      - develop
 permissions:
   contents: write
 jobs:
@@ -21,13 +21,13 @@ jobs:
       - name: get and commit files
         run: |
           git checkout main
-          git checkout main -- ./ontology
+          git checkout develop -- ./ontology
           pip install -r requirements.txt
           python copy_ontology.py
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -f docs/
-          git commit -m "publish main ontologies" -a
+          git commit -m "publish develop ontologies" -a
           
       - name: push changes
         uses: ad-m/github-push-action@master

@@ -28,16 +28,16 @@ $ git@github.com:huanyu-li/BadmintONTO.git
 $ git checkout develop
 $ git pull
 ```
-3. Create a new branch (e.g., `update-badmintonto-to-version-1.0`)
+3. Create a new branch (e.g., `update-badmintonto-to-version-0.1`)
 ```bash
-$ git checkout -b update-badmintonto-to-version-1.0
+$ git checkout -b update-badmintonto-to-version-0.1
 ```
 
 4. Add, commit and push:
 ```bash
-$ git add ontolgies/BadmintONTO.ttl
-$ git commit -m "update badmintonto to version 1.0"
-$ git push origin update-badmintonto-to-version-1.0
+$ git add ontology/0.1/BadmintONTO.ttl
+$ git commit -m "update badmintonto to version 0.1"
+$ git push origin update-badmintonto-to-version-0.1
 ```
 
 5. At the GitHub page, create a pull request from your branch to `develop`.

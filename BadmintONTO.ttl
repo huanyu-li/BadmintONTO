@@ -9,8 +9,11 @@
 <http://w3id.org/BadmintONTO/> rdf:type owl:Ontology ;
                                 owl:versionIRI <http://w3id.org/BadmintONTO/0.1/> ;
                                 owl:imports <http://www.w3.org/2006/time#2016> ;
+                                <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-9084-0470> ,
+                                                                       <https://orcid.org/0000-0003-1881-3969> ;
                                 <http://purl.org/dc/terms/created> "2023-03-21" ;
                                 <http://purl.org/dc/terms/creator> "Huanyu Li" ;
+                                <http://purl.org/dc/terms/description> "An ontology for the badminton domain." ;
                                 <http://purl.org/dc/terms/license> "https://github.com/huanyu-li/BadmintONTO/blob/main/LICENSE" ;
                                 <http://purl.org/dc/terms/title> "BadmintON onTOlogy (BadmintONTO)" ;
                                 <http://purl.org/vocab/vann/preferredNamespacePrefix> "badmintonto" ;

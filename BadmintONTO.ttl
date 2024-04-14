@@ -69,11 +69,7 @@
 
 ###  http://w3id.org/BadmintONTO/atCourtArea
 :atCourtArea rdf:type owl:ObjectProperty ;
-             rdfs:domain [ rdf:type owl:Class ;
-                           owl:unionOf ( :PlayerLocation
-                                         :ShuttleLocation
-                                       )
-                         ] ;
+             rdfs:domain :Location ;
              rdfs:range :CourtArea ;
              rdfs:comment "atCourtArea is to represent the location of a player/shuttle at a specific court area." ;
              rdfs:label "at court area" .
@@ -81,7 +77,7 @@
 
 ###  http://w3id.org/BadmintONTO/eliminationPlayer
 :eliminationPlayer rdf:type owl:ObjectProperty ;
-                   rdfs:subPropertyOf :hasPlayer ;
+                   rdfs:subPropertyOf :isInformationAbout ;
                    rdfs:domain :EliminationInformation ;
                    rdfs:range [ rdf:type owl:Class ;
                                 owl:unionOf ( :Pair
@@ -139,14 +135,6 @@
               rdfs:label "has agent role" .
 
 
-###  http://w3id.org/BadmintONTO/hasDraw
-:hasDraw rdf:type owl:ObjectProperty ;
-         rdfs:domain :Competition ;
-         rdfs:range :Draw ;
-         rdfs:comment "hasDraw represents that a particular competition can have different draws (e.g., man single, men doubble, woman single, women double and mix double)." ;
-         rdfs:label "has draw" .
-
-
 ###  http://w3id.org/BadmintONTO/hasHittingArea
 :hasHittingArea rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :isInformationAbout ;
@@ -168,11 +156,7 @@
 ###  http://w3id.org/BadmintONTO/hasLocation
 :hasLocation rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :isInformationAbout ;
-             rdfs:domain [ rdf:type owl:Class ;
-                           owl:unionOf ( :PlayerInformation
-                                         :ShotInformation
-                                       )
-                         ] ;
+             rdfs:domain :ShotInformation ;
              rdfs:range :Location ;
              rdfs:comment "has Location" ,
                           "hasLocation represents that some entities can associate with locations." .
@@ -180,17 +164,18 @@
 
 ###  http://w3id.org/BadmintONTO/hasMatchType
 :hasMatchType rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf :isInformationAbout ;
-              rdfs:domain :MatchInformation ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:domain :Competition ,
+                          :MatchInformation ;
               rdfs:range :MatchType ;
-              rdfs:comment "hasMatchType represents that the match type is captured by a match-information object." ;
+              rdfs:comment "hasMatchType represents that a particular competition can have different draws (e.g., man single, men doubble, woman single, women double and mix double)." ,
+                           "hasMatchType represents that the match type is captured by a match-information object." ;
               rdfs:label "has match type" .
 
 
 ###  http://w3id.org/BadmintONTO/hasPlayer
 :hasPlayer rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf :isInformationAbout ;
-           rdfs:domain :InformationObject ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
            rdfs:range :Player ;
            rdfs:comment "hasPlayer represents that some entities can associate with players/pairs/teams." ;
            rdfs:label "has player" .
@@ -204,8 +189,7 @@
                                       :SetInformation
                                       :ShotInformation
                                     )
-                      ] ;
-          rdfs:range :SinglePlayerRole .
+                      ] .
 
 
 ###  http://w3id.org/BadmintONTO/hasRoleB
@@ -216,8 +200,7 @@
                                       :SetInformation
                                       :ShotInformation
                                     )
-                      ] ;
-          rdfs:range :SinglePlayerRole .
+                      ] .
 
 
 ###  http://w3id.org/BadmintONTO/hasRoute
@@ -257,7 +240,7 @@
 
 ###  http://w3id.org/BadmintONTO/hittingPlayer
 :hittingPlayer rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf :hasPlayer ;
+               rdfs:subPropertyOf :isInformationAbout ;
                rdfs:domain :ShotInformation ;
                rdfs:range :Player ;
                rdfs:comment "hittingPlayer represents that the player who hits a shot is captured by a shot-information object." ;
@@ -319,7 +302,7 @@
 ###  http://w3id.org/BadmintONTO/playerLocation
 :playerLocation rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :hasLocation ;
-                rdfs:domain :PlayerInformation ;
+                rdfs:domain :ShotInformation ;
                 rdfs:range :PlayerLocation ;
                 rdfs:comment "playerLocation represents that a player's location is captured by a player-information object." ;
                 rdfs:label "player location" .
@@ -327,7 +310,7 @@
 
 ###  http://w3id.org/BadmintONTO/qualifiedPlayer
 :qualifiedPlayer rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf :hasPlayer ;
+                 rdfs:subPropertyOf :isInformationAbout ;
                  rdfs:domain [ rdf:type owl:Class ;
                                owl:unionOf ( :EliminationInformation
                                              :RoundRobinGroupInformation
@@ -343,9 +326,25 @@
                  rdfs:label "qualified player" .
 
 
+###  http://w3id.org/BadmintONTO/rallyLoseReason
+:rallyLoseReason rdf:type owl:ObjectProperty ;
+                 rdfs:domain :RallyInformation ;
+                 rdfs:range :RallyLoseReason ;
+                 rdfs:comment "The lose reason of a rally." ;
+                 rdfs:label "rally lose reason" .
+
+
+###  http://w3id.org/BadmintONTO/rallyWinReason
+:rallyWinReason rdf:type owl:ObjectProperty ;
+                rdfs:domain :RallyInformation ;
+                rdfs:range :RallyWinReason ;
+                rdfs:comment "The win reason of a rally." ;
+                rdfs:label "rally win reason" .
+
+
 ###  http://w3id.org/BadmintONTO/receivingPlayer
 :receivingPlayer rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf :hasPlayer ;
+                 rdfs:subPropertyOf :isInformationAbout ;
                  rdfs:domain :ShotInformation ;
                  rdfs:range :Player ;
                  rdfs:comment "receivingPlayer represents that the player who will receive a shot is captured by a shot-information object." ;
@@ -370,7 +369,7 @@
 
 ###  http://w3id.org/BadmintONTO/roundRobinPlayer
 :roundRobinPlayer rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf :hasPlayer ;
+                  rdfs:subPropertyOf :isInformationAbout ;
                   rdfs:domain :RoundRobinGroupInformation ;
                   rdfs:range [ rdf:type owl:Class ;
                                owl:unionOf ( :Pair
@@ -510,24 +509,6 @@
               rdfs:range xsd:double ;
               rdfs:comment "The height of a player." ;
               rdfs:label "player height" .
-
-
-###  http://w3id.org/BadmintONTO/rallyLoseReason
-:rallyLoseReason rdf:type owl:DatatypeProperty ;
-                 rdfs:subPropertyOf :hasInformationValue ;
-                 rdfs:domain :RallyInformation ;
-                 rdfs:range xsd:string ;
-                 rdfs:comment "The lose reason of a rally." ;
-                 rdfs:label "rally lose reason" .
-
-
-###  http://w3id.org/BadmintONTO/rallyWinReason
-:rallyWinReason rdf:type owl:DatatypeProperty ;
-                rdfs:subPropertyOf :hasInformationValue ;
-                rdfs:domain :RallyInformation ;
-                rdfs:range xsd:string ;
-                rdfs:comment "The win reason of a rally." ;
-                rdfs:label "rally win reason" .
 
 
 ###  http://w3id.org/BadmintONTO/roundRobinGroup
@@ -676,20 +657,6 @@
 :CourtArea rdf:type owl:Class ;
            rdfs:comment "A court area indicates a particular area in a court." ;
            rdfs:label "Court Area" .
-
-
-###  http://w3id.org/BadmintONTO/DoublePlayerRole
-:DoublePlayerRole rdf:type owl:Class ;
-                  rdfs:subClassOf :PlayerRole ;
-                  rdfs:comment "A role that a player takes in a double match." ;
-                  rdfs:label "Double Player Role" .
-
-
-###  http://w3id.org/BadmintONTO/Draw
-:Draw rdf:type owl:Class ;
-      owl:equivalentClass :MatchType ;
-      rdfs:comment "The different match types in badminton (i.e., man single, men double, woman single, women double and mix double)." ;
-      rdfs:label "Draw" .
 
 
 ###  http://w3id.org/BadmintONTO/EliminationEvent
@@ -984,13 +951,6 @@
       rdfs:label "Pair" .
 
 
-###  http://w3id.org/BadmintONTO/PairPlayersRole
-:PairPlayersRole rdf:type owl:Class ;
-                 rdfs:subClassOf :PlayerRole ;
-                 rdfs:comment "A role that a pair of two players takes in a match." ;
-                 rdfs:label "Pair-Player Role" .
-
-
 ###  http://w3id.org/BadmintONTO/PenaltyEvent
 :PenaltyEvent rdf:type owl:Class ;
               rdfs:subClassOf :Event ;
@@ -1012,26 +972,14 @@
         rdfs:label "Player" .
 
 
-###  http://w3id.org/BadmintONTO/PlayerInformation
-:PlayerInformation rdf:type owl:Class ;
-                   rdfs:subClassOf :InformationObject ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty :hasPlayer ;
-                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                     owl:onClass :Player
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty :playerLocation ;
-                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                     owl:onClass :PlayerLocation
-                                   ] ;
-                   rdfs:comment "An information object captures relevant information of a player." ;
-                   rdfs:label "Player Information" .
-
-
 ###  http://w3id.org/BadmintONTO/PlayerLocation
 :PlayerLocation rdf:type owl:Class ;
-                rdfs:subClassOf :Location ;
+                rdfs:subClassOf :Location ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasPlayer ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass :Player
+                                ] ;
                 rdfs:comment "The location of a player." ;
                 rdfs:label "Player Location" .
 
@@ -1099,16 +1047,6 @@
                                                 )
                                   ] ,
                                   [ rdf:type owl:Restriction ;
-                                    owl:onProperty :rallyLoseReason ;
-                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                    owl:onDataRange xsd:string
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty :rallyWinReason ;
-                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                    owl:onDataRange xsd:string
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty :roundScoreA ;
                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                     owl:onDataRange xsd:nonNegativeInteger
@@ -1125,6 +1063,18 @@
                                   ] ;
                   rdfs:comment "An information object captures relevant information of a rally." ;
                   rdfs:label "Rally Information" .
+
+
+###  http://w3id.org/BadmintONTO/RallyLoseReason
+:RallyLoseReason rdf:type owl:Class ;
+                 rdfs:comment "A rally stops and one of the agents loses the point because the opponent wins the point." ;
+                 rdfs:label "Rally Lose Reason" .
+
+
+###  http://w3id.org/BadmintONTO/RallyWinReason
+:RallyWinReason rdf:type owl:Class ;
+                rdfs:comment "A rally stops and one of the agents wins the point due to a particular reason according to rules." ;
+                rdfs:label "Rally Win Reason" .
 
 
 ###  http://w3id.org/BadmintONTO/RestEvent
@@ -1181,13 +1131,6 @@
                  rdfs:subClassOf :TournamentStage ;
                  rdfs:label "Round Robin Stage" ,
                             "round-robin play." .
-
-
-###  http://w3id.org/BadmintONTO/Serve
-:Serve rdf:type owl:Class ;
-       rdfs:subClassOf :ShotType ;
-       rdfs:comment "A serve is always played by a player as a start of a rally." ;
-       rdfs:label "Serve" .
 
 
 ###  http://w3id.org/BadmintONTO/SetDateTimeDesciption
@@ -1299,10 +1242,6 @@
            rdfs:subClassOf :Event ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty :isDescribedBy ;
-                             owl:someValuesFrom :PlayerInformation
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :isDescribedBy ;
                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                              owl:onClass :ShotInformation
                            ] ;
@@ -1313,54 +1252,35 @@
 ###  http://w3id.org/BadmintONTO/ShotInformation
 :ShotInformation rdf:type owl:Class ;
                  rdfs:subClassOf :InformationObject ,
-                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :hasHittingArea ;
-                                                          owl:someValuesFrom :HittingArea
-                                                        ]
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :hasHittingArea ;
-                                                          owl:allValuesFrom :HittingArea
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasHittingArea ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass :HittingArea
                                  ] ,
-                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :hasHittingStyle ;
-                                                          owl:someValuesFrom :HittingStyle
-                                                        ]
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :hasHittingStyle ;
-                                                          owl:allValuesFrom :HittingStyle
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasHittingStyle ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass :HittingStyle
                                  ] ,
-                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :hasRoute ;
-                                                          owl:someValuesFrom :ShuttleRoute
-                                                        ]
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :hasRoute ;
-                                                          owl:allValuesFrom :ShuttleRoute
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasRoute ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass :ShuttleRoute
                                  ] ,
-                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :hasShotType ;
-                                                          owl:someValuesFrom :ShotType
-                                                        ]
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :hasShotType ;
-                                                          owl:allValuesFrom :ShotType
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasShotType ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass :ShotType
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty :hittingPlayer ;
                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                    owl:onClass :Player
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :playerLocation ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass :PlayerLocation
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty :receivingPlayer ;
@@ -1408,20 +1328,6 @@
 :ShuttleRoute rdf:type owl:Class ;
               rdfs:comment "The route of the shuttle after a play hitting a shuttle." ;
               rdfs:label "Shuttle Route" .
-
-
-###  http://w3id.org/BadmintONTO/SinglePlayerRole
-:SinglePlayerRole rdf:type owl:Class ;
-                  rdfs:subClassOf :PlayerRole ;
-                  rdfs:comment "A role that a player takes in a single match." ;
-                  rdfs:label "Single Player Role" .
-
-
-###  http://w3id.org/BadmintONTO/Stroke
-:Stroke rdf:type owl:Class ;
-        rdfs:subClassOf :ShotType ;
-        rdfs:comment "A stroke is played a player after serving in a rally." ;
-        rdfs:label "Stroke" .
 
 
 ###  http://w3id.org/BadmintONTO/SudirmanCupCompetition
@@ -1565,10 +1471,10 @@
               :CourtArea .
 
 
-###  http://w3id.org/BadmintONTO/AttackingClearStroke
-:AttackingClearStroke rdf:type owl:NamedIndividual ,
-                               :Stroke ;
-                      rdfs:label "Attacking Clear" .
+###  http://w3id.org/BadmintONTO/AttackingClear
+:AttackingClear rdf:type owl:NamedIndividual ,
+                         :ShotType ;
+                rdfs:label "Attacking Clear" .
 
 
 ###  http://w3id.org/BadmintONTO/B_1
@@ -1651,10 +1557,10 @@
               :CourtArea .
 
 
-###  http://w3id.org/BadmintONTO/BackCourtDriveStroke
-:BackCourtDriveStroke rdf:type owl:NamedIndividual ,
-                               :Stroke ;
-                      rdfs:label "Back-Court Drive" .
+###  http://w3id.org/BadmintONTO/BackCourtDrive
+:BackCourtDrive rdf:type owl:NamedIndividual ,
+                         :ShotType ;
+                rdfs:label "Back Court Drive" .
 
 
 ###  http://w3id.org/BadmintONTO/BackhandHitting
@@ -1663,29 +1569,38 @@
                  rdfs:label "Bankhand Hitting" .
 
 
-###  http://w3id.org/BadmintONTO/ClearStroke
-:ClearStroke rdf:type owl:NamedIndividual ,
-                      :Stroke ;
-             rdfs:label "Clear" .
+###  http://w3id.org/BadmintONTO/Clear
+:Clear rdf:type owl:NamedIndividual ,
+                :ShotType ;
+       rdfs:label "Clear" .
 
 
-###  http://w3id.org/BadmintONTO/CrossCourtNetStroke
-:CrossCourtNetStroke rdf:type owl:NamedIndividual ,
-                              :Stroke ;
-                     rdfs:label "Cross-Court Net" .
+###  http://w3id.org/BadmintONTO/CrossCourtNetShot
+:CrossCourtNetShot rdf:type owl:NamedIndividual ,
+                            :ShotType ;
+                   rdfs:label "Cross Court Net Shot" .
 
 
-###  http://w3id.org/BadmintONTO/DefensiveClearStroke
-:DefensiveClearStroke rdf:type owl:NamedIndividual ,
-                               :Stroke ;
-                      rdfs:label "Defensive Clear" .
+###  http://w3id.org/BadmintONTO/DefensiveClear
+:DefensiveClear rdf:type owl:NamedIndividual ,
+                         :ShotType ;
+                rdfs:label "Defensive Clear" .
 
 
-###  http://w3id.org/BadmintONTO/DefensiveReturnDriveStroke
-:DefensiveReturnDriveStroke rdf:type owl:NamedIndividual ,
-                                     :Stroke ;
-                            rdfs:label "Defensive Return-Drive" .
+###  http://w3id.org/BadmintONTO/DefensiveReturnDrive
+:DefensiveReturnDrive rdf:type owl:NamedIndividual ,
+                               :ShotType ;
+                      rdfs:label "Defensive Return Drive" .
 
+
+###  http://w3id.org/BadmintONTO/DefensiveReturnLob
+:DefensiveReturnLob rdf:type owl:NamedIndividual ,
+                             :ShotType ;
+                    owl:sameAs :Lob ;
+                    rdfs:label "Defensive Return Lob" .
+
+
+###  http://w3id.org/BadmintONTO/Lob
 
 ###  http://w3id.org/BadmintONTO/Doctor
 :Doctor rdf:type owl:NamedIndividual ,
@@ -1698,25 +1613,53 @@
                  :MatchType .
 
 
-###  http://w3id.org/BadmintONTO/DriveStroke
-:DriveStroke rdf:type owl:NamedIndividual ,
-                      :Stroke ;
-             owl:sameAs :FlickStroke ;
-             rdfs:label "Drive" .
+###  http://w3id.org/BadmintONTO/DoubleRoleA
+:DoubleRoleA rdf:type owl:NamedIndividual ,
+                      :PlayerRole ;
+             rdfs:comment "Double-player role in Pair A" ;
+             rdfs:label "Double Player A" .
 
 
-###  http://w3id.org/BadmintONTO/FlickStroke
+###  http://w3id.org/BadmintONTO/DoubleRoleB
+:DoubleRoleB rdf:type owl:NamedIndividual ,
+                      :PlayerRole ;
+             rdfs:comment "Double-player role in Pair A" ;
+             rdfs:label "Double Role B" .
 
-###  http://w3id.org/BadmintONTO/DrivenFlightStroke
-:DrivenFlightStroke rdf:type owl:NamedIndividual ,
-                             :Stroke ;
-                    rdfs:label "Driven Flight" .
+
+###  http://w3id.org/BadmintONTO/DoubleRoleC
+:DoubleRoleC rdf:type owl:NamedIndividual ,
+                      :PlayerRole ;
+             rdfs:comment "Double-player role in Pair B" ;
+             rdfs:label "Double Role C" .
 
 
-###  http://w3id.org/BadmintONTO/DropStroke
-:DropStroke rdf:type owl:NamedIndividual ,
-                     :Stroke ;
-            rdfs:label "Drop" .
+###  http://w3id.org/BadmintONTO/DoubleRoleD
+:DoubleRoleD rdf:type owl:NamedIndividual ,
+                      :PlayerRole ;
+             rdfs:comment "Double-player role in Pair B" ;
+             rdfs:label "Double Role D" .
+
+
+###  http://w3id.org/BadmintONTO/Drive
+:Drive rdf:type owl:NamedIndividual ,
+                :ShotType ;
+       owl:sameAs :Flick ;
+       rdfs:label "Drive" .
+
+
+###  http://w3id.org/BadmintONTO/Flick
+
+###  http://w3id.org/BadmintONTO/DrivenFlight
+:DrivenFlight rdf:type owl:NamedIndividual ,
+                       :ShotType ;
+              rdfs:label "Driven Flight" .
+
+
+###  http://w3id.org/BadmintONTO/Drop
+:Drop rdf:type owl:NamedIndividual ,
+               :ShotType ;
+      rdfs:label "Drop" .
 
 
 ###  http://w3id.org/BadmintONTO/Finals
@@ -1727,10 +1670,10 @@
 
 ###  http://w3id.org/BadmintONTO/round-of-2
 
-###  http://w3id.org/BadmintONTO/FlickStroke
-:FlickStroke rdf:type owl:NamedIndividual ,
-                      :Stroke ;
-             rdfs:label "Flick" .
+###  http://w3id.org/BadmintONTO/Flick
+:Flick rdf:type owl:NamedIndividual ,
+                :ShotType ;
+       rdfs:label "Flick" .
 
 
 ###  http://w3id.org/BadmintONTO/ForehandHitting
@@ -1744,14 +1687,10 @@
                       :RoundRobinStage .
 
 
-###  http://w3id.org/BadmintONTO/LiftStroke
-:LiftStroke rdf:type owl:NamedIndividual ,
-                     :Stroke ;
-            owl:sameAs :LobStroke ;
-            rdfs:label "Lift" .
+###  http://w3id.org/BadmintONTO/HangingNet
+:HangingNet rdf:type owl:NamedIndividual ,
+                     :RallyLoseReason .
 
-
-###  http://w3id.org/BadmintONTO/LobStroke
 
 ###  http://w3id.org/BadmintONTO/LineJudge
 :LineJudge rdf:type owl:NamedIndividual ,
@@ -1759,15 +1698,20 @@
            rdfs:label "Line Judge" .
 
 
-###  http://w3id.org/BadmintONTO/LobStroke
-:LobStroke rdf:type owl:NamedIndividual ,
-                    :Stroke ;
-           rdfs:label "Lob" .
+###  http://w3id.org/BadmintONTO/Lob
+:Lob rdf:type owl:NamedIndividual ,
+              :ShotType ;
+     rdfs:label "Lob" .
+
+
+###  http://w3id.org/BadmintONTO/LocationJudgementError
+:LocationJudgementError rdf:type owl:NamedIndividual ,
+                                 :RallyLoseReason .
 
 
 ###  http://w3id.org/BadmintONTO/LongServe
 :LongServe rdf:type owl:NamedIndividual ,
-                    :Serve ;
+                    :ShotType ;
            rdfs:label "Long Serve" .
 
 
@@ -1786,10 +1730,50 @@
                     :MatchType .
 
 
-###  http://w3id.org/BadmintONTO/NetPlayStroke
-:NetPlayStroke rdf:type owl:NamedIndividual ,
-                        :Stroke ;
-               rdfs:label "Net Play" .
+###  http://w3id.org/BadmintONTO/NetError
+:NetError rdf:type owl:NamedIndividual ,
+                   :RallyLoseReason .
+
+
+###  http://w3id.org/BadmintONTO/NetShot
+:NetShot rdf:type owl:NamedIndividual ,
+                  :ShotType ;
+         rdfs:label "Net Play" .
+
+
+###  http://w3id.org/BadmintONTO/OpponentHangingNet
+:OpponentHangingNet rdf:type owl:NamedIndividual ,
+                             :RallyWinReason .
+
+
+###  http://w3id.org/BadmintONTO/OpponentLocationJudgementError
+:OpponentLocationJudgementError rdf:type owl:NamedIndividual ,
+                                         :RallyWinReason .
+
+
+###  http://w3id.org/BadmintONTO/OpponentNetError
+:OpponentNetError rdf:type owl:NamedIndividual ,
+                           :RallyWinReason .
+
+
+###  http://w3id.org/BadmintONTO/OpponentPenalty
+:OpponentPenalty rdf:type owl:NamedIndividual ,
+                          :RallyWinReason .
+
+
+###  http://w3id.org/BadmintONTO/OpponentShuttleLanding
+:OpponentShuttleLanding rdf:type owl:NamedIndividual ,
+                                 :RallyLoseReason .
+
+
+###  http://w3id.org/BadmintONTO/OpponentShuttleLocationJudgementError
+:OpponentShuttleLocationJudgementError rdf:type owl:NamedIndividual ,
+                                                :RallyWinReason .
+
+
+###  http://w3id.org/BadmintONTO/OpponentWellWide
+:OpponentWellWide rdf:type owl:NamedIndividual ,
+                           :RallyWinReason .
 
 
 ###  http://w3id.org/BadmintONTO/OverHandArea
@@ -1797,16 +1781,40 @@
                        :HittingArea .
 
 
-###  http://w3id.org/BadmintONTO/PassiveDropStroke
-:PassiveDropStroke rdf:type owl:NamedIndividual ,
-                            :Stroke ;
-                   rdfs:label "Passive Drop" .
+###  http://w3id.org/BadmintONTO/OverHeadArea
+:OverHeadArea rdf:type owl:NamedIndividual ,
+                       :HittingArea .
 
 
-###  http://w3id.org/BadmintONTO/PushStroke
-:PushStroke rdf:type owl:NamedIndividual ,
-                     :Stroke ;
-            rdfs:label "Push" .
+###  http://w3id.org/BadmintONTO/PairRoleA
+:PairRoleA rdf:type owl:NamedIndividual ,
+                    :PlayerRole ;
+           rdfs:comment "Pair-players role as pair A" ;
+           rdfs:label "Pair A" .
+
+
+###  http://w3id.org/BadmintONTO/PairRoleB
+:PairRoleB rdf:type owl:NamedIndividual ,
+                    :PlayerRole ;
+           rdfs:comment "Pair-players role as pair B" ;
+           rdfs:label "Pair B" .
+
+
+###  http://w3id.org/BadmintONTO/PassiveDrop
+:PassiveDrop rdf:type owl:NamedIndividual ,
+                      :ShotType ;
+             rdfs:label "Passive Drop" .
+
+
+###  http://w3id.org/BadmintONTO/Penalty
+:Penalty rdf:type owl:NamedIndividual ,
+                  :RallyLoseReason .
+
+
+###  http://w3id.org/BadmintONTO/Push
+:Push rdf:type owl:NamedIndividual ,
+               :ShotType ;
+      rdfs:label "Push" .
 
 
 ###  http://w3id.org/BadmintONTO/Quarter-finals
@@ -1817,10 +1825,10 @@
 
 ###  http://w3id.org/BadmintONTO/round-of-8
 
-###  http://w3id.org/BadmintONTO/ReturnNetStroke
-:ReturnNetStroke rdf:type owl:NamedIndividual ,
-                          :Stroke ;
-                 rdfs:label "Return Net" .
+###  http://w3id.org/BadmintONTO/ReturnNet
+:ReturnNet rdf:type owl:NamedIndividual ,
+                    :ShotType ;
+           rdfs:label "Return Net" .
 
 
 ###  http://w3id.org/BadmintONTO/RoundHeadArea
@@ -1828,10 +1836,10 @@
                         :HittingArea .
 
 
-###  http://w3id.org/BadmintONTO/RushStroke
-:RushStroke rdf:type owl:NamedIndividual ,
-                     :Stroke ;
-            rdfs:label "Rush" .
+###  http://w3id.org/BadmintONTO/Rush
+:Rush rdf:type owl:NamedIndividual ,
+               :ShotType ;
+      rdfs:label "Rush" .
 
 
 ###  http://w3id.org/BadmintONTO/Semi-finals
@@ -1850,8 +1858,18 @@
 
 ###  http://w3id.org/BadmintONTO/ShortServe
 :ShortServe rdf:type owl:NamedIndividual ,
-                     :Serve ;
+                     :ShotType ;
             rdfs:label "Short Serve" .
+
+
+###  http://w3id.org/BadmintONTO/ShuttleLanding
+:ShuttleLanding rdf:type owl:NamedIndividual ,
+                         :RallyWinReason .
+
+
+###  http://w3id.org/BadmintONTO/ShuttleLocationJudgementError
+:ShuttleLocationJudgementError rdf:type owl:NamedIndividual ,
+                                        :RallyLoseReason .
 
 
 ###  http://w3id.org/BadmintONTO/SideHandArea
@@ -1864,16 +1882,28 @@
                  :MatchType .
 
 
+###  http://w3id.org/BadmintONTO/SingleRoleA
+:SingleRoleA rdf:type owl:NamedIndividual ,
+                      :PlayerRole ;
+             rdfs:label "Single Role A" .
+
+
+###  http://w3id.org/BadmintONTO/SingleRoleB
+:SingleRoleB rdf:type owl:NamedIndividual ,
+                      :PlayerRole ;
+             rdfs:label "Single Role B" .
+
+
 ###  http://w3id.org/BadmintONTO/SlashRoute
 :SlashRoute rdf:type owl:NamedIndividual ,
                      :ShuttleRoute ;
             rdfs:label "Slash Route" .
 
 
-###  http://w3id.org/BadmintONTO/SmashStroke
-:SmashStroke rdf:type owl:NamedIndividual ,
-                      :Stroke ;
-             rdfs:label "Smash" .
+###  http://w3id.org/BadmintONTO/Smash
+:Smash rdf:type owl:NamedIndividual ,
+                :ShotType ;
+       rdfs:label "Smash" .
 
 
 ###  http://w3id.org/BadmintONTO/StraightRoute
@@ -1893,6 +1923,11 @@
                         :HittingArea .
 
 
+###  http://w3id.org/BadmintONTO/WellWide
+:WellWide rdf:type owl:NamedIndividual ,
+                   :RallyLoseReason .
+
+
 ###  http://w3id.org/BadmintONTO/WomanSingle
 :WomanSingle rdf:type owl:NamedIndividual ,
                       :MatchType .
@@ -1903,57 +1938,15 @@
                       :MatchType .
 
 
-###  http://w3id.org/BadmintONTO/WristSmashStroke
-:WristSmashStroke rdf:type owl:NamedIndividual ,
-                           :Stroke ;
-                  rdfs:label "Wrist Smash" .
-
-
-###  http://w3id.org/BadmintONTO/double_player_a
-:double_player_a rdf:type owl:NamedIndividual ,
-                          :DoublePlayerRole ;
-                 rdfs:comment "Double-player role in Pair A" ;
-                 rdfs:label "Double Player A" .
-
-
-###  http://w3id.org/BadmintONTO/double_player_b
-:double_player_b rdf:type owl:NamedIndividual ,
-                          :DoublePlayerRole ;
-                 rdfs:comment "Double-player role in Pair A" ;
-                 rdfs:label "Double Player B" .
-
-
-###  http://w3id.org/BadmintONTO/double_player_c
-:double_player_c rdf:type owl:NamedIndividual ,
-                          :DoublePlayerRole ;
-                 rdfs:comment "Double-player role in Pair B" ;
-                 rdfs:label "Double Player C" .
-
-
-###  http://w3id.org/BadmintONTO/double_player_d
-:double_player_d rdf:type owl:NamedIndividual ,
-                          :DoublePlayerRole ;
-                 rdfs:comment "Double-player role in Pair B" ;
-                 rdfs:label "Double Player D" .
+###  http://w3id.org/BadmintONTO/WristSmash
+:WristSmash rdf:type owl:NamedIndividual ,
+                     :ShotType ;
+            rdfs:label "Wrist Smash" .
 
 
 ###  http://w3id.org/BadmintONTO/eighth-finals
 :eighth-finals rdf:type owl:NamedIndividual ,
                         :EliminationStage .
-
-
-###  http://w3id.org/BadmintONTO/pair_a
-:pair_a rdf:type owl:NamedIndividual ,
-                 :PairPlayersRole ;
-        rdfs:comment "Pair-players role as pair A" ;
-        rdfs:label "Pair A" .
-
-
-###  http://w3id.org/BadmintONTO/pair_b
-:pair_b rdf:type owl:NamedIndividual ,
-                 :PairPlayersRole ;
-        rdfs:comment "Pair-players role as pair B" ;
-        rdfs:label "Pair B" .
 
 
 ###  http://w3id.org/BadmintONTO/round-of-128

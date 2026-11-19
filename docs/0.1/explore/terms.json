@@ -1,0 +1,4365 @@
+{
+ "ontology": {
+  "iri": "http://w3id.org/BadmintONTO/",
+  "title": "BadmintON onTOlogy (BadmintONTO)",
+  "version": "0.1",
+  "license": "https://github.com/huanyu-li/BadmintONTO/blob/main/LICENSE",
+  "creator": "Huanyu Li",
+  "created": "2023-03-21",
+  "repository": "https://github.com/huanyu-li/BadmintONTO"
+ },
+ "terms": {
+  "http://w3id.org/BadmintONTO/AgentRole": {
+   "id": "http://w3id.org/BadmintONTO/AgentRole",
+   "kind": "class",
+   "label": "Agent Role",
+   "localName": "AgentRole",
+   "definition": "A role that an agent can take in a specific context.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "restrictions": [
+    "(is performed by some Agent and is performed by only Agent)"
+   ],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [
+    "http://w3id.org/BadmintONTO/PlayerRole"
+   ],
+   "individuals": [
+    "http://w3id.org/BadmintONTO/Doctor",
+    "http://w3id.org/BadmintONTO/LineJudge",
+    "http://w3id.org/BadmintONTO/ServiceJudge",
+    "http://w3id.org/BadmintONTO/Umpire"
+   ],
+   "usedAsDomainBy": [
+    "http://w3id.org/BadmintONTO/isPerformedBy"
+   ],
+   "usedAsRangeBy": [
+    "http://w3id.org/BadmintONTO/hasAgentRole"
+   ],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/BWFTeamCompetition": {
+   "id": "http://w3id.org/BadmintONTO/BWFTeamCompetition",
+   "kind": "class",
+   "label": "BWF Team Competition",
+   "localName": "BWFTeamCompetition",
+   "definition": "Team competitions organized by the Badminton World Federation (BWF).",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/Competition"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [
+    "http://w3id.org/BadmintONTO/SudirmanCupCompetition",
+    "http://w3id.org/BadmintONTO/ThomasCupCompetition",
+    "http://w3id.org/BadmintONTO/UberCupCompetition"
+   ],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/BWFTournamentCompetition": {
+   "id": "http://w3id.org/BadmintONTO/BWFTournamentCompetition",
+   "kind": "class",
+   "label": "BWF Tournament Competition",
+   "localName": "BWFTournamentCompetition",
+   "definition": "Tournamen competitions organized by BWF.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/Competition"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/ChallengeEvent": {
+   "id": "http://w3id.org/BadmintONTO/ChallengeEvent",
+   "kind": "class",
+   "label": "Challenge Event",
+   "localName": "ChallengeEvent",
+   "definition": "A challenge event called by a player to challenge a judgement.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/Event"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/ChangeCourtEvent": {
+   "id": "http://w3id.org/BadmintONTO/ChangeCourtEvent",
+   "kind": "class",
+   "label": "Change-Court Event",
+   "localName": "ChangeCourtEvent",
+   "definition": "A change-court event can happen between sets, or after one player or one pair firstly wins 11 points.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/Event"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/Competition": {
+   "id": "http://w3id.org/BadmintONTO/Competition",
+   "kind": "class",
+   "label": "Competition",
+   "localName": "Competition",
+   "definition": "Different Competition Types in badminton.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [
+    "http://w3id.org/BadmintONTO/BWFTeamCompetition",
+    "http://w3id.org/BadmintONTO/BWFTournamentCompetition",
+    "http://w3id.org/BadmintONTO/SummerOlymipicsCompetition"
+   ],
+   "individuals": [],
+   "usedAsDomainBy": [
+    "http://w3id.org/BadmintONTO/hasDraw",
+    "http://w3id.org/BadmintONTO/inCompetition"
+   ],
+   "usedAsRangeBy": [
+    "http://w3id.org/BadmintONTO/relatesToCompetition"
+   ],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/CompetitionEvent": {
+   "id": "http://w3id.org/BadmintONTO/CompetitionEvent",
+   "kind": "class",
+   "label": "Competition Event",
+   "localName": "CompetitionEvent",
+   "definition": "A competition event takes place in period of time, composing different draws and matches.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/Event"
+   ],
+   "restrictions": [
+    "has sub-event some Match Event"
+   ],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [
+    "http://w3id.org/BadmintONTO/relatesToCompetition"
+   ],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/CourtArea": {
+   "id": "http://w3id.org/BadmintONTO/CourtArea",
+   "kind": "class",
+   "label": "Court Area",
+   "localName": "CourtArea",
+   "definition": "A court area indicates a particular area in a court.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [
+    "http://w3id.org/BadmintONTO/A_1",
+    "http://w3id.org/BadmintONTO/A_10",
+    "http://w3id.org/BadmintONTO/A_11",
+    "http://w3id.org/BadmintONTO/A_12",
+    "http://w3id.org/BadmintONTO/A_13",
+    "http://w3id.org/BadmintONTO/A_14",
+    "http://w3id.org/BadmintONTO/A_15",
+    "http://w3id.org/BadmintONTO/A_16",
+    "http://w3id.org/BadmintONTO/A_2",
+    "http://w3id.org/BadmintONTO/A_3",
+    "http://w3id.org/BadmintONTO/A_4",
+    "http://w3id.org/BadmintONTO/A_5",
+    "http://w3id.org/BadmintONTO/A_6",
+    "http://w3id.org/BadmintONTO/A_7",
+    "http://w3id.org/BadmintONTO/A_8",
+    "http://w3id.org/BadmintONTO/A_9",
+    "http://w3id.org/BadmintONTO/B_1",
+    "http://w3id.org/BadmintONTO/B_10",
+    "http://w3id.org/BadmintONTO/B_11",
+    "http://w3id.org/BadmintONTO/B_12",
+    "http://w3id.org/BadmintONTO/B_13",
+    "http://w3id.org/BadmintONTO/B_14",
+    "http://w3id.org/BadmintONTO/B_15",
+    "http://w3id.org/BadmintONTO/B_16",
+    "http://w3id.org/BadmintONTO/B_2",
+    "http://w3id.org/BadmintONTO/B_3",
+    "http://w3id.org/BadmintONTO/B_4",
+    "http://w3id.org/BadmintONTO/B_5",
+    "http://w3id.org/BadmintONTO/B_6",
+    "http://w3id.org/BadmintONTO/B_7",
+    "http://w3id.org/BadmintONTO/B_8",
+    "http://w3id.org/BadmintONTO/B_9"
+   ],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [
+    "http://w3id.org/BadmintONTO/atCourtArea"
+   ],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/DoublePlayerRole": {
+   "id": "http://w3id.org/BadmintONTO/DoublePlayerRole",
+   "kind": "class",
+   "label": "Double Player Role",
+   "localName": "DoublePlayerRole",
+   "definition": "A role that a player takes in a double match.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/PlayerRole"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [
+    "http://w3id.org/BadmintONTO/double_player_a",
+    "http://w3id.org/BadmintONTO/double_player_b",
+    "http://w3id.org/BadmintONTO/double_player_c",
+    "http://w3id.org/BadmintONTO/double_player_d"
+   ],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/Draw": {
+   "id": "http://w3id.org/BadmintONTO/Draw",
+   "kind": "class",
+   "label": "Draw",
+   "localName": "Draw",
+   "definition": "The different match types in badminton (i.e., man single, men double, woman single, women double and mix double).",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "restrictions": [],
+   "equivalent": [
+    "Match Type"
+   ],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [
+    "http://w3id.org/BadmintONTO/hasDraw"
+   ],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/EliminationEvent": {
+   "id": "http://w3id.org/BadmintONTO/EliminationEvent",
+   "kind": "class",
+   "label": "Elimination Event",
+   "localName": "EliminationEvent",
+   "definition": "The event for the elimination stage at a tournament.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/Event"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/EliminationInformation": {
+   "id": "http://w3id.org/BadmintONTO/EliminationInformation",
+   "kind": "class",
+   "label": "Elimination Information",
+   "localName": "EliminationInformation",
+   "definition": "An information object captures relevant information of the elimination tournament stage.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/InformationObject"
+   ],
+   "restrictions": [
+    "eliminationPlayer some (Pair or Player or Team)",
+    "qualified player some (Pair or Player or Team)",
+    "eliminationStage exactly 1 Elimination Stage"
+   ],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [
+    "http://w3id.org/BadmintONTO/eliminationPlayer",
+    "http://w3id.org/BadmintONTO/eliminationStage",
+    "http://w3id.org/BadmintONTO/qualifiedPlayer"
+   ],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/EliminationStage": {
+   "id": "http://w3id.org/BadmintONTO/EliminationStage",
+   "kind": "class",
+   "label": "Elimination Stage",
+   "localName": "EliminationStage",
+   "definition": "Sudden-death play.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/TournamentStage"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [
+    "http://w3id.org/BadmintONTO/eighth-finals",
+    "http://w3id.org/BadmintONTO/Finals",
+    "http://w3id.org/BadmintONTO/Quarter-finals",
+    "http://w3id.org/BadmintONTO/round-of-128",
+    "http://w3id.org/BadmintONTO/round-of-16",
+    "http://w3id.org/BadmintONTO/round-of-2",
+    "http://w3id.org/BadmintONTO/round-of-4",
+    "http://w3id.org/BadmintONTO/round-of-64",
+    "http://w3id.org/BadmintONTO/round-of-8",
+    "http://w3id.org/BadmintONTO/Semi-finals",
+    "http://w3id.org/BadmintONTO/sixteenth-finals",
+    "http://w3id.org/BadmintONTO/sixty-fourth-finals",
+    "http://w3id.org/BadmintONTO/thirty-second-finals"
+   ],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [
+    "http://w3id.org/BadmintONTO/eliminationStage"
+   ],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/Equipment": {
+   "id": "http://w3id.org/BadmintONTO/Equipment",
+   "kind": "class",
+   "label": "Equipment",
+   "localName": "Equipment",
+   "definition": "Equipments in badmintion domain.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [
+    "http://w3id.org/BadmintONTO/Racket"
+   ],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/Event": {
+   "id": "http://w3id.org/BadmintONTO/Event",
+   "kind": "class",
+   "label": "Event",
+   "localName": "Event",
+   "definition": "Activities that take place within a given context or timeframe.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "restrictions": [
+    "(has agent role some Agent Role and has agent role only Agent Role)",
+    "(is described by some Information Object and is described by only Information Object)",
+    "(occurs at location some Location and occurs at location only Location)",
+    "(occurs at time some TemporalEntity and occurs at time only TemporalEntity)"
+   ],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [
+    "http://w3id.org/BadmintONTO/ChallengeEvent",
+    "http://w3id.org/BadmintONTO/ChangeCourtEvent",
+    "http://w3id.org/BadmintONTO/CompetitionEvent",
+    "http://w3id.org/BadmintONTO/EliminationEvent",
+    "http://w3id.org/BadmintONTO/GameEvent",
+    "http://w3id.org/BadmintONTO/GetPointEvent",
+    "http://w3id.org/BadmintONTO/MatchEvent",
+    "http://w3id.org/BadmintONTO/MedicalPauseEvent",
+    "http://w3id.org/BadmintONTO/PenaltyEvent",
+    "http://w3id.org/BadmintONTO/RallyEvent",
+    "http://w3id.org/BadmintONTO/RestEvent",
+    "http://w3id.org/BadmintONTO/RoundRobinGroupEvent",
+    "http://w3id.org/BadmintONTO/SetEvent",
+    "http://w3id.org/BadmintONTO/StrokeEvent",
+    "http://w3id.org/BadmintONTO/WithdrawalEvent"
+   ],
+   "individuals": [],
+   "usedAsDomainBy": [
+    "http://w3id.org/BadmintONTO/hasAgentRole",
+    "http://w3id.org/BadmintONTO/hasSubEvent",
+    "http://w3id.org/BadmintONTO/hasSuperEvent",
+    "http://w3id.org/BadmintONTO/isDescribedBy",
+    "http://w3id.org/BadmintONTO/occursAtLocation",
+    "http://w3id.org/BadmintONTO/occursAtTime"
+   ],
+   "usedAsRangeBy": [
+    "http://w3id.org/BadmintONTO/hasSubEvent",
+    "http://w3id.org/BadmintONTO/hasSuperEvent"
+   ],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/EventInformation": {
+   "id": "http://w3id.org/BadmintONTO/EventInformation",
+   "kind": "class",
+   "label": "Event Information",
+   "localName": "EventInformation",
+   "definition": "An information object captures relevant information of an event.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/InformationObject"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/GameEvent": {
+   "id": "http://w3id.org/BadmintONTO/GameEvent",
+   "kind": "class",
+   "label": "Game Event",
+   "localName": "GameEvent",
+   "definition": "A set (game) in a match.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/Event"
+   ],
+   "restrictions": [],
+   "equivalent": [
+    "Set Event"
+   ],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/Geometry": {
+   "id": "http://w3id.org/BadmintONTO/Geometry",
+   "kind": "class",
+   "label": "Geometry",
+   "localName": "Geometry",
+   "definition": "A coherent set of direct positions in space. The positions are held within a Spatial Reference System (SRS).",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [
+    "http://w3id.org/BadmintONTO/Location"
+   ],
+   "individuals": [],
+   "usedAsDomainBy": [
+    "http://www.opengis.net/ont/geosparql#asWKT"
+   ],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/GetPointEvent": {
+   "id": "http://w3id.org/BadmintONTO/GetPointEvent",
+   "kind": "class",
+   "label": "Get-Point Event",
+   "localName": "GetPointEvent",
+   "definition": "A get-point event is as the last sub-event in a rally event.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/Event"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/HittingArea": {
+   "id": "http://w3id.org/BadmintONTO/HittingArea",
+   "kind": "class",
+   "label": "Hitting Area",
+   "localName": "HittingArea",
+   "definition": "The hitting area in terms of a player when the player hits a shuttle.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [
+    "http://w3id.org/BadmintONTO/OverHandArea",
+    "http://w3id.org/BadmintONTO/RoundHeadArea",
+    "http://w3id.org/BadmintONTO/SideHandArea",
+    "http://w3id.org/BadmintONTO/UnderHandArea"
+   ],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [
+    "http://w3id.org/BadmintONTO/hasHittingArea"
+   ],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/HittingStyle": {
+   "id": "http://w3id.org/BadmintONTO/HittingStyle",
+   "kind": "class",
+   "label": "Hittting Style",
+   "localName": "HittingStyle",
+   "definition": "A hitting style indicates if a shot is hit backhand or forehand.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [
+    "http://w3id.org/BadmintONTO/BackhandHitting",
+    "http://w3id.org/BadmintONTO/ForehandHitting"
+   ],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [
+    "http://w3id.org/BadmintONTO/hasHittingStyle"
+   ],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/InformationObject": {
+   "id": "http://w3id.org/BadmintONTO/InformationObject",
+   "kind": "class",
+   "label": "Information Object",
+   "localName": "InformationObject",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [
+    "http://w3id.org/BadmintONTO/EliminationInformation",
+    "http://w3id.org/BadmintONTO/EventInformation",
+    "http://w3id.org/BadmintONTO/MatchInformation",
+    "http://w3id.org/BadmintONTO/PlayerInformation",
+    "http://w3id.org/BadmintONTO/RallyInformation",
+    "http://w3id.org/BadmintONTO/RoundRobinGroupInformation",
+    "http://w3id.org/BadmintONTO/SetInformation",
+    "http://w3id.org/BadmintONTO/ShotInformation"
+   ],
+   "individuals": [],
+   "usedAsDomainBy": [
+    "http://w3id.org/BadmintONTO/hasPlayer",
+    "http://w3id.org/BadmintONTO/hasInformationValue",
+    "http://w3id.org/BadmintONTO/isInformationAbout"
+   ],
+   "usedAsRangeBy": [
+    "http://w3id.org/BadmintONTO/isDescribedBy"
+   ],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/Location": {
+   "id": "http://w3id.org/BadmintONTO/Location",
+   "kind": "class",
+   "label": "Location",
+   "localName": "Location",
+   "definition": "The geometric location.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/Geometry"
+   ],
+   "restrictions": [
+    "(at court area some Court Area and at court area only Court Area)",
+    "asWKT some wktLiteral"
+   ],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [
+    "http://w3id.org/BadmintONTO/PlayerLocation",
+    "http://w3id.org/BadmintONTO/ShuttleLocation"
+   ],
+   "individuals": [],
+   "usedAsDomainBy": [
+    "http://w3id.org/BadmintONTO/belongToCountry"
+   ],
+   "usedAsRangeBy": [
+    "http://w3id.org/BadmintONTO/hasLocation",
+    "http://w3id.org/BadmintONTO/occursAtLocation"
+   ],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/MatchDateTimeDescription": {
+   "id": "http://w3id.org/BadmintONTO/MatchDateTimeDescription",
+   "kind": "class",
+   "label": "MatchDateTimeDescription",
+   "localName": "MatchDateTimeDescription",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://www.w3.org/2006/time#GeneralDateTimeDescription"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/MatchDurationDescription": {
+   "id": "http://w3id.org/BadmintONTO/MatchDurationDescription",
+   "kind": "class",
+   "label": "Match Duration Description",
+   "localName": "MatchDurationDescription",
+   "definition": "To describe a match duration.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://www.w3.org/2006/time#DurationDescription"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/MatchEvent": {
+   "id": "http://w3id.org/BadmintONTO/MatchEvent",
+   "kind": "class",
+   "label": "Match Event",
+   "localName": "MatchEvent",
+   "definition": "A match event is participated by two single players or two pairs, and contains 3 sets at most.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/Event"
+   ],
+   "restrictions": [
+    "has sub-event some Set Event",
+    "is described by some Match Information",
+    "occurs at time exactly 1 Match Time Entity"
+   ],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/MatchInformation": {
+   "id": "http://w3id.org/BadmintONTO/MatchInformation",
+   "kind": "class",
+   "label": "Match Information",
+   "localName": "MatchInformation",
+   "definition": "An information object captures relevant information of a match.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/InformationObject"
+   ],
+   "restrictions": [
+    "(winByPair exactly 1 Pair or winByPlayer exactly 1 Player)",
+    "has player some Player",
+    "has match type exactly 1 Match Type",
+    "inCompetition exactly 1 string",
+    "match score A exactly 1 nonNegativeInteger",
+    "match score B exactly 1 nonNegativeInteger"
+   ],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [
+    "http://w3id.org/BadmintONTO/hasMatchType",
+    "http://w3id.org/BadmintONTO/hasRoleA",
+    "http://w3id.org/BadmintONTO/hasRoleB",
+    "http://w3id.org/BadmintONTO/inStage",
+    "http://w3id.org/BadmintONTO/matchScoreA",
+    "http://w3id.org/BadmintONTO/matchScoreB",
+    "http://w3id.org/BadmintONTO/setNumber"
+   ],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/MatchTimeEntity": {
+   "id": "http://w3id.org/BadmintONTO/MatchTimeEntity",
+   "kind": "class",
+   "label": "Match Time Entity",
+   "localName": "MatchTimeEntity",
+   "definition": "Temporal entity for a match.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://www.w3.org/2006/time#TemporalEntity"
+   ],
+   "restrictions": [
+    "hasBeginning exactly 1 Instant",
+    "hasDurationDescription exactly 1 Match Duration Description",
+    "hasEnd exactly 1 Instant",
+    "inDateTime exactly 1 MatchDateTimeDescription"
+   ],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/MatchType": {
+   "id": "http://w3id.org/BadmintONTO/MatchType",
+   "kind": "class",
+   "label": "Match Type",
+   "localName": "MatchType",
+   "definition": "The different match types in badminton (i.e., man single, men double, woman single, women double and mix double).",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [
+    "http://w3id.org/BadmintONTO/Double",
+    "http://w3id.org/BadmintONTO/ManSingle",
+    "http://w3id.org/BadmintONTO/MenDouble",
+    "http://w3id.org/BadmintONTO/MixDouble",
+    "http://w3id.org/BadmintONTO/Single",
+    "http://w3id.org/BadmintONTO/WomanSingle",
+    "http://w3id.org/BadmintONTO/WomenDouble"
+   ],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [
+    "http://w3id.org/BadmintONTO/hasMatchType"
+   ],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/MedicalPauseEvent": {
+   "id": "http://w3id.org/BadmintONTO/MedicalPauseEvent",
+   "kind": "class",
+   "label": "Medical Pause Event",
+   "localName": "MedicalPauseEvent",
+   "definition": "A medical pause event can be asked by a player.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/Event"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/Pair": {
+   "id": "http://w3id.org/BadmintONTO/Pair",
+   "kind": "class",
+   "label": "Pair",
+   "localName": "Pair",
+   "definition": "Pairs in double plays (i.e., men double, women double and mix double).",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://xmlns.com/foaf/0.1/Agent"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [
+    "http://w3id.org/BadmintONTO/currentWorldRanking",
+    "http://w3id.org/BadmintONTO/highestWorldRanking"
+   ],
+   "usedAsRangeBy": [
+    "http://w3id.org/BadmintONTO/eliminationPlayer",
+    "http://w3id.org/BadmintONTO/getPointByPair",
+    "http://w3id.org/BadmintONTO/getSetByPair",
+    "http://w3id.org/BadmintONTO/qualifiedPlayer",
+    "http://w3id.org/BadmintONTO/roundRobinPlayer",
+    "http://w3id.org/BadmintONTO/winBy",
+    "http://w3id.org/BadmintONTO/winByPair"
+   ],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/PairPlayersRole": {
+   "id": "http://w3id.org/BadmintONTO/PairPlayersRole",
+   "kind": "class",
+   "label": "Pair-Player Role",
+   "localName": "PairPlayersRole",
+   "definition": "A role that a pair of two players takes in a match.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/PlayerRole"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [
+    "http://w3id.org/BadmintONTO/pair_a",
+    "http://w3id.org/BadmintONTO/pair_b"
+   ],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/PenaltyEvent": {
+   "id": "http://w3id.org/BadmintONTO/PenaltyEvent",
+   "kind": "class",
+   "label": "Penalty Event",
+   "localName": "PenaltyEvent",
+   "definition": "A penalty event can be called by an umpire.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/Event"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/Person": {
+   "id": "http://w3id.org/BadmintONTO/Person",
+   "kind": "class",
+   "label": "Person",
+   "localName": "Person",
+   "definition": "A person agent can have some roles.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://xmlns.com/foaf/0.1/Agent"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [
+    "http://w3id.org/BadmintONTO/Player"
+   ],
+   "individuals": [],
+   "usedAsDomainBy": [
+    "http://w3id.org/BadmintONTO/personFullName"
+   ],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/Player": {
+   "id": "http://w3id.org/BadmintONTO/Player",
+   "kind": "class",
+   "label": "Player",
+   "localName": "Player",
+   "definition": "A player in badmintion related events.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/Person"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [
+    "http://w3id.org/BadmintONTO/currentWorldRanking",
+    "http://w3id.org/BadmintONTO/highestWorldRanking",
+    "http://w3id.org/BadmintONTO/playerAge",
+    "http://w3id.org/BadmintONTO/playerHeight"
+   ],
+   "usedAsRangeBy": [
+    "http://w3id.org/BadmintONTO/eliminationPlayer",
+    "http://w3id.org/BadmintONTO/getPointByPlayer",
+    "http://w3id.org/BadmintONTO/getSetByPlayer",
+    "http://w3id.org/BadmintONTO/hasPlayer",
+    "http://w3id.org/BadmintONTO/hittingPlayer",
+    "http://w3id.org/BadmintONTO/playedBy",
+    "http://w3id.org/BadmintONTO/qualifiedPlayer",
+    "http://w3id.org/BadmintONTO/receivingPlayer",
+    "http://w3id.org/BadmintONTO/roundRobinPlayer",
+    "http://w3id.org/BadmintONTO/winBy",
+    "http://w3id.org/BadmintONTO/winByPlayer"
+   ],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/PlayerInformation": {
+   "id": "http://w3id.org/BadmintONTO/PlayerInformation",
+   "kind": "class",
+   "label": "Player Information",
+   "localName": "PlayerInformation",
+   "definition": "An information object captures relevant information of a player.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/InformationObject"
+   ],
+   "restrictions": [
+    "has player exactly 1 Player",
+    "player location exactly 1 Player Location"
+   ],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [
+    "http://w3id.org/BadmintONTO/hasLocation",
+    "http://w3id.org/BadmintONTO/playerLocation"
+   ],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/PlayerLocation": {
+   "id": "http://w3id.org/BadmintONTO/PlayerLocation",
+   "kind": "class",
+   "label": "Player Location",
+   "localName": "PlayerLocation",
+   "definition": "The location of a player.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/Location"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [
+    "http://w3id.org/BadmintONTO/atCourtArea"
+   ],
+   "usedAsRangeBy": [
+    "http://w3id.org/BadmintONTO/playerLocation"
+   ],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/PlayerRole": {
+   "id": "http://w3id.org/BadmintONTO/PlayerRole",
+   "kind": "class",
+   "label": "Player Role",
+   "localName": "PlayerRole",
+   "definition": "A role that a player takes in a match.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/AgentRole"
+   ],
+   "restrictions": [
+    "(playedBy some Player and playedBy only Player)"
+   ],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [
+    "http://w3id.org/BadmintONTO/DoublePlayerRole",
+    "http://w3id.org/BadmintONTO/PairPlayersRole",
+    "http://w3id.org/BadmintONTO/SinglePlayerRole"
+   ],
+   "individuals": [],
+   "usedAsDomainBy": [
+    "http://w3id.org/BadmintONTO/playedBy"
+   ],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/Racket": {
+   "id": "http://w3id.org/BadmintONTO/Racket",
+   "kind": "class",
+   "label": "Racket",
+   "localName": "Racket",
+   "definition": "Rackets in badminton domain.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/Equipment"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/RallyEvent": {
+   "id": "http://w3id.org/BadmintONTO/RallyEvent",
+   "kind": "class",
+   "label": "Rally Event",
+   "localName": "RallyEvent",
+   "definition": "A rally event starts with a serve and ends until one of the two players/pairs wins the point.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/Event"
+   ],
+   "restrictions": [
+    "is described by some Rally Information",
+    "has sub-event min 1 Stroke Event",
+    "has sub-event exactly 1 Get-Point Event"
+   ],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/RallyInformation": {
+   "id": "http://w3id.org/BadmintONTO/RallyInformation",
+   "kind": "class",
+   "label": "Rally Information",
+   "localName": "RallyInformation",
+   "definition": "An information object captures relevant information of a rally.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/InformationObject"
+   ],
+   "restrictions": [
+    "(getPointByPair exactly 1 Pair or getPointByPlayer exactly 1 Player)",
+    "rally lose reason exactly 1 string",
+    "rally win reason exactly 1 string",
+    "round score A exactly 1 nonNegativeInteger",
+    "round score B exactly 1 nonNegativeInteger",
+    "shot number exactly 1 nonNegativeInteger"
+   ],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [
+    "http://w3id.org/BadmintONTO/rallyLoseReason",
+    "http://w3id.org/BadmintONTO/rallyWinReason",
+    "http://w3id.org/BadmintONTO/roundScoreA",
+    "http://w3id.org/BadmintONTO/roundScoreB",
+    "http://w3id.org/BadmintONTO/shotNumber"
+   ],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/RestEvent": {
+   "id": "http://w3id.org/BadmintONTO/RestEvent",
+   "kind": "class",
+   "label": "Rest Event",
+   "localName": "RestEvent",
+   "definition": "A rest event can happen in between sets and after one of the two players/pairs firstly wins 11 points in a set.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/Event"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/RoundRobinGroupEvent": {
+   "id": "http://w3id.org/BadmintONTO/RoundRobinGroupEvent",
+   "kind": "class",
+   "label": "Round Robin Group Event",
+   "localName": "RoundRobinGroupEvent",
+   "definition": "An event for a round-robin group at a tournament.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/Event"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/RoundRobinGroupInformation": {
+   "id": "http://w3id.org/BadmintONTO/RoundRobinGroupInformation",
+   "kind": "class",
+   "label": "Round Robin Information",
+   "localName": "RoundRobinGroupInformation",
+   "definition": "An information object captures relevant information of a round-robin group.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/InformationObject"
+   ],
+   "restrictions": [
+    "qualified player some (Pair or Player or Team)",
+    "round robin player some (Pair or Player or Team)",
+    "roundRobinGroupStage exactly 1 Round Robin Stage",
+    "round robin group exactly 1 string"
+   ],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [
+    "http://w3id.org/BadmintONTO/qualifiedPlayer",
+    "http://w3id.org/BadmintONTO/roundRobinGroup",
+    "http://w3id.org/BadmintONTO/roundRobinPlayer",
+    "http://w3id.org/BadmintONTO/roundRobinGroupStage"
+   ],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/RoundRobinStage": {
+   "id": "http://w3id.org/BadmintONTO/RoundRobinStage",
+   "kind": "class",
+   "label": "Round Robin Stage",
+   "localName": "RoundRobinStage",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/TournamentStage"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [
+    "http://w3id.org/BadmintONTO/Group-Stage",
+    "http://w3id.org/BadmintONTO/rr-round1",
+    "http://w3id.org/BadmintONTO/rr-round2",
+    "http://w3id.org/BadmintONTO/rr-round3",
+    "http://w3id.org/BadmintONTO/rr-round4"
+   ],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [
+    "http://w3id.org/BadmintONTO/roundRobinGroupStage"
+   ],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/Serve": {
+   "id": "http://w3id.org/BadmintONTO/Serve",
+   "kind": "class",
+   "label": "Serve",
+   "localName": "Serve",
+   "definition": "A serve is always played by a player as a start of a rally.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/ShotType"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [
+    "http://w3id.org/BadmintONTO/LongServe",
+    "http://w3id.org/BadmintONTO/ShortServe"
+   ],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/SetDateTimeDesciption": {
+   "id": "http://w3id.org/BadmintONTO/SetDateTimeDesciption",
+   "kind": "class",
+   "label": "SetDateTimeDesciption",
+   "localName": "SetDateTimeDesciption",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://www.w3.org/2006/time#GeneralDateTimeDescription"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/SetDurationDescription": {
+   "id": "http://w3id.org/BadmintONTO/SetDurationDescription",
+   "kind": "class",
+   "label": "Set Duration Description",
+   "localName": "SetDurationDescription",
+   "definition": "To description a set.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://www.w3.org/2006/time#DurationDescription"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/SetEvent": {
+   "id": "http://w3id.org/BadmintONTO/SetEvent",
+   "kind": "class",
+   "label": "Set Event",
+   "localName": "SetEvent",
+   "definition": "A set event is with in a match and ends after the one player/pair wins 21 points and wins by 2 points at least.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/Event"
+   ],
+   "restrictions": [
+    "has sub-event some Rally Event",
+    "is described by some Set Information",
+    "has sub-event exactly 1 Rest Event",
+    "has super-event exactly 1 Match Event",
+    "occurs at time exactly 1 Set Time Entity"
+   ],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/SetInformation": {
+   "id": "http://w3id.org/BadmintONTO/SetInformation",
+   "kind": "class",
+   "label": "Set Information",
+   "localName": "SetInformation",
+   "definition": "An information object captures relevant information of a set.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/InformationObject"
+   ],
+   "restrictions": [
+    "(getSetByPair exactly 1 Pair or getSetByPlayer exactly 1 Player)",
+    "hasRoleA exactly 1 Player Role",
+    "hasRoleB exactly 1 Player Role",
+    "set score A exactly 1 nonNegativeInteger",
+    "set score B exactly 1 nonNegativeInteger"
+   ],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [
+    "http://w3id.org/BadmintONTO/hasRoleA",
+    "http://w3id.org/BadmintONTO/hasRoleB",
+    "http://w3id.org/BadmintONTO/setScoreA",
+    "http://w3id.org/BadmintONTO/setScoreB"
+   ],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/SetTimeEntity": {
+   "id": "http://w3id.org/BadmintONTO/SetTimeEntity",
+   "kind": "class",
+   "label": "Set Time Entity",
+   "localName": "SetTimeEntity",
+   "definition": "Temporal entity for a set.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://www.w3.org/2006/time#TemporalEntity"
+   ],
+   "restrictions": [
+    "hasBeginning exactly 1 Instant",
+    "hasDurationDescription exactly 1 Set Duration Description",
+    "hasEnd exactly 1 Instant"
+   ],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/ShotInformation": {
+   "id": "http://w3id.org/BadmintONTO/ShotInformation",
+   "kind": "class",
+   "label": "Shot Information",
+   "localName": "ShotInformation",
+   "definition": "An information object captures relevant information of a shot.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/InformationObject"
+   ],
+   "restrictions": [
+    "(has hitting area some Hitting Area and has hitting area only Hitting Area)",
+    "(has hitting style some Hittting Style and has hitting style only Hittting Style)",
+    "(has route some Shuttle Route and has route only Shuttle Route)",
+    "(has shot type some Shot Type and has shot type only Shot Type)",
+    "hitting player exactly 1 Player",
+    "receiving player exactly 1 Player",
+    "shuttle hit location exactly 1 Shuttle Location",
+    "shuttle landing location exactly 1 Shuttle Location",
+    "round score A exactly 1 nonNegativeInteger",
+    "round score B exactly 1 nonNegativeInteger"
+   ],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [
+    "http://w3id.org/BadmintONTO/hasHittingArea",
+    "http://w3id.org/BadmintONTO/hasHittingStyle",
+    "http://w3id.org/BadmintONTO/hasRoute",
+    "http://w3id.org/BadmintONTO/hasShotType",
+    "http://w3id.org/BadmintONTO/hasLocation",
+    "http://w3id.org/BadmintONTO/hasRoleA",
+    "http://w3id.org/BadmintONTO/hasRoleB",
+    "http://w3id.org/BadmintONTO/hittingPlayer",
+    "http://w3id.org/BadmintONTO/receivingPlayer",
+    "http://w3id.org/BadmintONTO/roundScoreA",
+    "http://w3id.org/BadmintONTO/roundScoreB",
+    "http://w3id.org/BadmintONTO/shuttleHitLocation",
+    "http://w3id.org/BadmintONTO/shuttleLandingLocation"
+   ],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/ShotType": {
+   "id": "http://w3id.org/BadmintONTO/ShotType",
+   "kind": "class",
+   "label": "Shot Type",
+   "localName": "ShotType",
+   "definition": "A shot can be classfied as a server or a specific stroke.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [
+    "http://w3id.org/BadmintONTO/Serve",
+    "http://w3id.org/BadmintONTO/Stroke"
+   ],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [
+    "http://w3id.org/BadmintONTO/hasShotType"
+   ],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/ShuttleLocation": {
+   "id": "http://w3id.org/BadmintONTO/ShuttleLocation",
+   "kind": "class",
+   "label": "Shuttle Location",
+   "localName": "ShuttleLocation",
+   "definition": "The location of a shuttle.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/Location"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [
+    "http://w3id.org/BadmintONTO/atCourtArea"
+   ],
+   "usedAsRangeBy": [
+    "http://w3id.org/BadmintONTO/shuttleHitLocation",
+    "http://w3id.org/BadmintONTO/shuttleLandingLocation"
+   ],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/ShuttleRoute": {
+   "id": "http://w3id.org/BadmintONTO/ShuttleRoute",
+   "kind": "class",
+   "label": "Shuttle Route",
+   "localName": "ShuttleRoute",
+   "definition": "The route of the shuttle after a play hitting a shuttle.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [
+    "http://w3id.org/BadmintONTO/SlashRoute",
+    "http://w3id.org/BadmintONTO/StraightRoute"
+   ],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [
+    "http://w3id.org/BadmintONTO/hasRoute"
+   ],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/SinglePlayerRole": {
+   "id": "http://w3id.org/BadmintONTO/SinglePlayerRole",
+   "kind": "class",
+   "label": "Single Player Role",
+   "localName": "SinglePlayerRole",
+   "definition": "A role that a player takes in a single match.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/PlayerRole"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [
+    "http://w3id.org/BadmintONTO/hasRoleA",
+    "http://w3id.org/BadmintONTO/hasRoleB"
+   ],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/Stroke": {
+   "id": "http://w3id.org/BadmintONTO/Stroke",
+   "kind": "class",
+   "label": "Stroke",
+   "localName": "Stroke",
+   "definition": "A stroke is played a player after serving in a rally.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/ShotType"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [
+    "http://w3id.org/BadmintONTO/AttackingClearStroke",
+    "http://w3id.org/BadmintONTO/BackCourtDriveStroke",
+    "http://w3id.org/BadmintONTO/ClearStroke",
+    "http://w3id.org/BadmintONTO/CrossCourtNetStroke",
+    "http://w3id.org/BadmintONTO/DefensiveClearStroke",
+    "http://w3id.org/BadmintONTO/DefensiveReturnDriveStroke",
+    "http://w3id.org/BadmintONTO/DriveStroke",
+    "http://w3id.org/BadmintONTO/DrivenFlightStroke",
+    "http://w3id.org/BadmintONTO/DropStroke",
+    "http://w3id.org/BadmintONTO/FlickStroke",
+    "http://w3id.org/BadmintONTO/LiftStroke",
+    "http://w3id.org/BadmintONTO/LobStroke",
+    "http://w3id.org/BadmintONTO/NetPlayStroke",
+    "http://w3id.org/BadmintONTO/PassiveDropStroke",
+    "http://w3id.org/BadmintONTO/PushStroke",
+    "http://w3id.org/BadmintONTO/ReturnNetStroke",
+    "http://w3id.org/BadmintONTO/RushStroke",
+    "http://w3id.org/BadmintONTO/SmashStroke",
+    "http://w3id.org/BadmintONTO/WristSmashStroke"
+   ],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/StrokeEvent": {
+   "id": "http://w3id.org/BadmintONTO/StrokeEvent",
+   "kind": "class",
+   "label": "Stroke Event",
+   "localName": "StrokeEvent",
+   "definition": "A stroke event is about a player hitting a shuttle.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/Event"
+   ],
+   "restrictions": [
+    "is described by some Player Information",
+    "is described by exactly 1 Shot Information"
+   ],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/SudirmanCupCompetition": {
+   "id": "http://w3id.org/BadmintONTO/SudirmanCupCompetition",
+   "kind": "class",
+   "label": "Sudirman Cup Competition",
+   "localName": "SudirmanCupCompetition",
+   "definition": "Mixed team competition organized by BWF.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/BWFTeamCompetition"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/SummerOlymipicsCompetition": {
+   "id": "http://w3id.org/BadmintONTO/SummerOlymipicsCompetition",
+   "kind": "class",
+   "label": "Summer Olympics Competition",
+   "localName": "SummerOlymipicsCompetition",
+   "definition": "A badminton competition in a summer olympics.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/Competition"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/Team": {
+   "id": "http://w3id.org/BadmintONTO/Team",
+   "kind": "class",
+   "label": "Team",
+   "localName": "Team",
+   "definition": "A team in a team-baed competition.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://xmlns.com/foaf/0.1/Agent"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [
+    "http://w3id.org/BadmintONTO/eliminationPlayer",
+    "http://w3id.org/BadmintONTO/getPointByTeam",
+    "http://w3id.org/BadmintONTO/qualifiedPlayer",
+    "http://w3id.org/BadmintONTO/roundRobinPlayer",
+    "http://w3id.org/BadmintONTO/winBy"
+   ],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/ThomasCupCompetition": {
+   "id": "http://w3id.org/BadmintONTO/ThomasCupCompetition",
+   "kind": "class",
+   "label": "Thomas Cup Competition",
+   "localName": "ThomasCupCompetition",
+   "definition": "Men team competition organized by BWF.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/BWFTeamCompetition"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/TournamentStage": {
+   "id": "http://w3id.org/BadmintONTO/TournamentStage",
+   "kind": "class",
+   "label": "Tournament Stage",
+   "localName": "TournamentStage",
+   "definition": "Round-Robin stage or Elimination stage.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [
+    "http://w3id.org/BadmintONTO/EliminationStage",
+    "http://w3id.org/BadmintONTO/RoundRobinStage"
+   ],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [
+    "http://w3id.org/BadmintONTO/inStage"
+   ],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/UberCupCompetition": {
+   "id": "http://w3id.org/BadmintONTO/UberCupCompetition",
+   "kind": "class",
+   "label": "Uber Cup Competition",
+   "localName": "UberCupCompetition",
+   "definition": "Women team competition organized by BWF.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/BWFTeamCompetition"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/WithdrawalEvent": {
+   "id": "http://w3id.org/BadmintONTO/WithdrawalEvent",
+   "kind": "class",
+   "label": "Withdrawal Event",
+   "localName": "WithdrawalEvent",
+   "definition": "A withdrawal event can be called by a player/pair during/before a match.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/Event"
+   ],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [],
+   "sameAs": []
+  },
+  "http://xmlns.com/foaf/0.1/Agent": {
+   "id": "http://xmlns.com/foaf/0.1/Agent",
+   "kind": "class",
+   "label": "Agent",
+   "localName": "Agent",
+   "definition": "An agent (eg. person, group, software or physical artifact).",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "restrictions": [],
+   "equivalent": [],
+   "disjoint": [],
+   "children": [
+    "http://w3id.org/BadmintONTO/Pair",
+    "http://w3id.org/BadmintONTO/Person",
+    "http://w3id.org/BadmintONTO/Team"
+   ],
+   "individuals": [],
+   "usedAsDomainBy": [],
+   "usedAsRangeBy": [
+    "http://w3id.org/BadmintONTO/isPerformedBy"
+   ],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/atCourtArea": {
+   "id": "http://w3id.org/BadmintONTO/atCourtArea",
+   "kind": "objectProperty",
+   "label": "at court area",
+   "localName": "atCourtArea",
+   "definition": "atCourtArea is to represent the location of a player/shuttle at a specific court area.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "domain": [
+    "(Player Location or Shuttle Location)"
+   ],
+   "range": [
+    "Court Area"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/eliminationPlayer": {
+   "id": "http://w3id.org/BadmintONTO/eliminationPlayer",
+   "kind": "objectProperty",
+   "label": "eliminationPlayer",
+   "localName": "eliminationPlayer",
+   "definition": "elimination player",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/hasPlayer"
+   ],
+   "domain": [
+    "Elimination Information"
+   ],
+   "range": [
+    "(Pair or Player or Team)"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/eliminationStage": {
+   "id": "http://w3id.org/BadmintONTO/eliminationStage",
+   "kind": "objectProperty",
+   "label": "eliminationStage",
+   "localName": "eliminationStage",
+   "definition": "eliminationStage represents in which stage that an elimination play is.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/isInformationAbout"
+   ],
+   "domain": [
+    "Elimination Information"
+   ],
+   "range": [
+    "Elimination Stage"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/getPointByPair": {
+   "id": "http://w3id.org/BadmintONTO/getPointByPair",
+   "kind": "objectProperty",
+   "label": "getPointByPair",
+   "localName": "getPointByPair",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/winBy"
+   ],
+   "domain": [],
+   "range": [
+    "Pair"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/getPointByPlayer": {
+   "id": "http://w3id.org/BadmintONTO/getPointByPlayer",
+   "kind": "objectProperty",
+   "label": "getPointByPlayer",
+   "localName": "getPointByPlayer",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/winBy"
+   ],
+   "domain": [],
+   "range": [
+    "Player"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/getPointByTeam": {
+   "id": "http://w3id.org/BadmintONTO/getPointByTeam",
+   "kind": "objectProperty",
+   "label": "getPointByTeam",
+   "localName": "getPointByTeam",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/winBy"
+   ],
+   "domain": [],
+   "range": [
+    "Team"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/getSetByPair": {
+   "id": "http://w3id.org/BadmintONTO/getSetByPair",
+   "kind": "objectProperty",
+   "label": "getSetByPair",
+   "localName": "getSetByPair",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/winBy"
+   ],
+   "domain": [],
+   "range": [
+    "Pair"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/getSetByPlayer": {
+   "id": "http://w3id.org/BadmintONTO/getSetByPlayer",
+   "kind": "objectProperty",
+   "label": "getSetByPlayer",
+   "localName": "getSetByPlayer",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/winBy"
+   ],
+   "domain": [],
+   "range": [
+    "Player"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/hasAgentRole": {
+   "id": "http://w3id.org/BadmintONTO/hasAgentRole",
+   "kind": "objectProperty",
+   "label": "has agent role",
+   "localName": "hasAgentRole",
+   "definition": "hasAgentRole represents that an event can have some agents playing specific roles.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "domain": [
+    "Event"
+   ],
+   "range": [
+    "Agent Role"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/hasDraw": {
+   "id": "http://w3id.org/BadmintONTO/hasDraw",
+   "kind": "objectProperty",
+   "label": "has draw",
+   "localName": "hasDraw",
+   "definition": "hasDraw represents that a particular competition can have different draws (e.g., man single, men doubble, woman single, women double and mix double).",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "domain": [
+    "Competition"
+   ],
+   "range": [
+    "Draw"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/hasHittingArea": {
+   "id": "http://w3id.org/BadmintONTO/hasHittingArea",
+   "kind": "objectProperty",
+   "label": "has hitting area",
+   "localName": "hasHittingArea",
+   "definition": "hasHittingArea represents that a shot is hit at a particular area in terms of the player.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/isInformationAbout"
+   ],
+   "domain": [
+    "Shot Information"
+   ],
+   "range": [
+    "Hitting Area"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/hasHittingStyle": {
+   "id": "http://w3id.org/BadmintONTO/hasHittingStyle",
+   "kind": "objectProperty",
+   "label": "has hitting style",
+   "localName": "hasHittingStyle",
+   "definition": "hasHittingStyle represents that if a shuttle is hit backhand or forehand by a player.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/isInformationAbout"
+   ],
+   "domain": [
+    "Shot Information"
+   ],
+   "range": [
+    "Hittting Style"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/hasLocation": {
+   "id": "http://w3id.org/BadmintONTO/hasLocation",
+   "kind": "objectProperty",
+   "label": "hasLocation",
+   "localName": "hasLocation",
+   "definition": "has Location",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/isInformationAbout"
+   ],
+   "domain": [
+    "(Player Information or Shot Information)"
+   ],
+   "range": [
+    "Location"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [
+    "http://w3id.org/BadmintONTO/playerLocation",
+    "http://w3id.org/BadmintONTO/shuttleHitLocation",
+    "http://w3id.org/BadmintONTO/shuttleLandingLocation"
+   ],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/hasMatchType": {
+   "id": "http://w3id.org/BadmintONTO/hasMatchType",
+   "kind": "objectProperty",
+   "label": "has match type",
+   "localName": "hasMatchType",
+   "definition": "hasMatchType represents that the match type is captured by a match-information object.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/isInformationAbout"
+   ],
+   "domain": [
+    "Match Information"
+   ],
+   "range": [
+    "Match Type"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/hasPlayer": {
+   "id": "http://w3id.org/BadmintONTO/hasPlayer",
+   "kind": "objectProperty",
+   "label": "has player",
+   "localName": "hasPlayer",
+   "definition": "hasPlayer represents that some entities can associate with players/pairs/teams.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/isInformationAbout"
+   ],
+   "domain": [
+    "Information Object"
+   ],
+   "range": [
+    "Player"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [
+    "http://w3id.org/BadmintONTO/eliminationPlayer",
+    "http://w3id.org/BadmintONTO/hittingPlayer",
+    "http://w3id.org/BadmintONTO/qualifiedPlayer",
+    "http://w3id.org/BadmintONTO/receivingPlayer",
+    "http://w3id.org/BadmintONTO/roundRobinPlayer"
+   ],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/hasRoleA": {
+   "id": "http://w3id.org/BadmintONTO/hasRoleA",
+   "kind": "objectProperty",
+   "label": "hasRoleA",
+   "localName": "hasRoleA",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://www.w3.org/2002/07/owl#topObjectProperty"
+   ],
+   "domain": [
+    "(Match Information or Set Information or Shot Information)"
+   ],
+   "range": [
+    "Single Player Role"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/hasRoleB": {
+   "id": "http://w3id.org/BadmintONTO/hasRoleB",
+   "kind": "objectProperty",
+   "label": "hasRoleB",
+   "localName": "hasRoleB",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://www.w3.org/2002/07/owl#topObjectProperty"
+   ],
+   "domain": [
+    "(Match Information or Set Information or Shot Information)"
+   ],
+   "range": [
+    "Single Player Role"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/hasRoute": {
+   "id": "http://w3id.org/BadmintONTO/hasRoute",
+   "kind": "objectProperty",
+   "label": "has route",
+   "localName": "hasRoute",
+   "definition": "hasRoute represents that the route of a shuttle after hitting.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/isInformationAbout"
+   ],
+   "domain": [
+    "Shot Information"
+   ],
+   "range": [
+    "Shuttle Route"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/hasShotType": {
+   "id": "http://w3id.org/BadmintONTO/hasShotType",
+   "kind": "objectProperty",
+   "label": "has shot type",
+   "localName": "hasShotType",
+   "definition": "hasShotType represents that the shot type is captured by a shot-information object.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/isInformationAbout"
+   ],
+   "domain": [
+    "Shot Information"
+   ],
+   "range": [
+    "Shot Type"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/hasSubEvent": {
+   "id": "http://w3id.org/BadmintONTO/hasSubEvent",
+   "kind": "objectProperty",
+   "label": "has sub-event",
+   "localName": "hasSubEvent",
+   "definition": "hasSubEvent represents that an event can have another event as a sub-event.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "domain": [
+    "Event"
+   ],
+   "range": [
+    "Event"
+   ],
+   "inverseOf": "http://w3id.org/BadmintONTO/hasSuperEvent",
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/hasSuperEvent": {
+   "id": "http://w3id.org/BadmintONTO/hasSuperEvent",
+   "kind": "objectProperty",
+   "label": "has super-event",
+   "localName": "hasSuperEvent",
+   "definition": "hasSuperEvent represents that an event can have another event as a super-event.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "domain": [
+    "Event"
+   ],
+   "range": [
+    "Event"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/hittingPlayer": {
+   "id": "http://w3id.org/BadmintONTO/hittingPlayer",
+   "kind": "objectProperty",
+   "label": "hitting player",
+   "localName": "hittingPlayer",
+   "definition": "hittingPlayer represents that the player who hits a shot is captured by a shot-information object.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/hasPlayer"
+   ],
+   "domain": [
+    "Shot Information"
+   ],
+   "range": [
+    "Player"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/inStage": {
+   "id": "http://w3id.org/BadmintONTO/inStage",
+   "kind": "objectProperty",
+   "label": "inStage",
+   "localName": "inStage",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "domain": [
+    "Match Information"
+   ],
+   "range": [
+    "Tournament Stage"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/isDescribedBy": {
+   "id": "http://w3id.org/BadmintONTO/isDescribedBy",
+   "kind": "objectProperty",
+   "label": "is described by",
+   "localName": "isDescribedBy",
+   "definition": "isDescribedBy represents that an event can be described an information object that captures relevant information.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "domain": [
+    "Event"
+   ],
+   "range": [
+    "Information Object"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/isInformationAbout": {
+   "id": "http://w3id.org/BadmintONTO/isInformationAbout",
+   "kind": "objectProperty",
+   "label": "isInformationAbout",
+   "localName": "isInformationAbout",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "domain": [
+    "Information Object"
+   ],
+   "range": [],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [
+    "http://w3id.org/BadmintONTO/eliminationStage",
+    "http://w3id.org/BadmintONTO/hasHittingArea",
+    "http://w3id.org/BadmintONTO/hasHittingStyle",
+    "http://w3id.org/BadmintONTO/hasMatchType",
+    "http://w3id.org/BadmintONTO/hasPlayer",
+    "http://w3id.org/BadmintONTO/hasRoute",
+    "http://w3id.org/BadmintONTO/hasShotType",
+    "http://w3id.org/BadmintONTO/hasLocation",
+    "http://w3id.org/BadmintONTO/roundRobinGroupStage",
+    "http://w3id.org/BadmintONTO/winBy"
+   ],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/isPerformedBy": {
+   "id": "http://w3id.org/BadmintONTO/isPerformedBy",
+   "kind": "objectProperty",
+   "label": "is performed by",
+   "localName": "isPerformedBy",
+   "definition": "isPerformedBy represents that an agent role is performed by an agent.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "domain": [
+    "Agent Role"
+   ],
+   "range": [
+    "Agent"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [
+    "http://w3id.org/BadmintONTO/playedBy"
+   ],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/occursAtLocation": {
+   "id": "http://w3id.org/BadmintONTO/occursAtLocation",
+   "kind": "objectProperty",
+   "label": "occurs at location",
+   "localName": "occursAtLocation",
+   "definition": "occursAtLocation represents that an event takes place at a location.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "domain": [
+    "Event"
+   ],
+   "range": [
+    "Location"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/occursAtTime": {
+   "id": "http://w3id.org/BadmintONTO/occursAtTime",
+   "kind": "objectProperty",
+   "label": "occurs at time",
+   "localName": "occursAtTime",
+   "definition": "occursAtTime represents that an event takes place at a time.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "domain": [
+    "Event"
+   ],
+   "range": [
+    "TemporalEntity"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/playedBy": {
+   "id": "http://w3id.org/BadmintONTO/playedBy",
+   "kind": "objectProperty",
+   "label": "playedBy",
+   "localName": "playedBy",
+   "definition": "played By",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/isPerformedBy"
+   ],
+   "domain": [
+    "Player Role"
+   ],
+   "range": [
+    "Player"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/playerLocation": {
+   "id": "http://w3id.org/BadmintONTO/playerLocation",
+   "kind": "objectProperty",
+   "label": "player location",
+   "localName": "playerLocation",
+   "definition": "playerLocation represents that a player's location is captured by a player-information object.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/hasLocation"
+   ],
+   "domain": [
+    "Player Information"
+   ],
+   "range": [
+    "Player Location"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/qualifiedPlayer": {
+   "id": "http://w3id.org/BadmintONTO/qualifiedPlayer",
+   "kind": "objectProperty",
+   "label": "qualified player",
+   "localName": "qualifiedPlayer",
+   "definition": "The players/pairs/teams are qualified in a round-robin group or elimination stage.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/hasPlayer"
+   ],
+   "domain": [
+    "(Elimination Information or Round Robin Information)"
+   ],
+   "range": [
+    "(Pair or Player or Team)"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/receivingPlayer": {
+   "id": "http://w3id.org/BadmintONTO/receivingPlayer",
+   "kind": "objectProperty",
+   "label": "receiving player",
+   "localName": "receivingPlayer",
+   "definition": "receivingPlayer represents that the player who will receive a shot is captured by a shot-information object.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/hasPlayer"
+   ],
+   "domain": [
+    "Shot Information"
+   ],
+   "range": [
+    "Player"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/relatesToCompetition": {
+   "id": "http://w3id.org/BadmintONTO/relatesToCompetition",
+   "kind": "objectProperty",
+   "label": "relates to competition",
+   "localName": "relatesToCompetition",
+   "definition": "relatesToCompetition represents the type of competition for a competition event.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "domain": [
+    "Competition Event"
+   ],
+   "range": [
+    "Competition"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/roundRobinGroupStage": {
+   "id": "http://w3id.org/BadmintONTO/roundRobinGroupStage",
+   "kind": "objectProperty",
+   "label": "roundRobinGroupStage",
+   "localName": "roundRobinGroupStage",
+   "definition": "roundRobinGroupStage represents in which stage that a round-robin play is.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/isInformationAbout"
+   ],
+   "domain": [
+    "Round Robin Information"
+   ],
+   "range": [
+    "Round Robin Stage"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/roundRobinPlayer": {
+   "id": "http://w3id.org/BadmintONTO/roundRobinPlayer",
+   "kind": "objectProperty",
+   "label": "round robin player",
+   "localName": "roundRobinPlayer",
+   "definition": "roundRobinPlayer represents that a group in a round robin tournament can have some players/pairs/teams.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/hasPlayer"
+   ],
+   "domain": [
+    "Round Robin Information"
+   ],
+   "range": [
+    "(Pair or Player or Team)"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/shuttleHitLocation": {
+   "id": "http://w3id.org/BadmintONTO/shuttleHitLocation",
+   "kind": "objectProperty",
+   "label": "shuttle hit location",
+   "localName": "shuttleHitLocation",
+   "definition": "shuttleHitLocation represents that a shuttle's hit location is captured by a shot-information object.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/hasLocation"
+   ],
+   "domain": [
+    "Shot Information"
+   ],
+   "range": [
+    "Shuttle Location"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/shuttleLandingLocation": {
+   "id": "http://w3id.org/BadmintONTO/shuttleLandingLocation",
+   "kind": "objectProperty",
+   "label": "shuttle landing location",
+   "localName": "shuttleLandingLocation",
+   "definition": "shuttleLandingLocation represents that a shuttle's landing location is captured by a shot-information object.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/hasLocation"
+   ],
+   "domain": [
+    "Shot Information"
+   ],
+   "range": [
+    "Shuttle Location"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/winBy": {
+   "id": "http://w3id.org/BadmintONTO/winBy",
+   "kind": "objectProperty",
+   "label": "winBy",
+   "localName": "winBy",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/isInformationAbout"
+   ],
+   "domain": [],
+   "range": [
+    "(Pair or Player or Team)"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [
+    "http://w3id.org/BadmintONTO/getPointByPair",
+    "http://w3id.org/BadmintONTO/getPointByPlayer",
+    "http://w3id.org/BadmintONTO/getPointByTeam",
+    "http://w3id.org/BadmintONTO/getSetByPair",
+    "http://w3id.org/BadmintONTO/getSetByPlayer",
+    "http://w3id.org/BadmintONTO/winByPair",
+    "http://w3id.org/BadmintONTO/winByPlayer"
+   ],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/winByPair": {
+   "id": "http://w3id.org/BadmintONTO/winByPair",
+   "kind": "objectProperty",
+   "label": "winByPair",
+   "localName": "winByPair",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/winBy"
+   ],
+   "domain": [],
+   "range": [
+    "Pair"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/winByPlayer": {
+   "id": "http://w3id.org/BadmintONTO/winByPlayer",
+   "kind": "objectProperty",
+   "label": "winByPlayer",
+   "localName": "winByPlayer",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/winBy"
+   ],
+   "domain": [],
+   "range": [
+    "Player"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/belongToCountry": {
+   "id": "http://w3id.org/BadmintONTO/belongToCountry",
+   "kind": "datatypeProperty",
+   "label": "belong to country",
+   "localName": "belongToCountry",
+   "definition": "ISO (3166) country code",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "domain": [
+    "Location"
+   ],
+   "range": [
+    "string"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/currentWorldRanking": {
+   "id": "http://w3id.org/BadmintONTO/currentWorldRanking",
+   "kind": "datatypeProperty",
+   "label": "current working ranking",
+   "localName": "currentWorldRanking",
+   "definition": "The current world ranking of a player/pair.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "domain": [
+    "(Pair or Player)"
+   ],
+   "range": [
+    "nonNegativeInteger"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/hasInformationValue": {
+   "id": "http://w3id.org/BadmintONTO/hasInformationValue",
+   "kind": "datatypeProperty",
+   "label": "hasInformationValue",
+   "localName": "hasInformationValue",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "domain": [
+    "Information Object"
+   ],
+   "range": [],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [
+    "http://w3id.org/BadmintONTO/matchScoreA",
+    "http://w3id.org/BadmintONTO/matchScoreB",
+    "http://w3id.org/BadmintONTO/rallyLoseReason",
+    "http://w3id.org/BadmintONTO/rallyWinReason",
+    "http://w3id.org/BadmintONTO/roundRobinGroup",
+    "http://w3id.org/BadmintONTO/roundScoreA",
+    "http://w3id.org/BadmintONTO/roundScoreB",
+    "http://w3id.org/BadmintONTO/setScoreA",
+    "http://w3id.org/BadmintONTO/setScoreB",
+    "http://w3id.org/BadmintONTO/shotNumber"
+   ],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/highestWorldRanking": {
+   "id": "http://w3id.org/BadmintONTO/highestWorldRanking",
+   "kind": "datatypeProperty",
+   "label": "highest world ranking",
+   "localName": "highestWorldRanking",
+   "definition": "The highest world ranking of a player/pair.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "domain": [
+    "(Pair or Player)"
+   ],
+   "range": [
+    "nonNegativeInteger"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/inCompetition": {
+   "id": "http://w3id.org/BadmintONTO/inCompetition",
+   "kind": "datatypeProperty",
+   "label": "inCompetition",
+   "localName": "inCompetition",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "domain": [
+    "Competition"
+   ],
+   "range": [
+    "string"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/matchScoreA": {
+   "id": "http://w3id.org/BadmintONTO/matchScoreA",
+   "kind": "datatypeProperty",
+   "label": "match score A",
+   "localName": "matchScoreA",
+   "definition": "The match score of player/pair A.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/hasInformationValue"
+   ],
+   "domain": [
+    "Match Information"
+   ],
+   "range": [
+    "nonNegativeInteger"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/matchScoreB": {
+   "id": "http://w3id.org/BadmintONTO/matchScoreB",
+   "kind": "datatypeProperty",
+   "label": "match score B",
+   "localName": "matchScoreB",
+   "definition": "The match score of player/pair B.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/hasInformationValue"
+   ],
+   "domain": [
+    "Match Information"
+   ],
+   "range": [
+    "nonNegativeInteger"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/personFullName": {
+   "id": "http://w3id.org/BadmintONTO/personFullName",
+   "kind": "datatypeProperty",
+   "label": "person full name",
+   "localName": "personFullName",
+   "definition": "The full name of a person.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "domain": [
+    "Person"
+   ],
+   "range": [
+    "string"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/playerAge": {
+   "id": "http://w3id.org/BadmintONTO/playerAge",
+   "kind": "datatypeProperty",
+   "label": "player age",
+   "localName": "playerAge",
+   "definition": "The age of a player.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "domain": [
+    "Player"
+   ],
+   "range": [
+    "nonNegativeInteger"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/playerHeight": {
+   "id": "http://w3id.org/BadmintONTO/playerHeight",
+   "kind": "datatypeProperty",
+   "label": "player height",
+   "localName": "playerHeight",
+   "definition": "The height of a player.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "domain": [
+    "Player"
+   ],
+   "range": [
+    "double"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/rallyLoseReason": {
+   "id": "http://w3id.org/BadmintONTO/rallyLoseReason",
+   "kind": "datatypeProperty",
+   "label": "rally lose reason",
+   "localName": "rallyLoseReason",
+   "definition": "The lose reason of a rally.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/hasInformationValue"
+   ],
+   "domain": [
+    "Rally Information"
+   ],
+   "range": [
+    "string"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/rallyWinReason": {
+   "id": "http://w3id.org/BadmintONTO/rallyWinReason",
+   "kind": "datatypeProperty",
+   "label": "rally win reason",
+   "localName": "rallyWinReason",
+   "definition": "The win reason of a rally.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/hasInformationValue"
+   ],
+   "domain": [
+    "Rally Information"
+   ],
+   "range": [
+    "string"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/roundRobinGroup": {
+   "id": "http://w3id.org/BadmintONTO/roundRobinGroup",
+   "kind": "datatypeProperty",
+   "label": "round robin group",
+   "localName": "roundRobinGroup",
+   "definition": "round-robin group number.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/hasInformationValue"
+   ],
+   "domain": [
+    "Round Robin Information"
+   ],
+   "range": [
+    "string"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/roundScoreA": {
+   "id": "http://w3id.org/BadmintONTO/roundScoreA",
+   "kind": "datatypeProperty",
+   "label": "round score A",
+   "localName": "roundScoreA",
+   "definition": "The set score of player/pair A.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/hasInformationValue"
+   ],
+   "domain": [
+    "(Rally Information or Shot Information)"
+   ],
+   "range": [
+    "nonNegativeInteger"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/roundScoreB": {
+   "id": "http://w3id.org/BadmintONTO/roundScoreB",
+   "kind": "datatypeProperty",
+   "label": "round score B",
+   "localName": "roundScoreB",
+   "definition": "The round score of player/pair B.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/hasInformationValue"
+   ],
+   "domain": [
+    "(Rally Information or Shot Information)"
+   ],
+   "range": [
+    "nonNegativeInteger"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/setNumber": {
+   "id": "http://w3id.org/BadmintONTO/setNumber",
+   "kind": "datatypeProperty",
+   "label": "setNumber",
+   "localName": "setNumber",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "domain": [
+    "Match Information"
+   ],
+   "range": [
+    "nonNegativeInteger"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/setScoreA": {
+   "id": "http://w3id.org/BadmintONTO/setScoreA",
+   "kind": "datatypeProperty",
+   "label": "set score A",
+   "localName": "setScoreA",
+   "definition": "The set score of player/pair A.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/hasInformationValue"
+   ],
+   "domain": [
+    "Set Information"
+   ],
+   "range": [
+    "nonNegativeInteger"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/setScoreB": {
+   "id": "http://w3id.org/BadmintONTO/setScoreB",
+   "kind": "datatypeProperty",
+   "label": "set score B",
+   "localName": "setScoreB",
+   "definition": "The set score of player/pair B.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/hasInformationValue"
+   ],
+   "domain": [
+    "Set Information"
+   ],
+   "range": [
+    "nonNegativeInteger"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/shotNumber": {
+   "id": "http://w3id.org/BadmintONTO/shotNumber",
+   "kind": "datatypeProperty",
+   "label": "shot number",
+   "localName": "shotNumber",
+   "definition": "The number of shots in a rally.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [
+    "http://w3id.org/BadmintONTO/hasInformationValue"
+   ],
+   "domain": [
+    "Rally Information"
+   ],
+   "range": [
+    "nonNegativeInteger"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://www.opengis.net/ont/geosparql#asWKT": {
+   "id": "http://www.opengis.net/ont/geosparql#asWKT",
+   "kind": "datatypeProperty",
+   "label": "asWKT",
+   "localName": "asWKT",
+   "definition": "The WKT serialization of a Geometry.",
+   "synonyms": [],
+   "deprecated": false,
+   "parents": [],
+   "domain": [
+    "Geometry"
+   ],
+   "range": [
+    "wktLiteral"
+   ],
+   "inverseOf": null,
+   "characteristics": [],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/A_1": {
+   "id": "http://w3id.org/BadmintONTO/A_1",
+   "kind": "individual",
+   "label": "A_1",
+   "localName": "A_1",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/CourtArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/A_10": {
+   "id": "http://w3id.org/BadmintONTO/A_10",
+   "kind": "individual",
+   "label": "A_10",
+   "localName": "A_10",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/CourtArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/A_11": {
+   "id": "http://w3id.org/BadmintONTO/A_11",
+   "kind": "individual",
+   "label": "A_11",
+   "localName": "A_11",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/CourtArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/A_12": {
+   "id": "http://w3id.org/BadmintONTO/A_12",
+   "kind": "individual",
+   "label": "A_12",
+   "localName": "A_12",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/CourtArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/A_13": {
+   "id": "http://w3id.org/BadmintONTO/A_13",
+   "kind": "individual",
+   "label": "A_13",
+   "localName": "A_13",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/CourtArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/A_14": {
+   "id": "http://w3id.org/BadmintONTO/A_14",
+   "kind": "individual",
+   "label": "A_14",
+   "localName": "A_14",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/CourtArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/A_15": {
+   "id": "http://w3id.org/BadmintONTO/A_15",
+   "kind": "individual",
+   "label": "A_15",
+   "localName": "A_15",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/CourtArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/A_16": {
+   "id": "http://w3id.org/BadmintONTO/A_16",
+   "kind": "individual",
+   "label": "A_16",
+   "localName": "A_16",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/CourtArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/A_2": {
+   "id": "http://w3id.org/BadmintONTO/A_2",
+   "kind": "individual",
+   "label": "A_2",
+   "localName": "A_2",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/CourtArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/A_3": {
+   "id": "http://w3id.org/BadmintONTO/A_3",
+   "kind": "individual",
+   "label": "A_3",
+   "localName": "A_3",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/CourtArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/A_4": {
+   "id": "http://w3id.org/BadmintONTO/A_4",
+   "kind": "individual",
+   "label": "A_4",
+   "localName": "A_4",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/CourtArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/A_5": {
+   "id": "http://w3id.org/BadmintONTO/A_5",
+   "kind": "individual",
+   "label": "A_5",
+   "localName": "A_5",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/CourtArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/A_6": {
+   "id": "http://w3id.org/BadmintONTO/A_6",
+   "kind": "individual",
+   "label": "A_6",
+   "localName": "A_6",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/CourtArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/A_7": {
+   "id": "http://w3id.org/BadmintONTO/A_7",
+   "kind": "individual",
+   "label": "A_7",
+   "localName": "A_7",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/CourtArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/A_8": {
+   "id": "http://w3id.org/BadmintONTO/A_8",
+   "kind": "individual",
+   "label": "A_8",
+   "localName": "A_8",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/CourtArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/A_9": {
+   "id": "http://w3id.org/BadmintONTO/A_9",
+   "kind": "individual",
+   "label": "A_9",
+   "localName": "A_9",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/CourtArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/AttackingClearStroke": {
+   "id": "http://w3id.org/BadmintONTO/AttackingClearStroke",
+   "kind": "individual",
+   "label": "Attacking Clear",
+   "localName": "AttackingClearStroke",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/Stroke"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/B_1": {
+   "id": "http://w3id.org/BadmintONTO/B_1",
+   "kind": "individual",
+   "label": "B_1",
+   "localName": "B_1",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/CourtArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/B_10": {
+   "id": "http://w3id.org/BadmintONTO/B_10",
+   "kind": "individual",
+   "label": "B_10",
+   "localName": "B_10",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/CourtArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/B_11": {
+   "id": "http://w3id.org/BadmintONTO/B_11",
+   "kind": "individual",
+   "label": "B_11",
+   "localName": "B_11",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/CourtArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/B_12": {
+   "id": "http://w3id.org/BadmintONTO/B_12",
+   "kind": "individual",
+   "label": "B_12",
+   "localName": "B_12",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/CourtArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/B_13": {
+   "id": "http://w3id.org/BadmintONTO/B_13",
+   "kind": "individual",
+   "label": "B_13",
+   "localName": "B_13",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/CourtArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/B_14": {
+   "id": "http://w3id.org/BadmintONTO/B_14",
+   "kind": "individual",
+   "label": "B_14",
+   "localName": "B_14",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/CourtArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/B_15": {
+   "id": "http://w3id.org/BadmintONTO/B_15",
+   "kind": "individual",
+   "label": "B_15",
+   "localName": "B_15",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/CourtArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/B_16": {
+   "id": "http://w3id.org/BadmintONTO/B_16",
+   "kind": "individual",
+   "label": "B_16",
+   "localName": "B_16",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/CourtArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/B_2": {
+   "id": "http://w3id.org/BadmintONTO/B_2",
+   "kind": "individual",
+   "label": "B_2",
+   "localName": "B_2",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/CourtArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/B_3": {
+   "id": "http://w3id.org/BadmintONTO/B_3",
+   "kind": "individual",
+   "label": "B_3",
+   "localName": "B_3",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/CourtArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/B_4": {
+   "id": "http://w3id.org/BadmintONTO/B_4",
+   "kind": "individual",
+   "label": "B_4",
+   "localName": "B_4",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/CourtArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/B_5": {
+   "id": "http://w3id.org/BadmintONTO/B_5",
+   "kind": "individual",
+   "label": "B_5",
+   "localName": "B_5",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/CourtArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/B_6": {
+   "id": "http://w3id.org/BadmintONTO/B_6",
+   "kind": "individual",
+   "label": "B_6",
+   "localName": "B_6",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/CourtArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/B_7": {
+   "id": "http://w3id.org/BadmintONTO/B_7",
+   "kind": "individual",
+   "label": "B_7",
+   "localName": "B_7",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/CourtArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/B_8": {
+   "id": "http://w3id.org/BadmintONTO/B_8",
+   "kind": "individual",
+   "label": "B_8",
+   "localName": "B_8",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/CourtArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/B_9": {
+   "id": "http://w3id.org/BadmintONTO/B_9",
+   "kind": "individual",
+   "label": "B_9",
+   "localName": "B_9",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/CourtArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/BackCourtDriveStroke": {
+   "id": "http://w3id.org/BadmintONTO/BackCourtDriveStroke",
+   "kind": "individual",
+   "label": "Back-Court Drive",
+   "localName": "BackCourtDriveStroke",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/Stroke"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/BackhandHitting": {
+   "id": "http://w3id.org/BadmintONTO/BackhandHitting",
+   "kind": "individual",
+   "label": "Bankhand Hitting",
+   "localName": "BackhandHitting",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/HittingStyle"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/ClearStroke": {
+   "id": "http://w3id.org/BadmintONTO/ClearStroke",
+   "kind": "individual",
+   "label": "Clear",
+   "localName": "ClearStroke",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/Stroke"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/CrossCourtNetStroke": {
+   "id": "http://w3id.org/BadmintONTO/CrossCourtNetStroke",
+   "kind": "individual",
+   "label": "Cross-Court Net",
+   "localName": "CrossCourtNetStroke",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/Stroke"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/DefensiveClearStroke": {
+   "id": "http://w3id.org/BadmintONTO/DefensiveClearStroke",
+   "kind": "individual",
+   "label": "Defensive Clear",
+   "localName": "DefensiveClearStroke",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/Stroke"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/DefensiveReturnDriveStroke": {
+   "id": "http://w3id.org/BadmintONTO/DefensiveReturnDriveStroke",
+   "kind": "individual",
+   "label": "Defensive Return-Drive",
+   "localName": "DefensiveReturnDriveStroke",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/Stroke"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/Doctor": {
+   "id": "http://w3id.org/BadmintONTO/Doctor",
+   "kind": "individual",
+   "label": "Doctor",
+   "localName": "Doctor",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/AgentRole"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/Double": {
+   "id": "http://w3id.org/BadmintONTO/Double",
+   "kind": "individual",
+   "label": "Double",
+   "localName": "Double",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/MatchType"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/DriveStroke": {
+   "id": "http://w3id.org/BadmintONTO/DriveStroke",
+   "kind": "individual",
+   "label": "Drive",
+   "localName": "DriveStroke",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/Stroke"
+   ],
+   "children": [],
+   "sameAs": [
+    "http://w3id.org/BadmintONTO/FlickStroke"
+   ]
+  },
+  "http://w3id.org/BadmintONTO/DrivenFlightStroke": {
+   "id": "http://w3id.org/BadmintONTO/DrivenFlightStroke",
+   "kind": "individual",
+   "label": "Driven Flight",
+   "localName": "DrivenFlightStroke",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/Stroke"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/DropStroke": {
+   "id": "http://w3id.org/BadmintONTO/DropStroke",
+   "kind": "individual",
+   "label": "Drop",
+   "localName": "DropStroke",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/Stroke"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/Finals": {
+   "id": "http://w3id.org/BadmintONTO/Finals",
+   "kind": "individual",
+   "label": "Finals",
+   "localName": "Finals",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/EliminationStage"
+   ],
+   "children": [],
+   "sameAs": [
+    "http://w3id.org/BadmintONTO/round-of-2"
+   ]
+  },
+  "http://w3id.org/BadmintONTO/FlickStroke": {
+   "id": "http://w3id.org/BadmintONTO/FlickStroke",
+   "kind": "individual",
+   "label": "Flick",
+   "localName": "FlickStroke",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/Stroke"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/ForehandHitting": {
+   "id": "http://w3id.org/BadmintONTO/ForehandHitting",
+   "kind": "individual",
+   "label": "Forehand Hitting",
+   "localName": "ForehandHitting",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/HittingStyle"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/Group-Stage": {
+   "id": "http://w3id.org/BadmintONTO/Group-Stage",
+   "kind": "individual",
+   "label": "Group-Stage",
+   "localName": "Group-Stage",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/RoundRobinStage"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/LiftStroke": {
+   "id": "http://w3id.org/BadmintONTO/LiftStroke",
+   "kind": "individual",
+   "label": "Lift",
+   "localName": "LiftStroke",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/Stroke"
+   ],
+   "children": [],
+   "sameAs": [
+    "http://w3id.org/BadmintONTO/LobStroke"
+   ]
+  },
+  "http://w3id.org/BadmintONTO/LineJudge": {
+   "id": "http://w3id.org/BadmintONTO/LineJudge",
+   "kind": "individual",
+   "label": "Line Judge",
+   "localName": "LineJudge",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/AgentRole"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/LobStroke": {
+   "id": "http://w3id.org/BadmintONTO/LobStroke",
+   "kind": "individual",
+   "label": "Lob",
+   "localName": "LobStroke",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/Stroke"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/LongServe": {
+   "id": "http://w3id.org/BadmintONTO/LongServe",
+   "kind": "individual",
+   "label": "Long Serve",
+   "localName": "LongServe",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/Serve"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/ManSingle": {
+   "id": "http://w3id.org/BadmintONTO/ManSingle",
+   "kind": "individual",
+   "label": "ManSingle",
+   "localName": "ManSingle",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/MatchType"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/MenDouble": {
+   "id": "http://w3id.org/BadmintONTO/MenDouble",
+   "kind": "individual",
+   "label": "MenDouble",
+   "localName": "MenDouble",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/MatchType"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/MixDouble": {
+   "id": "http://w3id.org/BadmintONTO/MixDouble",
+   "kind": "individual",
+   "label": "MixDouble",
+   "localName": "MixDouble",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/MatchType"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/NetPlayStroke": {
+   "id": "http://w3id.org/BadmintONTO/NetPlayStroke",
+   "kind": "individual",
+   "label": "Net Play",
+   "localName": "NetPlayStroke",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/Stroke"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/OverHandArea": {
+   "id": "http://w3id.org/BadmintONTO/OverHandArea",
+   "kind": "individual",
+   "label": "OverHandArea",
+   "localName": "OverHandArea",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/HittingArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/PassiveDropStroke": {
+   "id": "http://w3id.org/BadmintONTO/PassiveDropStroke",
+   "kind": "individual",
+   "label": "Passive Drop",
+   "localName": "PassiveDropStroke",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/Stroke"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/PushStroke": {
+   "id": "http://w3id.org/BadmintONTO/PushStroke",
+   "kind": "individual",
+   "label": "Push",
+   "localName": "PushStroke",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/Stroke"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/Quarter-finals": {
+   "id": "http://w3id.org/BadmintONTO/Quarter-finals",
+   "kind": "individual",
+   "label": "Quarter-finals",
+   "localName": "Quarter-finals",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/EliminationStage"
+   ],
+   "children": [],
+   "sameAs": [
+    "http://w3id.org/BadmintONTO/round-of-8"
+   ]
+  },
+  "http://w3id.org/BadmintONTO/ReturnNetStroke": {
+   "id": "http://w3id.org/BadmintONTO/ReturnNetStroke",
+   "kind": "individual",
+   "label": "Return Net",
+   "localName": "ReturnNetStroke",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/Stroke"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/RoundHeadArea": {
+   "id": "http://w3id.org/BadmintONTO/RoundHeadArea",
+   "kind": "individual",
+   "label": "RoundHeadArea",
+   "localName": "RoundHeadArea",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/HittingArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/RushStroke": {
+   "id": "http://w3id.org/BadmintONTO/RushStroke",
+   "kind": "individual",
+   "label": "Rush",
+   "localName": "RushStroke",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/Stroke"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/Semi-finals": {
+   "id": "http://w3id.org/BadmintONTO/Semi-finals",
+   "kind": "individual",
+   "label": "Semi-finals",
+   "localName": "Semi-finals",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/EliminationStage"
+   ],
+   "children": [],
+   "sameAs": [
+    "http://w3id.org/BadmintONTO/round-of-4"
+   ]
+  },
+  "http://w3id.org/BadmintONTO/ServiceJudge": {
+   "id": "http://w3id.org/BadmintONTO/ServiceJudge",
+   "kind": "individual",
+   "label": "Service Judge",
+   "localName": "ServiceJudge",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/AgentRole"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/ShortServe": {
+   "id": "http://w3id.org/BadmintONTO/ShortServe",
+   "kind": "individual",
+   "label": "Short Serve",
+   "localName": "ShortServe",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/Serve"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/SideHandArea": {
+   "id": "http://w3id.org/BadmintONTO/SideHandArea",
+   "kind": "individual",
+   "label": "SideHandArea",
+   "localName": "SideHandArea",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/HittingArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/Single": {
+   "id": "http://w3id.org/BadmintONTO/Single",
+   "kind": "individual",
+   "label": "Single",
+   "localName": "Single",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/MatchType"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/SlashRoute": {
+   "id": "http://w3id.org/BadmintONTO/SlashRoute",
+   "kind": "individual",
+   "label": "Slash Route",
+   "localName": "SlashRoute",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/ShuttleRoute"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/SmashStroke": {
+   "id": "http://w3id.org/BadmintONTO/SmashStroke",
+   "kind": "individual",
+   "label": "Smash",
+   "localName": "SmashStroke",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/Stroke"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/StraightRoute": {
+   "id": "http://w3id.org/BadmintONTO/StraightRoute",
+   "kind": "individual",
+   "label": "Stright Route",
+   "localName": "StraightRoute",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/ShuttleRoute"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/Umpire": {
+   "id": "http://w3id.org/BadmintONTO/Umpire",
+   "kind": "individual",
+   "label": "Umpire",
+   "localName": "Umpire",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/AgentRole"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/UnderHandArea": {
+   "id": "http://w3id.org/BadmintONTO/UnderHandArea",
+   "kind": "individual",
+   "label": "UnderHandArea",
+   "localName": "UnderHandArea",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/HittingArea"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/WomanSingle": {
+   "id": "http://w3id.org/BadmintONTO/WomanSingle",
+   "kind": "individual",
+   "label": "WomanSingle",
+   "localName": "WomanSingle",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/MatchType"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/WomenDouble": {
+   "id": "http://w3id.org/BadmintONTO/WomenDouble",
+   "kind": "individual",
+   "label": "WomenDouble",
+   "localName": "WomenDouble",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/MatchType"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/WristSmashStroke": {
+   "id": "http://w3id.org/BadmintONTO/WristSmashStroke",
+   "kind": "individual",
+   "label": "Wrist Smash",
+   "localName": "WristSmashStroke",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/Stroke"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/double_player_a": {
+   "id": "http://w3id.org/BadmintONTO/double_player_a",
+   "kind": "individual",
+   "label": "Double Player A",
+   "localName": "double_player_a",
+   "definition": "Double-player role in Pair A",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/DoublePlayerRole"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/double_player_b": {
+   "id": "http://w3id.org/BadmintONTO/double_player_b",
+   "kind": "individual",
+   "label": "Double Player B",
+   "localName": "double_player_b",
+   "definition": "Double-player role in Pair A",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/DoublePlayerRole"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/double_player_c": {
+   "id": "http://w3id.org/BadmintONTO/double_player_c",
+   "kind": "individual",
+   "label": "Double Player C",
+   "localName": "double_player_c",
+   "definition": "Double-player role in Pair B",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/DoublePlayerRole"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/double_player_d": {
+   "id": "http://w3id.org/BadmintONTO/double_player_d",
+   "kind": "individual",
+   "label": "Double Player D",
+   "localName": "double_player_d",
+   "definition": "Double-player role in Pair B",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/DoublePlayerRole"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/eighth-finals": {
+   "id": "http://w3id.org/BadmintONTO/eighth-finals",
+   "kind": "individual",
+   "label": "eighth-finals",
+   "localName": "eighth-finals",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/EliminationStage"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/pair_a": {
+   "id": "http://w3id.org/BadmintONTO/pair_a",
+   "kind": "individual",
+   "label": "Pair A",
+   "localName": "pair_a",
+   "definition": "Pair-players role as pair A",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/PairPlayersRole"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/pair_b": {
+   "id": "http://w3id.org/BadmintONTO/pair_b",
+   "kind": "individual",
+   "label": "Pair B",
+   "localName": "pair_b",
+   "definition": "Pair-players role as pair B",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/PairPlayersRole"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/round-of-128": {
+   "id": "http://w3id.org/BadmintONTO/round-of-128",
+   "kind": "individual",
+   "label": "round-of-128",
+   "localName": "round-of-128",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/EliminationStage"
+   ],
+   "children": [],
+   "sameAs": [
+    "http://w3id.org/BadmintONTO/sixty-fourth-finals"
+   ]
+  },
+  "http://w3id.org/BadmintONTO/round-of-16": {
+   "id": "http://w3id.org/BadmintONTO/round-of-16",
+   "kind": "individual",
+   "label": "round-of-16",
+   "localName": "round-of-16",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/EliminationStage"
+   ],
+   "children": [],
+   "sameAs": [
+    "http://w3id.org/BadmintONTO/sixteenth-finals"
+   ]
+  },
+  "http://w3id.org/BadmintONTO/round-of-2": {
+   "id": "http://w3id.org/BadmintONTO/round-of-2",
+   "kind": "individual",
+   "label": "round-of-2",
+   "localName": "round-of-2",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/EliminationStage"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/round-of-4": {
+   "id": "http://w3id.org/BadmintONTO/round-of-4",
+   "kind": "individual",
+   "label": "round-of-4",
+   "localName": "round-of-4",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/EliminationStage"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/round-of-64": {
+   "id": "http://w3id.org/BadmintONTO/round-of-64",
+   "kind": "individual",
+   "label": "round-of-64",
+   "localName": "round-of-64",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/EliminationStage"
+   ],
+   "children": [],
+   "sameAs": [
+    "http://w3id.org/BadmintONTO/thirty-second-finals"
+   ]
+  },
+  "http://w3id.org/BadmintONTO/round-of-8": {
+   "id": "http://w3id.org/BadmintONTO/round-of-8",
+   "kind": "individual",
+   "label": "round-of-8",
+   "localName": "round-of-8",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/EliminationStage"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/rr-round1": {
+   "id": "http://w3id.org/BadmintONTO/rr-round1",
+   "kind": "individual",
+   "label": "rr-round1",
+   "localName": "rr-round1",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/RoundRobinStage"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/rr-round2": {
+   "id": "http://w3id.org/BadmintONTO/rr-round2",
+   "kind": "individual",
+   "label": "rr-round2",
+   "localName": "rr-round2",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/RoundRobinStage"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/rr-round3": {
+   "id": "http://w3id.org/BadmintONTO/rr-round3",
+   "kind": "individual",
+   "label": "rr-round3",
+   "localName": "rr-round3",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/RoundRobinStage"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/rr-round4": {
+   "id": "http://w3id.org/BadmintONTO/rr-round4",
+   "kind": "individual",
+   "label": "rr-round4",
+   "localName": "rr-round4",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/RoundRobinStage"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/sixteenth-finals": {
+   "id": "http://w3id.org/BadmintONTO/sixteenth-finals",
+   "kind": "individual",
+   "label": "sixteenth-finals",
+   "localName": "sixteenth-finals",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/EliminationStage"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/sixty-fourth-finals": {
+   "id": "http://w3id.org/BadmintONTO/sixty-fourth-finals",
+   "kind": "individual",
+   "label": "sixty-fourth-finals",
+   "localName": "sixty-fourth-finals",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/EliminationStage"
+   ],
+   "children": [],
+   "sameAs": []
+  },
+  "http://w3id.org/BadmintONTO/thirty-second-finals": {
+   "id": "http://w3id.org/BadmintONTO/thirty-second-finals",
+   "kind": "individual",
+   "label": "thirty-second-finals",
+   "localName": "thirty-second-finals",
+   "definition": "",
+   "synonyms": [],
+   "deprecated": false,
+   "types": [
+    "http://w3id.org/BadmintONTO/EliminationStage"
+   ],
+   "children": [],
+   "sameAs": []
+  }
+ }
+}

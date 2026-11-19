@@ -2,7 +2,7 @@
 
 BadmintONTO is an ontology for the badmintion domain, representing the domain knowledge that can annotate play-by-play data in tournaments.
 
-The play-by-play is described at [HERE](./data/README.md)!
+The play-by-play data is described at [HERE](./data/README.md)!
 
 Example SPARQL queries are available at [HERE](./sparql_query/README.md)!
 

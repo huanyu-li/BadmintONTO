@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BadmintONTO Explorer</title>
+  <link rel="stylesheet" href="explorer.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="../../">BadmintONTO</a>
+    <span class="sub">Explorer</span>
+    <nav>
+      <a href="../index.html">Documentation</a>
+      <a href="../webvowl/index.html#BadmintONTO">Graph</a>
+      <a href="../../demo/">SPARQL</a>
+      <a href="https://github.com/huanyu-li/BadmintONTO">GitHub</a>
+    </nav>
+  </header>
+  <main>
+    <aside>
+      <input id="search" type="search" placeholder="Search terms…" autocomplete="off" aria-label="Search terms">
+      <div id="filters">
+        <label><input type="checkbox" value="class" checked> Classes</label>
+        <label><input type="checkbox" value="objectProperty" checked> Object props</label>
+        <label><input type="checkbox" value="datatypeProperty" checked> Data props</label>
+        <label><input type="checkbox" value="individual" checked> Individuals</label>
+      </div>
+      <div id="results" hidden></div>
+      <div id="tree"></div>
+    </aside>
+    <section id="detail"></section>
+  </main>
+  <script src="explorer.js"></script>
+</body>
+</html>
